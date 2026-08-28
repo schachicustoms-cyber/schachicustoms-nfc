@@ -503,6 +503,9 @@ main {
 
     font-size: 15px;
     line-height: 1.75;
+
+    /* Behält Absätze und Zeilenumbrüche aus cards.json bei */
+    white-space: pre-line;
 }
 
 

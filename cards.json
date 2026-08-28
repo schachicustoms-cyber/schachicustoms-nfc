@@ -72,5 +72,94 @@
                 "text": "If “Blade Knight” attacks a face-down Attack Position Flip Effect Monster with equal ATK, and both monsters are destroyed, then “Blade Knight”’s effect is applied because it destroyed the monster, and the monster’s effect is negated."
             }
         ]
+    },
+
+    "SCO-002": {
+        "id": "SCO-002",
+        "aliases": [],
+
+        "name": "Black Luster Soldier - Envoy of the Beginning",
+        "image": "images/cards/Black Luster Soldier - Envoy of the Beginning.jpg",
+
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": 8,
+        "type": "Warrior / Effect",
+
+        "atk": 3000,
+        "def": 2500,
+
+        "effect": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn, you can activate 1 of these effects.\n\n• Target 1 monster on the field; banish it. This card cannot attack the turn this effect is activated.\n\n• If this attacking card destroys an opponent’s monster by battle: It can make a second attack in a row.",
+
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+
+        "rulings": [
+            {
+                "title": "Different from Black Luster Soldier",
+                "text": "“Black Luster Soldier - Envoy of the Beginning” is treated as a different card from “Black Luster Soldier”. So you can have 3 copies of “Black Luster Soldier - Envoy of the Beginning” and 3 copies of “Black Luster Soldier” in your Deck & Side Deck combined."
+            },
+            {
+                "title": "Can banish itself",
+                "text": "“Black Luster Soldier - Envoy of the Beginning” can remove itself from play using its first effect."
+            },
+            {
+                "title": "Effect activation timing",
+                "text": "The first effect of “Black Luster Soldier - Envoy of the Beginning” can be activated during your Main Phase 1 or 2. The second effect can be activated during your Damage Step in your Battle Phase, and can be chained to."
+            },
+            {
+                "title": "Interaction with Skill Drain",
+                "text": "If you activate “Black Luster Soldier - Envoy of the Beginning”’s first effect, and “Skill Drain” is chained to it to negate the effect, or if “Skill Drain” was active before you activated the effect, you cannot attack with “Black Luster Soldier - Envoy of the Beginning” that turn because the activation of the effect was not negated and the condition that is included will not be negated by “Skill Drain”."
+            },
+            {
+                "title": "Effect can be used again",
+                "text": "If you use the first effect of “Black Luster Soldier - Envoy of the Beginning”, then remove him from play and return him to play, or destroy him and Special Summon him again, or flip him face-down then face-up again, you can activate his effect again that same turn."
+            },
+            {
+                "title": "Attack negated",
+                "text": "If “Black Luster Soldier - Envoy of the Beginning” attacks, and its attack is negated by “Magic Cylinder” or “Negate Attack”, you cannot activate his first effect during Main Phase 2."
+            },
+            {
+                "title": "Cards are banished face-up",
+                "text": "When a card is removed from play by “Black Luster Soldier - Envoy of the Beginning”’s first effect, it is removed from play face-up."
+            },
+            {
+                "title": "Second attack can be direct",
+                "text": "If “Black Luster Soldier - Envoy of the Beginning” destroys your opponent’s only monster with his first attack, he can attack your opponent directly for the second attack."
+            },
+            {
+                "title": "Maximum attacks from its own effect",
+                "text": "If “Black Luster Soldier - Envoy of the Beginning” attacks and destroys your opponent’s monster, then attacks a second time and destroys another monster, it does not get to attack any more that turn."
+            },
+            {
+                "title": "Interaction with Twin Swords of Flashing Light - Tryce",
+                "text": "Even if you equip him with “Twin Swords of Flashing Light - Tryce”, “Black Luster Soldier - Envoy of the Beginning” only gets a maximum of 2 attacks."
+            },
+            {
+                "title": "Second attack must be consecutive",
+                "text": "When “Black Luster Soldier - Envoy of the Beginning” conducts a second attack using his second effect, his effect activates during the first attack’s Damage Step, and the attack is declared in the next Battle Step. The second attack must come consecutively after the first attack; other monsters’ attacks cannot come in-between."
+            }
+        ]
     }
 }
