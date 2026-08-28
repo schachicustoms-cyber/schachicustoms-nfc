@@ -1,0 +1,24 @@
+{
+    "BK001": {
+        "id": "BK001",
+        "name": "Blade Knight",
+        "image": "images/cards/Blade Knight.jpg",
+
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": 4,
+        "type": "Warrior / Effect",
+
+        "atk": 1600,
+        "def": 1000,
+
+        "effect": "While you have 1 or fewer cards in your hand, this card gains 400 ATK. If this is the only monster you control, negate the effects of Flip monsters it destroys by battle.",
+
+        "custom": {
+            "series": "SCHACHICUSTOMS",
+            "status": "verified"
+        },
+
+        "rulings": []
+    }
+}
