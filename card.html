@@ -12,30 +12,111 @@
 
 <body>
 
-    <header>
-        <h1>SCHACHICUSTOMS</h1>
+    <!-- ======================================
+         HEADER
+    ======================================= -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <!-- Klick auf Branding führt zur Startseite -->
+            <a href="index.html" class="brand">
+
+                <div class="brand-name">
+                    SCHACHICUSTOMS
+                </div>
+
+                <div class="brand-tagline">
+                    ORICAS · TOKENS & MORE
+                </div>
+
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="database.html">
+                    Card Database
+                </a>
+
+                <a href="rulings.html">
+                    Basic Rulings
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- Kartensuche -->
+        <div class="header-search">
+
+            <form id="card-search-form">
+
+                <input
+                    type="search"
+                    id="card-search-input"
+                    placeholder="Search card..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
     </header>
+
+
+    <!-- ======================================
+         CARD PAGE
+    ======================================= -->
 
     <main class="card-page">
 
         <section class="card-container">
 
-            <!-- CARD IMAGE -->
+
+            <!-- ======================================
+                 CARD IMAGE
+            ======================================= -->
+
             <div class="card-image">
-                <img id="card-image" src="" alt="Card">
+
+                <img
+                    id="card-image"
+                    src=""
+                    alt="Card"
+                >
+
             </div>
 
 
-            <!-- CARD INFORMATION -->
+            <!-- ======================================
+                 CARD INFORMATION
+            ======================================= -->
+
             <div class="card-info">
+
 
                 <p class="card-label">
                     SCHACHICUSTOMS NFC CARD
                 </p>
 
-                <h2 id="card-name">
+
+                <h1 id="card-name">
                     Loading...
-                </h2>
+                </h1>
+
 
                 <p class="card-id">
                     Card ID:
@@ -43,73 +124,185 @@
                 </p>
 
 
-                <!-- BASIC CARD DATA -->
+                <!-- ======================================
+                     BASIC DATA
+                ======================================= -->
+
                 <div class="card-data">
 
                     <p>
-                        <strong>Attribute:</strong>
+                        <strong>Attribute</strong>
                         <span id="card-attribute">-</span>
                     </p>
 
                     <p>
-                        <strong>Level:</strong>
+                        <strong>Level</strong>
                         <span id="card-level">-</span>
                     </p>
 
                     <p>
-                        <strong>Type:</strong>
+                        <strong>Type</strong>
                         <span id="card-type">-</span>
                     </p>
 
                     <p>
-                        <strong>ATK:</strong>
+                        <strong>ATK</strong>
                         <span id="card-atk">-</span>
                     </p>
 
                     <p>
-                        <strong>DEF:</strong>
+                        <strong>DEF</strong>
                         <span id="card-def">-</span>
                     </p>
 
                 </div>
 
 
-                <!-- CARD EFFECT -->
-                <div class="card-effect">
+                <!-- ======================================
+                     CARD EFFECT
+                ======================================= -->
 
-                    <h3>Card Effect</h3>
+                <section class="card-effect">
 
-                    <p id="card-effect">
-                        -
-                    </p>
+                    <h2>
+                        Card Effect
+                    </h2>
 
-                </div>
+                    <div class="effect-box">
 
+                        <p id="card-effect">
+                            -
+                        </p>
 
-                <!-- RULINGS -->
-                <div class="card-rulings">
-
-                    <h3>Rulings & FAQ</h3>
-
-                    <div id="card-rulings">
-                        <p>No rulings available.</p>
                     </div>
 
-                </div>
+                </section>
 
 
-                <!-- NFC VERIFICATION -->
-                <div class="verification-box" id="verification">
+                <!-- ======================================
+                     RULINGS & FAQ
+                ======================================= -->
 
-                    <strong>
-                        ✓ NFC VERIFIED
-                    </strong>
+                <section class="card-rulings">
 
-                    <p>
-                        Authentic SCHACHICUSTOMS card entry
-                    </p>
+                    <div class="section-heading">
 
-                </div>
+                        <div>
+                            <h2>Rulings & FAQ</h2>
+
+                            <p>
+                                Individual card interactions and rulings.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!--
+                        JavaScript erstellt hier später
+                        automatisch die Dropdowns.
+                    -->
+
+                    <div id="card-rulings">
+
+                        <p>
+                            Loading rulings...
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     NFC STATUS
+                ======================================= -->
+
+                <section
+                    class="verification-box"
+                    id="verification"
+                >
+
+                    <div class="verification-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            NFC VERIFIED
+                        </strong>
+
+                        <p>
+                            Registered SCHACHICUSTOMS card entry
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     SHOP
+                ======================================= -->
+
+                <section
+                    class="shop-box"
+                    id="shop-box"
+                    hidden
+                >
+
+                    <div class="shop-info">
+
+                        <span class="shop-label">
+                            AVAILABLE AT SCHACHICUSTOMS
+                        </span>
+
+                        <strong
+                            class="shop-price"
+                            id="shop-price"
+                        >
+                            €1.99
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        id="shop-link"
+                        class="shop-button"
+                    >
+                        View in Shop →
+                    </a>
+
+                </section>
+
+
+                <!-- ======================================
+                     DATABASE LINK
+                ======================================= -->
+
+                <section class="database-link-box">
+
+                    <div>
+
+                        <span>
+                            Looking for another card?
+                        </span>
+
+                        <p>
+                            Browse the complete SCHACHICUSTOMS Card Database.
+                        </p>
+
+                    </div>
+
+                    <a href="database.html">
+                        View Database →
+                    </a>
+
+                </section>
+
 
             </div>
 
@@ -118,7 +311,10 @@
     </main>
 
 
-    <!-- SCHACHICUSTOMS CARD SYSTEM -->
+    <!-- ======================================
+         JAVASCRIPT
+    ======================================= -->
+
     <script src="js/card.js"></script>
 
 </body>
