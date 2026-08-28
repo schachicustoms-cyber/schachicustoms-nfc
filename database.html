@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Card Database | SCHACHICUSTOMS</title>
+
+    <meta
+        name="description"
+        content="Browse the SCHACHICUSTOMS Card Database and find custom Oricas by card name or SCO-ID."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ======================================
+         HEADER
+    ======================================= -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="brand"
+            >
+
+                <div class="brand-name">
+                    SCHACHICUSTOMS
+                </div>
+
+                <div class="brand-tagline">
+                    ORICAS · TOKENS & MORE
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="database.html"
+                    class="active"
+                >
+                    Card Database
+                </a>
+
+                <a href="rulings.html">
+                    Basic Rulings
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- ======================================
+             GLOBAL CARD SEARCH
+        ======================================= -->
+
+        <div class="header-search">
+
+            <form id="database-header-search-form">
+
+                <input
+                    type="search"
+                    id="database-header-search-input"
+                    placeholder="Search by card name or SCO-ID..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================
+         DATABASE PAGE
+    ======================================= -->
+
+    <main class="database-page">
+
+
+        <!-- ======================================
+             PAGE INTRO
+        ======================================= -->
+
+        <section class="database-hero">
+
+            <span class="database-eyebrow">
+                SCHACHICUSTOMS CARD ARCHIVE
+            </span>
+
+
+            <h1>
+                Card Database
+            </h1>
+
+
+            <p>
+
+                Browse all registered SCHACHICUSTOMS cards,
+                search by card name or SCO-ID and open
+                individual card information, FAQs and rulings.
+
+            </p>
+
+        </section>
+
+
+        <!-- ======================================
+             DATABASE CONTROLS
+        ======================================= -->
+
+        <section class="database-controls">
+
+
+            <div class="database-search-wrapper">
+
+                <label
+                    for="database-search-input"
+                    class="database-control-label"
+                >
+                    SEARCH DATABASE
+                </label>
+
+
+                <div class="database-search-box">
+
+                    <input
+                        type="search"
+                        id="database-search-input"
+                        placeholder="Search Blade Knight, Breaker, SCO-004..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="database-clear-search"
+                        class="database-clear-button"
+                        hidden
+                    >
+                        CLEAR
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="database-filter-wrapper">
+
+                <span class="database-control-label">
+                    CARD TYPE
+                </span>
+
+
+                <div class="database-filter-buttons">
+
+                    <button
+                        type="button"
+                        class="database-filter-button active"
+                        data-filter="all"
+                    >
+                        ALL
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="database-filter-button"
+                        data-filter="Monster"
+                    >
+                        MONSTERS
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="database-filter-button"
+                        data-filter="Spell"
+                    >
+                        SPELLS
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="database-filter-button"
+                        data-filter="Trap"
+                    >
+                        TRAPS
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ======================================
+             DATABASE META
+        ======================================= -->
+
+        <section class="database-meta">
+
+            <div>
+
+                <span id="database-result-count">
+                    Loading cards...
+                </span>
+
+            </div>
+
+
+            <div class="database-sort-wrapper">
+
+                <label for="database-sort">
+                    SORT
+                </label>
+
+
+                <select id="database-sort">
+
+                    <option value="id-asc">
+                        SCO-ID ↑
+                    </option>
+
+                    <option value="id-desc">
+                        SCO-ID ↓
+                    </option>
+
+                    <option value="name-asc">
+                        Name A–Z
+                    </option>
+
+                    <option value="name-desc">
+                        Name Z–A
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             CARD GRID
+        ======================================= -->
+
+        <section
+            class="database-grid"
+            id="database-grid"
+        >
+
+            <div class="database-loading">
+
+                Loading SCHACHICUSTOMS database...
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             NO RESULTS
+        ======================================= -->
+
+        <section
+            class="database-empty"
+            id="database-empty"
+            hidden
+        >
+
+            <span>
+                NO RESULTS
+            </span>
+
+
+            <h2>
+                No cards found.
+            </h2>
+
+
+            <p>
+                Try another card name, SCO-ID or filter.
+            </p>
+
+
+            <button
+                type="button"
+                id="database-reset-button"
+                class="home-secondary-button"
+            >
+                RESET SEARCH
+            </button>
+
+        </section>
+
+
+        <!-- ======================================
+             DATABASE ERROR
+        ======================================= -->
+
+        <section
+            class="database-error"
+            id="database-error"
+            hidden
+        >
+
+            <span>
+                DATABASE ERROR
+            </span>
+
+
+            <h2>
+                Card database unavailable.
+            </h2>
+
+
+            <p>
+
+                The SCHACHICUSTOMS card database
+                could not be loaded.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================
+         FOOTER
+    ======================================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <strong>
+                    SCHACHICUSTOMS
+                </strong>
+
+                <span>
+                    ORICAS · TOKENS & MORE
+                </span>
+
+            </div>
+
+
+            <nav class="footer-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="database.html">
+                    Card Database
+                </a>
+
+                <a href="rulings.html">
+                    Basic Rulings
+                </a>
+
+                <a
+                    href="https://www.thegoatgermany.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GOATGermany ↗
+                </a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ======================================
+         DATABASE JAVASCRIPT
+    ======================================= -->
+
+    <script src="js/database.js"></script>
+
+
+</body>
+
+</html>
