@@ -494,5 +494,52 @@
                 }
             ]
         }
+    },
+
+    "SCO-008": {
+        "id": "SCO-008",
+        "aliases": [],
+        "name": "Kycoo the Ghost Destroyer",
+        "image": "images/cards/Kycoo the Ghost Destroyer.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": 4,
+        "type": "Spellcaster / Effect",
+        "atk": 1800,
+        "def": 700,
+        "effect": "Each time this card inflicts Battle Damage to your opponent’s Life Points, you can remove from play up to 2 Monster Cards in your opponent’s Graveyard. As long as this card remains face-up on the field, your opponent cannot remove from play any cards in either Graveyard.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Cards outside the Graveyard can still be banished",
+                    "text": "Effects that remove cards from the Field, Hand, or Deck from play may be used if “Kycoo the Ghost Destroyer” is active on the field."
+                },
+                {
+                    "title": "Monster destroyed by battle",
+                    "text": "If “Kycoo the Ghost Destroyer” destroys a monster and inflicts Battle Damage, the monster destroyed is not an eligible target for “Kycoo the Ghost Destroyer’s” effect."
+                }
+            ]
+        }
     }
 }
