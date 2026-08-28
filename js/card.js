@@ -83,14 +83,16 @@ async function loadCard() {
 
         if (card.rulings && card.rulings.length > 0) {
 
-            card.rulings.forEach(function(ruling, index) {
+            card.rulings.forEach(function (ruling, index) {
 
+                // Gesamter Ruling-Block
                 const rulingElement =
                     document.createElement("div");
 
                 rulingElement.classList.add("ruling-item");
 
 
+                // Nummer: 01, 02, 03 ...
                 const rulingNumber =
                     document.createElement("span");
 
@@ -100,6 +102,7 @@ async function loadCard() {
                     String(index + 1).padStart(2, "0");
 
 
+                // Ruling-Text
                 const rulingText =
                     document.createElement("p");
 
@@ -107,6 +110,7 @@ async function loadCard() {
                     ruling;
 
 
+                // Nummer und Text zusammensetzen
                 rulingElement.appendChild(
                     rulingNumber
                 );
@@ -115,6 +119,8 @@ async function loadCard() {
                     rulingText
                 );
 
+
+                // Ruling auf der Seite anzeigen
                 rulingsContainer.appendChild(
                     rulingElement
                 );
@@ -137,7 +143,7 @@ async function loadCard() {
 
 
         // ========================================
-        // BROWSER TITEL
+        // BROWSER-TITEL
         // ========================================
 
         document.title =
