@@ -20,7 +20,6 @@
 
         <div class="header-inner">
 
-            <!-- Klick auf Branding führt zur Startseite -->
             <a href="index.html" class="brand">
 
                 <div class="brand-name">
@@ -34,7 +33,6 @@
             </a>
 
 
-            <!-- Navigation -->
             <nav class="main-nav">
 
                 <a href="index.html">
@@ -54,7 +52,10 @@
         </div>
 
 
-        <!-- Kartensuche -->
+        <!-- ======================================
+             CARD SEARCH
+        ======================================= -->
+
         <div class="header-search">
 
             <form id="card-search-form">
@@ -62,7 +63,7 @@
                 <input
                     type="search"
                     id="card-search-input"
-                    placeholder="Search card..."
+                    placeholder="Search by card name or SCO-ID..."
                     autocomplete="off"
                 >
 
@@ -87,21 +88,81 @@
 
 
             <!-- ======================================
-                 CARD IMAGE
+                 LEFT COLUMN
+                 CARD + SHOP
             ======================================= -->
 
-            <div class="card-image">
+            <aside class="card-sidebar">
 
-                <img
-                    id="card-image"
-                    src=""
-                    alt="Card"
+                <!-- CARD IMAGE -->
+
+                <div class="card-image">
+
+                    <img
+                        id="card-image"
+                        src=""
+                        alt="Card"
+                    >
+
+                </div>
+
+
+                <!-- ======================================
+                     SHOP
+                ======================================= -->
+
+                <section
+                    class="card-shop"
+                    id="shop-box"
                 >
 
-            </div>
+                    <span class="shop-label">
+                        AVAILABLE AT SCHACHICUSTOMS
+                    </span>
+
+
+                    <div class="shop-product">
+
+                        <span
+                            class="shop-card-name"
+                            id="shop-card-name"
+                        >
+                            Loading...
+                        </span>
+
+                        <strong
+                            class="shop-price"
+                            id="shop-price"
+                        >
+                            €1.99
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        id="shop-link"
+                        class="shop-button"
+                    >
+                        VIEW IN SHOP →
+                    </a>
+
+
+                    <div
+                        id="shop-coming-soon"
+                        class="shop-coming-soon"
+                    >
+                        SHOP COMING SOON
+                    </div>
+
+                </section>
+
+            </aside>
 
 
             <!-- ======================================
+                 RIGHT COLUMN
                  CARD INFORMATION
             ======================================= -->
 
@@ -109,7 +170,7 @@
 
 
                 <p class="card-label">
-                    SCHACHICUSTOMS NFC CARD
+                    SCHACHICUSTOMS ORICA
                 </p>
 
 
@@ -188,26 +249,129 @@
                     <div class="section-heading">
 
                         <div>
-                            <h2>Rulings & FAQ</h2>
+
+                            <h2>
+                                Rulings & FAQ
+                            </h2>
 
                             <p>
                                 Individual card interactions and rulings.
                             </p>
+
                         </div>
 
                     </div>
 
-
-                    <!--
-                        JavaScript erstellt hier später
-                        automatisch die Dropdowns.
-                    -->
 
                     <div id="card-rulings">
 
                         <p>
                             Loading rulings...
                         </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     SOURCES
+                ======================================= -->
+
+                <section
+                    class="sources-section"
+                    id="sources-section"
+                >
+
+                    <span class="resource-label">
+                        SOURCES & RESOURCES
+                    </span>
+
+                    <h2>
+                        Ruling Sources
+                    </h2>
+
+                    <div id="card-sources">
+
+                        <a
+                            href="https://rulings.thegoatgermany.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="resource-link"
+                        >
+
+                            <div>
+
+                                <strong>
+                                    GOATGermany Rulings
+                                </strong>
+
+                                <p>
+                                    Further GOAT Format rulings and resources.
+                                </p>
+
+                            </div>
+
+                            <span>
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ======================================
+                     GOATGERMANY COMMUNITY
+                ======================================= -->
+
+                <section class="community-box">
+
+                    <div class="community-content">
+
+                        <span class="resource-label">
+                            GOAT FORMAT COMMUNITY
+                        </span>
+
+                        <h2>
+                            GOATGermany
+                        </h2>
+
+                        <p>
+                            More GOAT Format content, community resources
+                            and information from GOATGermany.
+                        </p>
+
+                    </div>
+
+
+                    <div class="community-actions">
+
+                        <a
+                            href="https://www.thegoatgermany.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="secondary-button"
+                        >
+                            VISIT GOATGERMANY ↗
+                        </a>
+
+
+                        <!--
+                            Wird später aktiviert,
+                            sobald der WhatsApp-Link vorliegt.
+                        -->
+
+                        <a
+                            href="#"
+                            id="whatsapp-link"
+                            class="whatsapp-button"
+                            hidden
+                        >
+                            JOIN WHATSAPP →
+                        </a>
 
                     </div>
 
@@ -243,44 +407,7 @@
 
 
                 <!-- ======================================
-                     SHOP
-                ======================================= -->
-
-                <section
-                    class="shop-box"
-                    id="shop-box"
-                    hidden
-                >
-
-                    <div class="shop-info">
-
-                        <span class="shop-label">
-                            AVAILABLE AT SCHACHICUSTOMS
-                        </span>
-
-                        <strong
-                            class="shop-price"
-                            id="shop-price"
-                        >
-                            €1.99
-                        </strong>
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        id="shop-link"
-                        class="shop-button"
-                    >
-                        View in Shop →
-                    </a>
-
-                </section>
-
-
-                <!-- ======================================
-                     DATABASE LINK
+                     DATABASE
                 ======================================= -->
 
                 <section class="database-link-box">
@@ -298,7 +425,7 @@
                     </div>
 
                     <a href="database.html">
-                        View Database →
+                        VIEW DATABASE →
                     </a>
 
                 </section>

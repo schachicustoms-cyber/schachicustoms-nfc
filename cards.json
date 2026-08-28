@@ -1,6 +1,10 @@
 {
-    "BK001": {
-        "id": "BK001",
+    "SCO-001": {
+        "id": "SCO-001",
+        "aliases": [
+            "BK001"
+        ],
+
         "name": "Blade Knight",
         "image": "images/cards/Blade Knight.jpg",
 
@@ -15,7 +19,7 @@
         "effect": "Gains 400 ATK while you have 1 or less cards in your hand. If you control no other monsters, the effects of Flip monsters destroyed by battle with this card are negated.",
 
         "custom": {
-            "series": "SCHACHICUSTOMS",
+            "series": "SCHACHICUSTOMS ORICA",
             "status": "verified"
         },
 
@@ -23,6 +27,19 @@
             "available": true,
             "price": "1.99",
             "url": ""
+        },
+
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
         },
 
         "rulings": [

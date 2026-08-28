@@ -2,8 +2,18 @@
 // SCHACHICUSTOMS – NFC CARD SYSTEM
 // ========================================
 
-const params = new URLSearchParams(window.location.search);
-const cardId = params.get("id");
+
+// ========================================
+// URL PARAMETER
+// ========================================
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const requestedCardId =
+    params.get("id");
 
 
 // ========================================
@@ -14,92 +24,108 @@ async function loadCard() {
 
     try {
 
-        const response = await fetch("cards.json");
+        const response =
+            await fetch("cards.json");
 
         if (!response.ok) {
-            throw new Error("Database could not be loaded.");
+
+            throw new Error(
+                "Database could not be loaded."
+            );
+
         }
 
-        const cards = await response.json();
+        const cards =
+            await response.json();
 
 
-        // Prüfen, ob Karten-ID existiert
-        if (!cardId || !cards[cardId]) {
+        // ========================================
+        // SUCHEN, WELCHE KARTE ANGEFORDERT WURDE
+        // ========================================
+
+        const result =
+            findCardByIdOrAlias(
+                cards,
+                requestedCardId
+            );
+
+
+        // Keine Karte gefunden
+        if (!result) {
+
             showNotFound();
+
             setupSearch(cards);
+
             return;
+
         }
 
 
-        const card = cards[cardId];
+        const card =
+            result.card;
+
+        const realId =
+            result.id;
 
 
         // ========================================
-        // BASISDATEN
+        // ALTE IDs AUF NEUE ID UMLEITEN
         // ========================================
 
-        document.getElementById("card-name").textContent =
-            card.name;
+        if (
+            requestedCardId &&
+            requestedCardId.toLowerCase() !==
+            realId.toLowerCase()
+        ) {
 
-        document.getElementById("card-id").textContent =
-            card.id;
+            const newUrl =
+                "card.html?id=" +
+                encodeURIComponent(realId);
 
-        document.getElementById("card-image").src =
-            card.image;
+            window.history.replaceState(
+                {},
+                "",
+                newUrl
+            );
 
-        document.getElementById("card-image").alt =
-            card.name;
-
-        document.getElementById("card-attribute").textContent =
-            card.attribute;
-
-        document.getElementById("card-level").textContent =
-            card.level;
-
-        document.getElementById("card-type").textContent =
-            card.type;
-
-        document.getElementById("card-atk").textContent =
-            card.atk;
-
-        document.getElementById("card-def").textContent =
-            card.def;
+        }
 
 
         // ========================================
-        // CARD EFFECT
+        // KARTE LADEN
         // ========================================
 
-        document.getElementById("card-effect").textContent =
-            card.effect || "No effect information available.";
+        renderCard(card);
 
+        renderRulings(
+            card.rulings
+        );
 
-        // ========================================
-        // RULINGS ALS DROPDOWN
-        // ========================================
+        renderVerification(
+            card
+        );
 
-        renderRulings(card.rulings);
+        renderShop(
+            card
+        );
 
+        renderSources(
+            card
+        );
 
-        // ========================================
-        // NFC VERIFICATION
-        // ========================================
-
-        renderVerification(card);
-
-
-        // ========================================
-        // SHOP
-        // ========================================
-
-        renderShop(card);
+        renderCommunity(
+            card
+        );
 
 
         // ========================================
         // SUCHE
         // ========================================
 
-        setupSearch(cards);
+        setupSearch(
+            cards
+        );
 
 
         // ========================================
@@ -107,7 +133,8 @@ async function loadCard() {
         // ========================================
 
         document.title =
-            card.name + " | SCHACHICUSTOMS";
+            card.name +
+            " | SCHACHICUSTOMS";
 
 
     } catch (error) {
@@ -125,130 +152,359 @@ async function loadCard() {
 
 
 // ========================================
-// RULINGS RENDERN
+// KARTE NACH ID ODER ALIAS FINDEN
+// ========================================
+
+function findCardByIdOrAlias(
+    cards,
+    requestedId
+) {
+
+    if (!requestedId) {
+
+        return null;
+
+    }
+
+
+    const query =
+        requestedId
+            .trim()
+            .toLowerCase();
+
+
+    // ========================================
+    // DIREKTE HAUPT-ID
+    // ========================================
+
+    for (
+        const [id, card]
+        of Object.entries(cards)
+    ) {
+
+        if (
+            id.toLowerCase() === query
+        ) {
+
+            return {
+                id: id,
+                card: card
+            };
+
+        }
+
+    }
+
+
+    // ========================================
+    // ALIAS SUCHEN
+    // z.B. BK001 → SCO-001
+    // ========================================
+
+    for (
+        const [id, card]
+        of Object.entries(cards)
+    ) {
+
+        if (
+            Array.isArray(card.aliases)
+        ) {
+
+            const aliasMatch =
+                card.aliases.some(
+                    alias =>
+                        alias
+                            .toLowerCase() ===
+                        query
+                );
+
+
+            if (aliasMatch) {
+
+                return {
+                    id: id,
+                    card: card
+                };
+
+            }
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+// ========================================
+// BASISDATEN RENDERN
+// ========================================
+
+function renderCard(card) {
+
+    setText(
+        "card-name",
+        card.name
+    );
+
+    setText(
+        "card-id",
+        card.id
+    );
+
+
+    const image =
+        document.getElementById(
+            "card-image"
+        );
+
+    image.src =
+        card.image;
+
+    image.alt =
+        card.name;
+
+
+    setText(
+        "card-attribute",
+        card.attribute
+    );
+
+    setText(
+        "card-level",
+        card.level
+    );
+
+    setText(
+        "card-type",
+        card.type
+    );
+
+    setText(
+        "card-atk",
+        card.atk
+    );
+
+    setText(
+        "card-def",
+        card.def
+    );
+
+
+    setText(
+        "card-effect",
+        card.effect ||
+        "No effect information available."
+    );
+
+}
+
+
+// ========================================
+// RULINGS
 // ========================================
 
 function renderRulings(rulings) {
 
     const container =
-        document.getElementById("card-rulings");
+        document.getElementById(
+            "card-rulings"
+        );
 
-    container.innerHTML = "";
+
+    container.innerHTML =
+        "";
 
 
-    if (!Array.isArray(rulings) || rulings.length === 0) {
+    if (
+        !Array.isArray(rulings) ||
+        rulings.length === 0
+    ) {
 
         const empty =
-            document.createElement("p");
+            document.createElement(
+                "p"
+            );
 
-        empty.className = "no-rulings";
+        empty.className =
+            "no-rulings";
 
         empty.textContent =
             "No rulings available.";
 
-        container.appendChild(empty);
+        container.appendChild(
+            empty
+        );
 
         return;
+
     }
 
 
-    rulings.forEach((ruling) => {
+    rulings.forEach(
+        ruling => {
 
-        // Gesamtes Dropdown
-        const item =
-            document.createElement("div");
+            // ========================================
+            // WRAPPER
+            // ========================================
 
-        item.className =
-            "ruling-dropdown";
-
-
-        // Klickbarer Titel
-        const button =
-            document.createElement("button");
-
-        button.className =
-            "ruling-toggle";
-
-        button.type =
-            "button";
-
-
-        // Titel
-        const title =
-            document.createElement("span");
-
-        title.className =
-            "ruling-title";
-
-        title.textContent =
-            ruling.title;
-
-
-        // Plus / Minus Symbol
-        const icon =
-            document.createElement("span");
-
-        icon.className =
-            "ruling-icon";
-
-        icon.textContent =
-            "+";
-
-
-        button.appendChild(title);
-        button.appendChild(icon);
-
-
-        // Ausklappbarer Text
-        const content =
-            document.createElement("div");
-
-        content.className =
-            "ruling-content";
-
-        content.hidden =
-            true;
-
-
-        const text =
-            document.createElement("p");
-
-        text.textContent =
-            ruling.text;
-
-
-        content.appendChild(text);
-
-
-        // Klickfunktion
-        button.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    !content.hidden;
-
-                content.hidden =
-                    isOpen;
-
-                icon.textContent =
-                    isOpen ? "+" : "−";
-
-                button.classList.toggle(
-                    "active",
-                    !isOpen
+            const item =
+                document.createElement(
+                    "div"
                 );
 
-            }
-        );
+            item.className =
+                "ruling-dropdown";
 
 
-        item.appendChild(button);
-        item.appendChild(content);
+            // ========================================
+            // BUTTON
+            // ========================================
 
-        container.appendChild(item);
+            const button =
+                document.createElement(
+                    "button"
+                );
 
-    });
+            button.className =
+                "ruling-toggle";
+
+            button.type =
+                "button";
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            // ========================================
+            // TITEL
+            // ========================================
+
+            const title =
+                document.createElement(
+                    "span"
+                );
+
+            title.className =
+                "ruling-title";
+
+            title.textContent =
+                ruling.title;
+
+
+            // ========================================
+            // PLUS / MINUS
+            // ========================================
+
+            const icon =
+                document.createElement(
+                    "span"
+                );
+
+            icon.className =
+                "ruling-icon";
+
+            icon.textContent =
+                "+";
+
+
+            button.appendChild(
+                title
+            );
+
+            button.appendChild(
+                icon
+            );
+
+
+            // ========================================
+            // TEXT
+            // ========================================
+
+            const content =
+                document.createElement(
+                    "div"
+                );
+
+            content.className =
+                "ruling-content";
+
+            content.hidden =
+                true;
+
+
+            const text =
+                document.createElement(
+                    "p"
+                );
+
+            text.textContent =
+                ruling.text;
+
+
+            content.appendChild(
+                text
+            );
+
+
+            // ========================================
+            // DROPDOWN FUNKTION
+            // ========================================
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const isOpen =
+                        button.getAttribute(
+                            "aria-expanded"
+                        ) ===
+                        "true";
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen)
+                    );
+
+
+                    content.hidden =
+                        isOpen;
+
+
+                    icon.textContent =
+                        isOpen
+                            ? "+"
+                            : "−";
+
+
+                    button.classList.toggle(
+                        "active",
+                        !isOpen
+                    );
+
+                }
+            );
+
+
+            item.appendChild(
+                button
+            );
+
+            item.appendChild(
+                content
+            );
+
+            container.appendChild(
+                item
+            );
+
+        }
+    );
 
 }
 
@@ -260,12 +516,15 @@ function renderRulings(rulings) {
 function renderVerification(card) {
 
     const verification =
-        document.getElementById("verification");
+        document.getElementById(
+            "verification"
+        );
 
 
     if (
         card.custom &&
-        card.custom.status === "verified"
+        card.custom.status ===
+        "verified"
     ) {
 
         verification.innerHTML = `
@@ -274,7 +533,9 @@ function renderVerification(card) {
             </div>
 
             <div>
-                <strong>NFC VERIFIED</strong>
+                <strong>
+                    NFC VERIFIED
+                </strong>
 
                 <p>
                     Registered SCHACHICUSTOMS card entry
@@ -290,7 +551,9 @@ function renderVerification(card) {
             </div>
 
             <div>
-                <strong>DATABASE ENTRY</strong>
+                <strong>
+                    DATABASE ENTRY
+                </strong>
 
                 <p>
                     SCHACHICUSTOMS card information
@@ -310,52 +573,110 @@ function renderVerification(card) {
 function renderShop(card) {
 
     const shopBox =
-        document.getElementById("shop-box");
+        document.getElementById(
+            "shop-box"
+        );
+
+    const shopCardName =
+        document.getElementById(
+            "shop-card-name"
+        );
 
     const shopPrice =
-        document.getElementById("shop-price");
+        document.getElementById(
+            "shop-price"
+        );
 
     const shopLink =
-        document.getElementById("shop-link");
+        document.getElementById(
+            "shop-link"
+        );
+
+    const comingSoon =
+        document.getElementById(
+            "shop-coming-soon"
+        );
 
 
-    // Standardmäßig verstecken
-    shopBox.hidden = true;
+    // Standardwerte
+    shopBox.hidden =
+        true;
+
+    shopLink.hidden =
+        true;
+
+    comingSoon.hidden =
+        true;
 
 
-    if (!card.shop) {
+    if (
+        !card.shop ||
+        !card.shop.available
+    ) {
+
         return;
+
     }
 
 
-    if (!card.shop.available) {
-        return;
-    }
+    // Shop anzeigen
+    shopBox.hidden =
+        false;
 
 
-    // Preis setzen
-    if (card.shop.price) {
+    // Kartenname
+    shopCardName.textContent =
+        card.name;
+
+
+    // Preis
+    if (
+        card.shop.price
+    ) {
 
         shopPrice.textContent =
-            "€" + card.shop.price;
+            "€" +
+            card.shop.price;
+
+    } else {
+
+        shopPrice.textContent =
+            "Price unavailable";
 
     }
 
 
-    /*
-        Shop wird erst angezeigt,
-        wenn auch eine echte URL vorhanden ist.
-    */
+    // ========================================
+    // SHOP URL EXISTIERT
+    // ========================================
 
     if (
         card.shop.url &&
-        card.shop.url.trim() !== ""
+        card.shop.url.trim() !==
+        ""
     ) {
 
         shopLink.href =
             card.shop.url;
 
-        shopBox.hidden =
+        shopLink.hidden =
+            false;
+
+        comingSoon.hidden =
+            true;
+
+    }
+
+    // ========================================
+    // NOCH KEINE SHOP URL
+    // ========================================
+
+    else {
+
+        shopLink.hidden =
+            true;
+
+        comingSoon.hidden =
             false;
 
     }
@@ -364,7 +685,145 @@ function renderShop(card) {
 
 
 // ========================================
-// CARD SEARCH
+// SOURCES
+// ========================================
+
+function renderSources(card) {
+
+    const section =
+        document.getElementById(
+            "sources-section"
+        );
+
+    const container =
+        document.getElementById(
+            "card-sources"
+        );
+
+
+    container.innerHTML =
+        "";
+
+
+    if (
+        !Array.isArray(card.sources) ||
+        card.sources.length === 0
+    ) {
+
+        section.hidden =
+            true;
+
+        return;
+
+    }
+
+
+    section.hidden =
+        false;
+
+
+    card.sources.forEach(
+        source => {
+
+            const link =
+                document.createElement(
+                    "a"
+                );
+
+
+            link.className =
+                "resource-link";
+
+            link.href =
+                source.url;
+
+            link.target =
+                "_blank";
+
+            link.rel =
+                "noopener noreferrer";
+
+
+            link.innerHTML = `
+                <div>
+
+                    <strong>
+                        ${escapeHtml(source.name)}
+                    </strong>
+
+                    <p>
+                        Further GOAT Format rulings
+                        and resources.
+                    </p>
+
+                </div>
+
+                <span>
+                    ↗
+                </span>
+            `;
+
+
+            container.appendChild(
+                link
+            );
+
+        }
+    );
+
+}
+
+
+// ========================================
+// COMMUNITY
+// ========================================
+
+function renderCommunity(card) {
+
+    const whatsapp =
+        document.getElementById(
+            "whatsapp-link"
+        );
+
+
+    whatsapp.hidden =
+        true;
+
+
+    if (
+        !card.community
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        card.community.whatsapp &&
+        card.community.whatsapp.trim() !==
+        ""
+    ) {
+
+        whatsapp.href =
+            card.community.whatsapp;
+
+        whatsapp.target =
+            "_blank";
+
+        whatsapp.rel =
+            "noopener noreferrer";
+
+        whatsapp.hidden =
+            false;
+
+    }
+
+}
+
+
+// ========================================
+// SEARCH
 // ========================================
 
 function setupSearch(cards) {
@@ -380,8 +839,13 @@ function setupSearch(cards) {
         );
 
 
-    if (!form || !input) {
+    if (
+        !form ||
+        !input
+    ) {
+
         return;
+
     }
 
 
@@ -391,6 +855,7 @@ function setupSearch(cards) {
 
             event.preventDefault();
 
+
             const query =
                 input.value
                     .trim()
@@ -398,51 +863,130 @@ function setupSearch(cards) {
 
 
             if (!query) {
+
                 return;
+
             }
 
 
-            // Zuerst exakte ID prüfen
-            const exactId =
-                Object.keys(cards).find(
-                    id =>
-                        id.toLowerCase() === query
+            // ========================================
+            // HAUPT-ID SUCHEN
+            // ========================================
+
+            for (
+                const [id, card]
+                of Object.entries(cards)
+            ) {
+
+                if (
+                    id.toLowerCase() ===
+                    query
+                ) {
+
+                    openCard(
+                        id
+                    );
+
+                    return;
+
+                }
+
+            }
+
+
+            // ========================================
+            // ALIAS SUCHEN
+            // ========================================
+
+            for (
+                const [id, card]
+                of Object.entries(cards)
+            ) {
+
+                if (
+                    Array.isArray(
+                        card.aliases
+                    )
+                ) {
+
+                    const match =
+                        card.aliases.some(
+                            alias =>
+                                alias
+                                    .toLowerCase() ===
+                                query
+                        );
+
+
+                    if (match) {
+
+                        openCard(
+                            id
+                        );
+
+                        return;
+
+                    }
+
+                }
+
+            }
+
+
+            // ========================================
+            // EXAKTER KARTENNAME
+            // ========================================
+
+            const exactName =
+                Object.entries(cards)
+                    .find(
+                        ([id, card]) =>
+                            card.name
+                                .toLowerCase() ===
+                            query
+                    );
+
+
+            if (exactName) {
+
+                openCard(
+                    exactName[0]
                 );
 
-
-            if (exactId) {
-
-                window.location.href =
-                    "card.html?id=" +
-                    encodeURIComponent(exactId);
-
                 return;
 
             }
 
 
-            // Danach Kartennamen durchsuchen
-            const result =
-                Object.values(cards).find(
-                    card =>
-                        card.name
-                            .toLowerCase()
-                            .includes(query)
+            // ========================================
+            // TEILWEISER KARTENNAME
+            // ========================================
+
+            const partialName =
+                Object.entries(cards)
+                    .find(
+                        ([id, card]) =>
+                            card.name
+                                .toLowerCase()
+                                .includes(query)
+                    );
+
+
+            if (partialName) {
+
+                openCard(
+                    partialName[0]
                 );
 
-
-            if (result) {
-
-                window.location.href =
-                    "card.html?id=" +
-                    encodeURIComponent(result.id);
-
                 return;
 
             }
 
 
-            // Kein Treffer
+            // ========================================
+            // KEIN TREFFER
+            // ========================================
+
             alert(
                 "No card found for: " +
                 input.value
@@ -455,39 +999,74 @@ function setupSearch(cards) {
 
 
 // ========================================
+// CARD ÖFFNEN
+// ========================================
+
+function openCard(id) {
+
+    window.location.href =
+        "card.html?id=" +
+        encodeURIComponent(id);
+
+}
+
+
+// ========================================
 // CARD NOT FOUND
 // ========================================
 
 function showNotFound() {
 
-    document.getElementById(
-        "card-name"
-    ).textContent =
-        "Card not found";
+    setText(
+        "card-name",
+        "Card not found"
+    );
 
 
-    document.getElementById(
-        "card-id"
-    ).textContent =
-        cardId || "No ID";
+    setText(
+        "card-id",
+        requestedCardId ||
+        "No ID"
+    );
 
 
-    document.getElementById(
-        "card-image"
-    ).style.display =
+    const image =
+        document.getElementById(
+            "card-image"
+        );
+
+    image.style.display =
         "none";
 
 
-    document.getElementById(
-        "card-effect"
-    ).textContent =
-        "No card information available.";
+    const shopBox =
+        document.getElementById(
+            "shop-box"
+        );
+
+    shopBox.hidden =
+        true;
+
+
+    setText(
+        "card-effect",
+        "No card information available."
+    );
 
 
     document.getElementById(
         "card-rulings"
     ).innerHTML =
-        "<p>No rulings available.</p>";
+        "<p class=\"no-rulings\">No rulings available.</p>";
+
+
+    const sources =
+        document.getElementById(
+            "sources-section"
+        );
+
+    sources.hidden =
+        true;
 
 
     document.getElementById(
@@ -498,7 +1077,9 @@ function showNotFound() {
         </div>
 
         <div>
-            <strong>CARD NOT FOUND</strong>
+            <strong>
+                CARD NOT FOUND
+            </strong>
 
             <p>
                 This card ID is not registered
@@ -516,10 +1097,10 @@ function showNotFound() {
 
 function showDatabaseError() {
 
-    document.getElementById(
-        "card-name"
-    ).textContent =
-        "Database Error";
+    setText(
+        "card-name",
+        "Database Error"
+    );
 
 
     document.getElementById(
@@ -530,7 +1111,9 @@ function showDatabaseError() {
         </div>
 
         <div>
-            <strong>DATABASE ERROR</strong>
+            <strong>
+                DATABASE ERROR
+            </strong>
 
             <p>
                 The SCHACHICUSTOMS card database
@@ -538,6 +1121,65 @@ function showDatabaseError() {
             </p>
         </div>
     `;
+
+}
+
+
+// ========================================
+// HELPER: TEXT SETZEN
+// ========================================
+
+function setText(
+    id,
+    value
+) {
+
+    const element =
+        document.getElementById(
+            id
+        );
+
+
+    if (!element) {
+
+        return;
+
+    }
+
+
+    element.textContent =
+        value ?? "-";
+
+}
+
+
+// ========================================
+// HELPER: HTML ESCAPEN
+// ========================================
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+        .replaceAll(
+            "\"",
+            "&quot;"
+        )
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
