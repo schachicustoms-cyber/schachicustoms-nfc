@@ -4,44 +4,35 @@
         "aliases": [
             "BK001"
         ],
-
         "name": "Blade Knight",
         "image": "images/cards/Blade Knight.jpg",
-
         "category": "Monster",
         "attribute": "LIGHT",
         "level": 4,
         "type": "Warrior / Effect",
-
         "atk": 1600,
         "def": 1000,
-
         "effect": "Gains 400 ATK while you have 1 or less cards in your hand. If you control no other monsters, the effects of Flip monsters destroyed by battle with this card are negated.",
-
         "custom": {
             "series": "SCHACHICUSTOMS ORICA",
             "status": "verified"
         },
-
         "shop": {
             "available": true,
             "price": "1.99",
             "url": ""
         },
-
         "sources": [
             {
                 "name": "GOATGermany Rulings",
                 "url": "https://rulings.thegoatgermany.de"
             }
         ],
-
         "community": {
             "name": "GOATGermany",
             "url": "https://www.thegoatgermany.de",
             "whatsapp": ""
         },
-
         "rulings": [
             {
                 "title": "Other monsters you control",
@@ -77,44 +68,35 @@
     "SCO-002": {
         "id": "SCO-002",
         "aliases": [],
-
         "name": "Black Luster Soldier - Envoy of the Beginning",
         "image": "images/cards/Black Luster Soldier - Envoy of the Beginning.jpg",
-
         "category": "Monster",
         "attribute": "LIGHT",
         "level": 8,
         "type": "Warrior / Effect",
-
         "atk": 3000,
         "def": 2500,
-
         "effect": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn, you can activate 1 of these effects.\n\n• Target 1 monster on the field; banish it. This card cannot attack the turn this effect is activated.\n\n• If this attacking card destroys an opponent’s monster by battle: It can make a second attack in a row.",
-
         "custom": {
             "series": "SCHACHICUSTOMS ORICA",
             "status": "verified"
         },
-
         "shop": {
             "available": true,
             "price": "1.99",
             "url": ""
         },
-
         "sources": [
             {
                 "name": "GOATGermany Rulings",
                 "url": "https://rulings.thegoatgermany.de"
             }
         ],
-
         "community": {
             "name": "GOATGermany",
             "url": "https://www.thegoatgermany.de",
             "whatsapp": ""
         },
-
         "rulings": [
             {
                 "title": "Different from Black Luster Soldier",
@@ -159,6 +141,74 @@
             {
                 "title": "Second attack must be consecutive",
                 "text": "When “Black Luster Soldier - Envoy of the Beginning” conducts a second attack using his second effect, his effect activates during the first attack’s Damage Step, and the attack is declared in the next Battle Step. The second attack must come consecutively after the first attack; other monsters’ attacks cannot come in-between."
+            }
+        ]
+    },
+
+    "SCO-003": {
+        "id": "SCO-003",
+        "aliases": [],
+        "name": "D.D. Warrior Lady",
+        "image": "images/cards/D.D. Warrior Lady.jpg",
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": 4,
+        "type": "Warrior / Effect",
+        "atk": 1500,
+        "def": 1600,
+        "effect": "After damage calculation, when this card battles an opponent’s monster: You can banish that monster, also banish this card.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": [
+            {
+                "title": "Effect is optional",
+                "text": "You don’t have to activate “D.D. Warrior Lady”’s effect if you don’t want to."
+            },
+            {
+                "title": "Interaction with Fiber Jar",
+                "text": "When your “D.D. Warrior Lady” attacks your opponent’s “Fiber Jar”, if you activate her effect then “Fiber Jar” is Step 1 of the chain, because it is mandatory, and “D.D. Warrior Lady” is Step 2 of the chain because it is an optional effect. “D.D. Warrior Lady” removes from play both monsters, and then resolve the effect of “Fiber Jar”. “D.D. Warrior Lady” and “Fiber Jar” are not shuffled into the Deck."
+            },
+            {
+                "title": "Interaction with Wall of Illusion",
+                "text": "When your “D.D. Warrior Lady” attacks “Wall of Illusion”, if you activate her effect then “Wall of Illusion” is Step 1 of the chain, because it is mandatory, and “D.D. Warrior Lady” is Step 2 of the chain because it is an optional effect. The effect of “D.D. Warrior Lady” removes from play both monsters, then the effect of “Wall of Illusion” disappears, since the attacking monster is no longer on the field."
+            },
+            {
+                "title": "D.D. Warrior Lady vs. D.D. Warrior Lady",
+                "text": "If your “D.D. Warrior Lady” attacks your opponent’s “D.D. Warrior Lady”, your “D.D. Warrior Lady” is Step 1 of the chain and your opponent’s is Step 2, and when Step 2 resolves, both “D.D. Warrior Lady” cards are removed from play and your “D.D. Warrior Lady”’s effect disappears. This ruling would also apply to attacking “Kelbek”."
+            },
+            {
+                "title": "Battle damage is not required",
+                "text": "Any time “D.D. Warrior Lady” is involved in battle, the controller of “D.D. Warrior Lady” may use its effect, regardless of if it inflicts damage."
+            },
+            {
+                "title": "Effect negation after battle",
+                "text": "If “D.D. Warrior Lady” is destroyed by “Dark Ruler Ha Des”, “Dark Balter the Terrible,” or a monster equipped with “Wicked Breaking Flamberge – Baou,” “D.D. Warrior Lady” will not receive its effect."
+            },
+            {
+                "title": "Effect does not target",
+                "text": "“D.D. Warrior Lady’s” effect is not targeting."
+            },
+            {
+                "title": "Interaction with Skill Drain",
+                "text": "If “Skill Drain” is active when “D.D. Warrior Lady’s” effect resolves, the effect of “D.D. Warrior Lady” is negated."
             }
         ]
     }
