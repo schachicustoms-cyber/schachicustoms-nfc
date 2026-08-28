@@ -40,7 +40,7 @@ async function loadCard() {
 
 
         // ========================================
-        // SUCHEN, WELCHE KARTE ANGEFORDERT WURDE
+        // ANGEFORDERTE KARTE SUCHEN
         // ========================================
 
         const result =
@@ -50,7 +50,6 @@ async function loadCard() {
             );
 
 
-        // Keine Karte gefunden
         if (!result) {
 
             showNotFound();
@@ -93,7 +92,7 @@ async function loadCard() {
 
 
         // ========================================
-        // KARTE LADEN
+        // KARTE RENDERN
         // ========================================
 
         renderCard(card);
@@ -129,7 +128,7 @@ async function loadCard() {
 
 
         // ========================================
-        // BROWSER TITEL
+        // BROWSER-TITEL
         // ========================================
 
         document.title =
@@ -174,7 +173,7 @@ function findCardByIdOrAlias(
 
 
     // ========================================
-    // DIREKTE HAUPT-ID
+    // HAUPT-ID
     // ========================================
 
     for (
@@ -197,8 +196,7 @@ function findCardByIdOrAlias(
 
 
     // ========================================
-    // ALIAS SUCHEN
-    // z.B. BK001 → SCO-001
+    // ALIAS
     // ========================================
 
     for (
@@ -318,24 +316,17 @@ function renderRulings(rulings) {
         "";
 
 
+    // ========================================
+    // KEINE RULINGS
+    // ========================================
+
     if (
-        !Array.isArray(rulings) ||
-        rulings.length === 0
+        !rulings ||
+        typeof rulings !== "object"
     ) {
 
-        const empty =
-            document.createElement(
-                "p"
-            );
-
-        empty.className =
-            "no-rulings";
-
-        empty.textContent =
-            "No rulings available.";
-
-        container.appendChild(
-            empty
+        renderNoRulings(
+            container
         );
 
         return;
@@ -343,167 +334,345 @@ function renderRulings(rulings) {
     }
 
 
+    const individual =
+        Array.isArray(
+            rulings.individual
+        )
+            ? rulings.individual
+            : [];
+
+
+    const netrep =
+        Array.isArray(
+            rulings.netrep
+        )
+            ? rulings.netrep
+            : [];
+
+
+    if (
+        individual.length === 0 &&
+        netrep.length === 0
+    ) {
+
+        renderNoRulings(
+            container
+        );
+
+        return;
+
+    }
+
+
+    // ========================================
+    // INDIVIDUAL CARD FAQs
+    // ========================================
+
+    if (
+        individual.length > 0
+    ) {
+
+        renderRulingGroup(
+            container,
+            "Individual Card FAQs",
+            individual,
+            "individual"
+        );
+
+    }
+
+
+    // ========================================
+    // NETREP RULINGS
+    // ========================================
+
+    if (
+        netrep.length > 0
+    ) {
+
+        renderRulingGroup(
+            container,
+            "Netrep Rulings",
+            netrep,
+            "netrep"
+        );
+
+    }
+
+}
+
+
+// ========================================
+// RULING-GRUPPE RENDERN
+// ========================================
+
+function renderRulingGroup(
+    container,
+    heading,
+    rulings,
+    groupType
+) {
+
+    const group =
+        document.createElement(
+            "div"
+        );
+
+    group.className =
+        "ruling-group " +
+        "ruling-group-" +
+        groupType;
+
+
+    // ========================================
+    // GRUPPENÜBERSCHRIFT
+    // ========================================
+
+    const groupHeading =
+        document.createElement(
+            "div"
+        );
+
+    groupHeading.className =
+        "ruling-group-heading";
+
+
+    const headingLabel =
+        document.createElement(
+            "span"
+        );
+
+    headingLabel.className =
+        "ruling-group-label";
+
+    headingLabel.textContent =
+        heading;
+
+
+    groupHeading.appendChild(
+        headingLabel
+    );
+
+
+    group.appendChild(
+        groupHeading
+    );
+
+
+    // ========================================
+    // EINZELNE RULINGS
+    // ========================================
+
     rulings.forEach(
         ruling => {
 
-            // ========================================
-            // WRAPPER
-            // ========================================
-
             const item =
-                document.createElement(
-                    "div"
+                createRulingDropdown(
+                    ruling
                 );
 
-            item.className =
-                "ruling-dropdown";
-
-
-            // ========================================
-            // BUTTON
-            // ========================================
-
-            const button =
-                document.createElement(
-                    "button"
-                );
-
-            button.className =
-                "ruling-toggle";
-
-            button.type =
-                "button";
-
-            button.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-
-            // ========================================
-            // TITEL
-            // ========================================
-
-            const title =
-                document.createElement(
-                    "span"
-                );
-
-            title.className =
-                "ruling-title";
-
-            title.textContent =
-                ruling.title;
-
-
-            // ========================================
-            // PLUS / MINUS
-            // ========================================
-
-            const icon =
-                document.createElement(
-                    "span"
-                );
-
-            icon.className =
-                "ruling-icon";
-
-            icon.textContent =
-                "+";
-
-
-            button.appendChild(
-                title
-            );
-
-            button.appendChild(
-                icon
-            );
-
-
-            // ========================================
-            // TEXT
-            // ========================================
-
-            const content =
-                document.createElement(
-                    "div"
-                );
-
-            content.className =
-                "ruling-content";
-
-            content.hidden =
-                true;
-
-
-            const text =
-                document.createElement(
-                    "p"
-                );
-
-            text.textContent =
-                ruling.text;
-
-
-            content.appendChild(
-                text
-            );
-
-
-            // ========================================
-            // DROPDOWN FUNKTION
-            // ========================================
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    const isOpen =
-                        button.getAttribute(
-                            "aria-expanded"
-                        ) ===
-                        "true";
-
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        String(!isOpen)
-                    );
-
-
-                    content.hidden =
-                        isOpen;
-
-
-                    icon.textContent =
-                        isOpen
-                            ? "+"
-                            : "−";
-
-
-                    button.classList.toggle(
-                        "active",
-                        !isOpen
-                    );
-
-                }
-            );
-
-
-            item.appendChild(
-                button
-            );
-
-            item.appendChild(
-                content
-            );
-
-            container.appendChild(
+            group.appendChild(
                 item
             );
 
         }
+    );
+
+
+    container.appendChild(
+        group
+    );
+
+}
+
+
+// ========================================
+// EINZELNES DROPDOWN ERSTELLEN
+// ========================================
+
+function createRulingDropdown(
+    ruling
+) {
+
+    const item =
+        document.createElement(
+            "div"
+        );
+
+    item.className =
+        "ruling-dropdown";
+
+
+    // ========================================
+    // BUTTON
+    // ========================================
+
+    const button =
+        document.createElement(
+            "button"
+        );
+
+    button.className =
+        "ruling-toggle";
+
+    button.type =
+        "button";
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+
+    // ========================================
+    // TITEL
+    // ========================================
+
+    const title =
+        document.createElement(
+            "span"
+        );
+
+    title.className =
+        "ruling-title";
+
+    title.textContent =
+        ruling.title ||
+        "Ruling";
+
+
+    // ========================================
+    // PLUS / MINUS
+    // ========================================
+
+    const icon =
+        document.createElement(
+            "span"
+        );
+
+    icon.className =
+        "ruling-icon";
+
+    icon.textContent =
+        "+";
+
+
+    button.appendChild(
+        title
+    );
+
+    button.appendChild(
+        icon
+    );
+
+
+    // ========================================
+    // INHALT
+    // ========================================
+
+    const content =
+        document.createElement(
+            "div"
+        );
+
+    content.className =
+        "ruling-content";
+
+    content.hidden =
+        true;
+
+
+    const text =
+        document.createElement(
+            "p"
+        );
+
+    text.textContent =
+        ruling.text ||
+        "";
+
+
+    content.appendChild(
+        text
+    );
+
+
+    // ========================================
+    // DROPDOWN-FUNKTION
+    // ========================================
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                button.getAttribute(
+                    "aria-expanded"
+                ) ===
+                "true";
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+
+            content.hidden =
+                isOpen;
+
+
+            icon.textContent =
+                isOpen
+                    ? "+"
+                    : "−";
+
+
+            button.classList.toggle(
+                "active",
+                !isOpen
+            );
+
+        }
+    );
+
+
+    item.appendChild(
+        button
+    );
+
+    item.appendChild(
+        content
+    );
+
+
+    return item;
+
+}
+
+
+// ========================================
+// KEINE RULINGS
+// ========================================
+
+function renderNoRulings(
+    container
+) {
+
+    const empty =
+        document.createElement(
+            "p"
+        );
+
+    empty.className =
+        "no-rulings";
+
+    empty.textContent =
+        "No rulings available.";
+
+
+    container.appendChild(
+        empty
     );
 
 }
@@ -598,7 +767,6 @@ function renderShop(card) {
         );
 
 
-    // Standardwerte
     shopBox.hidden =
         true;
 
@@ -619,17 +787,14 @@ function renderShop(card) {
     }
 
 
-    // Shop anzeigen
     shopBox.hidden =
         false;
 
 
-    // Kartenname
     shopCardName.textContent =
         card.name;
 
 
-    // Preis
     if (
         card.shop.price
     ) {
@@ -646,10 +811,6 @@ function renderShop(card) {
     }
 
 
-    // ========================================
-    // SHOP URL EXISTIERT
-    // ========================================
-
     if (
         card.shop.url &&
         card.shop.url.trim() !==
@@ -665,13 +826,7 @@ function renderShop(card) {
         comingSoon.hidden =
             true;
 
-    }
-
-    // ========================================
-    // NOCH KEINE SHOP URL
-    // ========================================
-
-    else {
+    } else {
 
         shopLink.hidden =
             true;
@@ -870,7 +1025,7 @@ function setupSearch(cards) {
 
 
             // ========================================
-            // HAUPT-ID SUCHEN
+            // ID
             // ========================================
 
             for (
@@ -895,7 +1050,7 @@ function setupSearch(cards) {
 
 
             // ========================================
-            // ALIAS SUCHEN
+            // ALIAS
             // ========================================
 
             for (
@@ -983,10 +1138,6 @@ function setupSearch(cards) {
             }
 
 
-            // ========================================
-            // KEIN TREFFER
-            // ========================================
-
             alert(
                 "No card found for: " +
                 input.value
@@ -999,7 +1150,7 @@ function setupSearch(cards) {
 
 
 // ========================================
-// CARD ÖFFNEN
+// KARTE ÖFFNEN
 // ========================================
 
 function openCard(id) {

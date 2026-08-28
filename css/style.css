@@ -504,13 +504,12 @@ main {
     font-size: 15px;
     line-height: 1.75;
 
-    /* Behält Absätze und Zeilenumbrüche aus cards.json bei */
     white-space: pre-line;
 }
 
 
 /* =========================================
-   RULINGS
+   RULINGS & FAQ
 ========================================= */
 
 .card-rulings {
@@ -518,8 +517,63 @@ main {
 }
 
 #card-rulings {
-    border-top: 1px solid #29292f;
+    width: 100%;
 }
+
+
+/* =========================================
+   RULING GROUPS
+========================================= */
+
+.ruling-group {
+    margin-top: 26px;
+}
+
+.ruling-group:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   RULING GROUP HEADING
+========================================= */
+
+.ruling-group-heading {
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #29292f;
+}
+
+.ruling-group-label {
+    display: inline-block;
+
+    color: #8d8d97;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NETREP GROUP
+========================================= */
+
+.ruling-group-netrep {
+    margin-top: 34px;
+    padding-top: 4px;
+}
+
+.ruling-group-netrep .ruling-group-label {
+    color: #b3b3bc;
+}
+
+
+/* =========================================
+   RULING DROPDOWNS
+========================================= */
 
 .ruling-dropdown {
     border-bottom: 1px solid #29292f;
@@ -552,6 +606,11 @@ main {
     font-weight: 600;
 }
 
+
+/* =========================================
+   PLUS / MINUS ICON
+========================================= */
+
 .ruling-icon {
     width: 28px;
     height: 28px;
@@ -581,6 +640,11 @@ main {
     border-color: #62626d;
 }
 
+
+/* =========================================
+   RULING CONTENT
+========================================= */
+
 .ruling-content {
     padding: 0 48px 20px 2px;
 }
@@ -593,6 +657,11 @@ main {
     font-size: 14px;
     line-height: 1.75;
 }
+
+
+/* =========================================
+   NO RULINGS
+========================================= */
 
 .no-rulings {
     padding: 20px 0;
@@ -955,6 +1024,10 @@ main {
         border-right: 0;
     }
 
+    .ruling-group-netrep {
+        margin-top: 30px;
+    }
+
     .database-link-box {
         align-items: flex-start;
         flex-direction: column;
@@ -1001,6 +1074,11 @@ main {
 
     .ruling-content {
         padding-right: 0;
+    }
+
+    .ruling-group-label {
+        font-size: 9px;
+        letter-spacing: 1.4px;
     }
 
     .community-box {
