@@ -541,5 +541,52 @@
                 }
             ]
         }
+    },
+
+    "SCO-009": {
+        "id": "SCO-009",
+        "aliases": [],
+        "name": "Mystic Swordsman LV2",
+        "image": "images/cards/Mystic Swordsman LV2.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": 2,
+        "type": "Warrior / Effect",
+        "atk": 900,
+        "def": 0,
+        "effect": "At the start of the Damage Step, if this card attacked a face-down Defense Position monster: Destroy that monster. During the End Phase, if this card destroyed a monster by battle this turn: You can send this face-up card to the Graveyard; Special Summon 1 “Mystic Swordsman LV4” from your hand or Deck.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Destroying a face-down Defense Position monster",
+                    "text": "If “Mystic Swordsman LV2” attacks a face-down Defense Position monster, that monster is destroyed by “Mystic Swordsman LV2”’s effect, not as a result of battle. So you cannot use its second effect to Special Summon “Mystic Swordsman LV4” during the End Phase."
+                },
+                {
+                    "title": "Level Up condition can be reset",
+                    "text": "If a level monster fulfills its condition to Special Summon the next-highest level (for example, if “Armed Dragon LV5” destroys a monster as a result of battle), and the level monster is then flipped face-down, or removed from play permanently, or sent to the Graveyard and then Special Summoned from the Graveyard, then its condition is reset and it is no longer considered to have met the condition to level up to the next level."
+                }
+            ],
+            "netrep": []
+        }
     }
 }
