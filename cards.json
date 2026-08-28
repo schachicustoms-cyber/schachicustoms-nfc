@@ -1,9 +1,7 @@
 {
     "SCO-001": {
         "id": "SCO-001",
-        "aliases": [
-            "BK001"
-        ],
+        "aliases": ["BK001"],
         "name": "Blade Knight",
         "image": "images/cards/Blade Knight.jpg",
         "category": "Monster",
@@ -386,6 +384,57 @@
                 {
                     "title": "Separate Battle Steps",
                     "text": "Each of “Asura Priest’s” attacks are separate Battle Steps."
+                }
+            ]
+        }
+    },
+
+    "SCO-006": {
+        "id": "SCO-006",
+        "aliases": [],
+        "name": "Don Zaloog",
+        "image": "images/cards/Don Zaloog.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": 4,
+        "type": "Warrior / Effect",
+        "atk": 1400,
+        "def": 1500,
+        "effect": "When this card inflicts battle damage to your opponent: You can activate 1 of these effects;\n\n• Discard 1 random card from their hand.\n• Send the top 2 cards of their Deck to the GY.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Effect is optional",
+                    "text": "The effect of “Don Zaloog” is not mandatory."
+                },
+                {
+                    "title": "Attacking or being attacked",
+                    "text": "“Don Zaloog’s” effect triggers if it inflicts Battle Damage, regardless of if it is attacking or is attacked."
+                },
+                {
+                    "title": "Interaction with Witch of the Black Forest",
+                    "text": "If “Don Zaloog” attacks and destroys “Witch of the Black Forest” and inflicts Battle Damage, “Don Zaloog’s” effect will resolve first as it triggers on Battle Damage."
                 }
             ]
         }
