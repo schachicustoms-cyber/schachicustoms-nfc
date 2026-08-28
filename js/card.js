@@ -3,15 +3,11 @@
 const params = new URLSearchParams(window.location.search);
 const cardId = params.get("id");
 
-
-// ========================================
-// CARD DATABASE LADEN
-// ========================================
-
 async function loadCard() {
 
     try {
 
+        // Datenbank laden
         const response = await fetch("cards.json");
 
         if (!response.ok) {
@@ -20,15 +16,16 @@ async function loadCard() {
 
         const cards = await response.json();
 
-
-        // Prüfen, ob eine gültige Karten-ID vorhanden ist
+        // Karten-ID prüfen
         if (!cardId || !cards[cardId]) {
             showNotFound();
             return;
         }
 
-
         const card = cards[cardId];
+
+        console.log("SCHACHICUSTOMS Card:", card);
+        console.log("Rulings loaded:", card.rulings);
 
 
         // ========================================
@@ -67,92 +64,90 @@ async function loadCard() {
         // CARD EFFECT
         // ========================================
 
-        document.getElementById("card-effect").textContent =
+        const effectElement =
+            document.getElementById("card-effect");
+
+        effectElement.textContent =
             card.effect || "No effect information available.";
 
 
         // ========================================
-        // RULINGS & FAQ
+        // RULINGS
         // ========================================
 
         const rulingsContainer =
             document.getElementById("card-rulings");
 
+        // Alten Inhalt vollständig entfernen
         rulingsContainer.innerHTML = "";
 
 
-        if (card.rulings && card.rulings.length > 0) {
+        if (Array.isArray(card.rulings) && card.rulings.length > 0) {
 
-            card.rulings.forEach(function (ruling, index) {
+            card.rulings.forEach((ruling, index) => {
 
-                // Gesamter Ruling-Block
-                const rulingElement =
+                const item =
                     document.createElement("div");
 
-                rulingElement.classList.add("ruling-item");
+                item.className = "ruling-item";
 
 
-                // Nummer: 01, 02, 03 ...
-                const rulingNumber =
+                const number =
                     document.createElement("span");
 
-                rulingNumber.classList.add("ruling-number");
+                number.className = "ruling-number";
 
-                rulingNumber.textContent =
+                number.textContent =
                     String(index + 1).padStart(2, "0");
 
 
-                // Ruling-Text
-                const rulingText =
+                const text =
                     document.createElement("p");
 
-                rulingText.textContent =
-                    ruling;
+                text.textContent = ruling;
 
 
-                // Nummer und Text zusammensetzen
-                rulingElement.appendChild(
-                    rulingNumber
-                );
+                item.appendChild(number);
+                item.appendChild(text);
 
-                rulingElement.appendChild(
-                    rulingText
-                );
-
-
-                // Ruling auf der Seite anzeigen
-                rulingsContainer.appendChild(
-                    rulingElement
-                );
+                rulingsContainer.appendChild(item);
 
             });
 
         } else {
 
-            const noRulings =
+            const empty =
                 document.createElement("p");
 
-            noRulings.textContent =
+            empty.textContent =
                 "No rulings available.";
 
-            rulingsContainer.appendChild(
-                noRulings
-            );
+            rulingsContainer.appendChild(empty);
 
         }
 
 
         // ========================================
-        // BROWSER-TITEL
+        // VERIFICATION
         // ========================================
 
+        document.getElementById("verification").innerHTML = `
+            <strong>✓ NFC VERIFIED</strong>
+            <p>Authentic SCHACHICUSTOMS card entry</p>
+        `;
+
+
+        // Browser-Titel
         document.title =
             card.name + " | SCHACHICUSTOMS";
 
 
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "SCHACHICUSTOMS Database Error:",
+            error
+        );
 
         showDatabaseError();
 
@@ -162,7 +157,7 @@ async function loadCard() {
 
 
 // ========================================
-// KARTE NICHT GEFUNDEN
+// CARD NOT FOUND
 // ========================================
 
 function showNotFound() {
@@ -185,7 +180,7 @@ function showNotFound() {
 
 
 // ========================================
-// DATENBANKFEHLER
+// DATABASE ERROR
 // ========================================
 
 function showDatabaseError() {
@@ -195,17 +190,14 @@ function showDatabaseError() {
 
     document.getElementById("verification").innerHTML = `
         <strong>DATABASE ERROR</strong>
-        <p>
-            The SCHACHICUSTOMS card database
-            could not be loaded.
-        </p>
+        <p>The SCHACHICUSTOMS card database could not be loaded.</p>
     `;
 
 }
 
 
 // ========================================
-// SYSTEM STARTEN
+// START
 // ========================================
 
 loadCard();
