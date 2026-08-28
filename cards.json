@@ -439,4 +439,61 @@
             ]
         }
     }
+  },
+
+    "SCO-007": {
+        "id": "SCO-007",
+        "aliases": [],
+        "name": "Exiled Force",
+        "image": "images/cards/Exiled Force.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": 4,
+        "type": "Warrior / Effect",
+        "atk": 1000,
+        "def": 1000,
+        "effect": "By Tributing this face-up card, destroy 1 monster on the field.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Only monster on the field",
+                    "text": "You cannot activate the effect of “Exiled Force” if it is the only monster on the field."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Activating immediately upon Summon",
+                    "text": "“Exiled Force” may activate its effect immediately upon summoning before the opponent may respond to the summoning."
+                },
+                {
+                    "title": "Tributing itself is a cost",
+                    "text": "Tributing itself is a cost of using “Exiled Force’s” effect."
+                },
+                {
+                    "title": "Spell Speed 1",
+                    "text": "“Exiled Force” has an activated effect and is Spell Speed 1."
+                }
+            ]
+        }
+    }
 }
