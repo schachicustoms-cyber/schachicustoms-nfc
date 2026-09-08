@@ -1072,5 +1072,108 @@
             "individual": [],
             "netrep": []
         }
+    },
+
+    "SCO-019": {
+        "id": "SCO-019",
+        "aliases": [],
+        "name": "Premature Burial",
+        "image": "images/cards/Premature Burial.jpg",
+        "category": "Spell",
+        "type": "Equip Spell",
+        "effect": "Activate this card by paying 800 LP, then target 1 monster in your Graveyard; Special Summon that target in Attack Position and equip it with this card. When this card is destroyed, destroy the equipped monster.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Interaction with Tailor of the Fickle",
+                    "text": "You cannot activate “Tailor of the Fickle” selecting “Premature Burial” as a target."
+                },
+                {
+                    "title": "Interaction with Fairy’s Hand Mirror",
+                    "text": "You cannot activate “Fairy’s Hand Mirror” to make your opponent chose a different monster when they activate “Premature Burial”."
+                },
+                {
+                    "title": "Interaction with Imperial Order",
+                    "text": "If you activate this card and your opponent chains “Imperial Order” the effect of “Premature Burial” is negated and the Special Summon never occurs, but you still pay 800 Life Points. If “Imperial Order” is activated after “Premature Burial” is already on the field, the equipped monster is NOT destroyed and “Premature Burial” remains on the field meaninglessly. If “Premature Burial” is then destroyed while “Imperial Order” is still active, the monster remains on the field, but if the monster is destroyed, “Premature Burial” is also destroyed, since it is still equipped to that monster."
+                },
+                {
+                    "title": "Equipped monster is flipped face-down",
+                    "text": "If the equipped monster is flipped face-down “Premature Burial” is destroyed but the monster is not destroyed."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Targeting effect",
+                    "text": "“Premature Burial” is a targeting effect targeting a card in the Graveyard."
+                },
+                {
+                    "title": "Interaction with Necrovalley",
+                    "text": "An already active “Premature Burial” is not negated when a “Necrovalley” is newly activated."
+                }
+            ]
+        }
+    },
+
+    "SCO-020": {
+        "id": "SCO-020",
+        "aliases": [],
+        "name": "Reinforcement of the Army",
+        "image": "images/cards/Reinforcement of the Army.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Add 1 Level 4 or lower Warrior monster from your Deck to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Selected monster must be revealed",
+                    "text": "You must reveal the monster you select with this card’s effect to your opponent before placing it in your hand."
+                },
+                {
+                    "title": "No valid Warrior remaining in the Deck",
+                    "text": "You can activate this card even if you have no Level 4 or lower Warrior-Type monsters remaining in your Deck, but you must let your opponent see your Deck to confirm. Shuffle your Deck afterwards."
+                }
+            ],
+            "netrep": []
+        }
     }
 }
