@@ -811,4 +811,49 @@
             ]
         }
     }
+,
+
+    "SCO-013": {
+        "id": "SCO-013",
+        "aliases": [],
+        "name": "Delinquent Duo",
+        "image": "images/cards/Delinquent Duo.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Pay 1000 Life Points. Your opponent randomly selects and discards 1 card from his/her hand and then selects and discards another card from his/her hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Opponent has only 1 card",
+                    "text": "This card may be activated if your opponent has only 1 card in his/her hand."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Effect must fully resolve before discarded card effects",
+                    "text": "If the first card discarded by the effect of “Delinquent Duo” has an effect that activates on being discarded or sent to the Graveyard, “Delinquent Duo’s” effect must still fully resolve before the new effect begins a new Chain."
+                }
+            ]
+        }
+    }
 }
