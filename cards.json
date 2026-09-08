@@ -901,5 +901,44 @@
             ],
             "netrep": []
         }
+    },
+
+    "SCO-015": {
+        "id": "SCO-015",
+        "aliases": [],
+        "name": "Heavy Storm",
+        "image": "images/cards/Heavy Storm.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Destroy all Spell and Trap Cards on the field.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Field Spell Cards",
+                    "text": "“Heavy Storm” does destroy Field Spell Cards."
+                }
+            ]
+        }
     }
 }
