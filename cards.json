@@ -588,5 +588,65 @@
             ],
             "netrep": []
         }
+    },
+
+    "SCO-010": {
+        "id": "SCO-010",
+        "aliases": [],
+        "name": "Zombyra the Dark",
+        "image": "images/cards/Zombyra.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": 4,
+        "type": "Warrior / Effect",
+        "atk": 2100,
+        "def": 400,
+        "effect": "This card cannot attack your opponent directly. If this card destroys a monster by battle: This card loses 200 ATK.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Effect resets when flipped face-down",
+                    "text": "If this monster is flipped face-down its effect is reset (its ATK will again be 2100)."
+                },
+                {
+                    "title": "Battle damage and direct attacks",
+                    "text": "You can damage your opponent’s Life Points by attacking an opponent’s monster with a lower ATK than “Zombyra the Dark”, but you cannot attack directly with him."
+                },
+                {
+                    "title": "Interaction with Dark Spirit of the Silent",
+                    "text": "If “Zombyra the Dark” is the target of “Dark Spirit of the Silent” and your opponent controls no monsters, it may attack directly."
+                },
+                {
+                    "title": "Timing of the ATK reduction",
+                    "text": "The reduction in ATK occurs immediately after the opposing monster is destroyed."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Interaction with Shooting Star Bow - Ceal",
+                    "text": "“Zombyra the Dark” equipped with “Shooting Star Bow - Ceal” may not attack directly."
+                }
+            ]
+        }
     }
 }
