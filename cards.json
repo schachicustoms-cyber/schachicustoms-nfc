@@ -1488,5 +1488,181 @@
             ],
             "netrep": []
         }
+    },
+
+    "SCO-026": {
+        "id": "SCO-026",
+        "aliases": [],
+        "name": "Sakuretsu Armor",
+        "image": "images/cards/Sakuretsu Armor.jpg",
+        "category": "Trap",
+        "type": "Normal Trap",
+        "effect": "When an opponent’s monster declares an attack: Target the attacking monster; destroy that target.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Targeting effect",
+                    "text": "“Sakuretsu Armor” targets 1 monster."
+                },
+                {
+                    "title": "Interaction with Book of Moon",
+                    "text": "If the turn player chains “Book of Moon” to “Sakuretsu Armor” to flip the attacking monster face-down, then the attacking monster is not destroyed by “Sakuretsu Armor”."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-027": {
+        "id": "SCO-027",
+        "aliases": [],
+        "name": "Solemn Judgment",
+        "image": "images/cards/Solemn Judgment.jpg",
+        "category": "Trap",
+        "type": "Counter Trap",
+        "effect": "Pay half of your Life Points. Negate an activation of a Spell / Trap Card / Normal Summon / Flip Summon / Special Summon and destroy the Spell Card, Trap Card, or Summoned monster.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Special Summons from card effects",
+                    "text": "“Solemn Judgment” can not be used to negate a Special Summon if that Special Summon occurs as a result of another card effect."
+                },
+                {
+                    "title": "Negated Special Summon monsters",
+                    "text": "Special Summon monsters like “Dark Necrofear” that have their summons negated by “Solemn Judgment” are not considered properly summoned and may not be Special Summoned from the Graveyard."
+                }
+            ]
+        }
+    },
+
+    "SCO-028": {
+        "id": "SCO-028",
+        "aliases": [],
+        "name": "Torrential Tribute",
+        "image": "images/cards/Torrential Tribute.jpg",
+        "category": "Trap",
+        "type": "Normal Trap",
+        "effect": "When a monster(s) is Summoned: Destroy all monsters on the field.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Activation after a Summon",
+                    "text": "“Torrential Tribute” is activated after a monster is Summoned; it is not chained to the Summon. So you cannot activate “Torrential Tribute” when “Jinzo” is Summoned."
+                },
+                {
+                    "title": "Summons through another card’s effect",
+                    "text": "“Torrential Tribute” can be activated after a monster is Summoned through another card’s effect, such as “Monster Reborn”, “Scapegoat”, “Cyber Jar” (if Flip Summoned), or “Call of the Haunted”."
+                },
+                {
+                    "title": "Activation after a Flip Summon",
+                    "text": "“Torrential Tribute” can be activated after a Flip Summon, but it does not negate the Flip Effect (it is chained to the Flip Effect)."
+                },
+                {
+                    "title": "Cannot be activated during the Damage Step",
+                    "text": "“Torrential Tribute” cannot be activated during the Damage Step. This prohibits “Torrential Tribute” from being used against monsters Special Summoned by “Mystic Tomato”, “Giant Rat”, “Nimble Momonga”, “Masked Dragon”, and other such cards that Special Summon a monster when destroyed as a result of battle, as well as “Cyber Jar” or “Morphing Jar #2” that is flipped face-up by an attack."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-029": {
+        "id": "SCO-029",
+        "aliases": [],
+        "name": "Trap Dustshoot",
+        "image": "images/cards/Trap Dustshoot.jpg",
+        "category": "Trap",
+        "type": "Normal Trap",
+        "effect": "You can only activate this card when your opponent has 4 or more cards in their hand. Look at your opponent’s hand, then select 1 Monster Card and return it to its owners’s Deck. Then shuffle the Deck.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Interaction with Exchange",
+                    "text": "You can select your own card that was taken by your opponent with “Exchange”. The card returns to the owner’s deck (yours, in this case)."
+                }
+            ],
+            "netrep": []
+        }
     }
 }
