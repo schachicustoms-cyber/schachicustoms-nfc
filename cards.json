@@ -991,5 +991,52 @@
                 }
             ]
         }
+    },
+
+    "SCO-017": {
+        "id": "SCO-017",
+        "aliases": [],
+        "name": "Nobleman of Crossout",
+        "image": "images/cards/Nobleman of Crossout.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Destroy 1 face-down monster and remove it from play. If the monster is a Flip Effect Monster, both players must check their respective Decks and remove all monsters of the same name from play. Then shuffle the Decks.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Flip Effects are not activated",
+                    "text": "If the targeted monster is a Flip Effect Monster, it is not flipped face-up and its Flip Effect is not activated. Both players must reveal their Decks to each other to verify that all cards of the same name as the Flip Effect Monster are removed from play."
+                },
+                {
+                    "title": "Cards never go to the Graveyard",
+                    "text": "The targeted monster, and any cards of the same name if the target was a Flip Effect Monster, are removed from play and never go to the Graveyard, so the effects of cards like “Sangan” will not activate."
+                },
+                {
+                    "title": "Cards in the hand or on the field",
+                    "text": "Cards of the same name in your hand or on the field are NOT removed from play."
+                }
+            ],
+            "netrep": []
+        }
     }
 }
