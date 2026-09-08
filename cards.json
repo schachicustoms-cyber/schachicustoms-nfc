@@ -1175,5 +1175,77 @@
             ],
             "netrep": []
         }
+    },
+
+    "SCO-021": {
+        "id": "SCO-021",
+        "aliases": [],
+        "name": "Snatch Steal",
+        "image": "images/cards/Snatch Steal.jpg",
+        "category": "Spell",
+        "type": "Equip Spell",
+        "effect": "Take control of a monster on your opponent’s side of the field that is equipped with this card. Increase your opponent’s Life Points by 1000 points during each of their Standby Phases.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Interaction with Different Dimension Gate",
+                    "text": "When your opponent’s monster on your side of the field that you control with “Change of Heart” or “Snatch Steal” is removed with “Different Dimension Gate”, it returns to your side of the field when “Different Dimension Gate” is destroyed, and then immediately returns to your opponent’s side of the field."
+                },
+                {
+                    "title": "Interaction with Gearfried the Swordmaster",
+                    "text": "If your opponent equips “Snatch Steal” to your “Gearfried the Swordmaster”, the effect of “Snatch Steal” resolves first and control changes. Then the effect of “Gearfried the Swordmaster” activates and your opponent gets to select which monster is destroyed."
+                },
+                {
+                    "title": "Interaction with Interdimensional Matter Transporter",
+                    "text": "If you control your opponent’s monster because of “Change of Heart” or “Snatch Steal”, and remove the monster with “Interdimensional Matter Transporter”, the monster returns to your side of the field, then immediately returns to your opponent’s side of the field."
+                },
+                {
+                    "title": "Interaction with Ojama Trio",
+                    "text": "When your opponent activates “Snatch Steal”, and you chain “Ojama Trio” to fill up his/her remaining Monster Zones, then there is no room for the stolen monster, and it is destroyed."
+                },
+                {
+                    "title": "Interaction with Remove Brainwashing",
+                    "text": "When “Snatch Steal” is active, the +1000 Life Points effect is applied even if “Remove Brainwashing” has returned control of the monster to the original owner."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Multiple copies of Snatch Steal",
+                    "text": "If more than one “Snatch Steal” is equipped to the same monster, the later “Snatch Steal” will take precedence for purposes of determining control."
+                },
+                {
+                    "title": "Snatch Steal leaves the field",
+                    "text": "If “Snatch Steal” leaves the field, the monster equipped with “Snatch Steal” will return to the control of the previous controller."
+                },
+                {
+                    "title": "Equipped monster is turned face-down",
+                    "text": "If the monster equipped with “Snatch Steal” is turned face-down, “Snatch Steal” will be sent to the Graveyard and the monster will remain under the control of the controller of “Snatch Steal.”"
+                },
+                {
+                    "title": "Interaction with Creature Swap",
+                    "text": "If a monster equipped with “Snatch Steal” changes control via “Creature Swap,” “Snatch Steal” will remain equipped to the original monster, but control will not shift back. The opponent of the controller of “Snatch Steal” will continue to regain 1000 LP per Standby Phase as long as “Snatch Steal” remains on the field."
+                }
+            ]
+        }
     }
 }
