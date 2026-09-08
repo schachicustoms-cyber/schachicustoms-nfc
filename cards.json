@@ -1038,5 +1038,39 @@
             ],
             "netrep": []
         }
+    },
+
+    "SCO-018": {
+        "id": "SCO-018",
+        "aliases": [],
+        "name": "Pot of Greed",
+        "image": "images/cards/Pot of Greed.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Draw 2 cards.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "3.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": []
+        }
     }
 }
