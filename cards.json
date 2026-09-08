@@ -648,5 +648,43 @@
                 }
             ]
         }
+    },
+
+    "SCO-011": {
+        "id": "SCO-011",
+        "aliases": [],
+        "name": "D.D. Assailant",
+        "image": "images/cards/D.D. Assailant.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": 4,
+        "type": "Warrior / Effect",
+        "atk": 1700,
+        "def": 1600,
+        "effect": "After damage calculation, when this card is destroyed by battle with an opponent's monster: Banish that monster, also banish this card.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": []
+        }
     }
 }
