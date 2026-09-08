@@ -940,5 +940,56 @@
                 }
             ]
         }
+    },
+
+    "SCO-016": {
+        "id": "SCO-016",
+        "aliases": [],
+        "name": "Mystical Space Typhoon",
+        "image": "images/cards/Mystical Space Typhoon.jpg",
+        "category": "Spell",
+        "type": "Quick-Play Spell",
+        "effect": "Target 1 Spell/Trap on the field; destroy that target.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "1.99",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Can be activated in any phase",
+                    "text": "“Mystical Space Typhoon” may be activated in any phase."
+                },
+                {
+                    "title": "Cannot be activated during the Damage Step",
+                    "text": "“Mystical Space Typhoon” may not be activated during the Damage Step."
+                },
+                {
+                    "title": "Targeting effect",
+                    "text": "“Mystical Space Typhoon” is a targeting effect."
+                },
+                {
+                    "title": "Interaction with Call of the Haunted",
+                    "text": "If “Mystical Space Typhoon” is activated in a chain with the activation of “Call of the Haunted,” “Mystical Space Typhoon” will destroy the “Call of the Haunted” before “Call of the Haunted” Special Summons a monster. “Call of the Haunted’s” effect will then disappear. If “Call of the Haunted” is activated in a chain with a “Mystical Space Typhoon” that targets “Call of the Haunted,” “Call of the Haunted” will resolve first, Special Summoning a monster. “Mystical Space Typhoon” will then resolve destroying the “Call of the Haunted.” If “Call of the Haunted” is not negated at this point, the monster Special Summoned by “Call of the Haunted” will be destroyed."
+                }
+            ]
+        }
     }
 }
