@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GOAT Extra Deck | SCHACHICUSTOMS</title>
+    <title>GOAT Fusion Deck | SCHACHICUSTOMS</title>
 
     <meta
         name="description"
-        content="A fixed 15-card GOAT Format Extra Deck by SCHACHICUSTOMS."
+        content="A fixed 15-card GOAT Fusion Deck by SCHACHICUSTOMS."
     >
 
     <link rel="stylesheet" href="css/style.css">
@@ -46,11 +46,15 @@
 
         <span class="database-eyebrow">FIXED 15-CARD SET</span>
 
-        <h1>GOAT Extra Deck</h1>
+        <h1>GOAT Fusion Deck</h1>
 
         <p class="extra-deck-intro">
-            A ready-to-use Extra Deck for GOAT Format. Select any card
+            A ready-to-use Fusion Deck for GOAT Format. Select any card
             below to open its complete database entry.
+        </p>
+
+        <p class="product-quality-note">
+            Premium quality · Common rarity · Matte finish · Custom anime card back
         </p>
 
         <div class="extra-deck-summary">
@@ -79,7 +83,7 @@
             <div class="extra-deck-list-header">
 
                 <div>
-                    <span class="section-eyebrow">FULL EXTRA DECK</span>
+                    <span class="section-eyebrow">FULL FUSION DECK</span>
                     <h2 id="goat-extra-deck-list-title">15 cards</h2>
                 </div>
 
@@ -102,16 +106,58 @@
             Includes 3 copies of Thousand-Eyes Restrict.
         </p>
 
+        <fieldset
+            class="product-options deck-nfc-options"
+            data-nfc-option-group
+            data-nfc-button="goat-fusion-deck-add"
+            data-nfc-base-id="deck:goat-extra"
+            data-nfc-base-details="Fixed 15-card set"
+        >
+            <legend>Choose your version</legend>
+
+            <label class="product-option">
+                <input
+                    type="radio"
+                    name="goat-fusion-deck-nfc-option"
+                    value="nfc"
+                    data-nfc-option
+                    data-nfc-label="With NFC tag"
+                    checked
+                >
+                <span class="product-option-circle" aria-hidden="true"></span>
+                <span>
+                    <strong>With NFC tag</strong>
+                    <small>€24.00 · Same price</small>
+                </span>
+            </label>
+
+            <label class="product-option">
+                <input
+                    type="radio"
+                    name="goat-fusion-deck-nfc-option"
+                    value="without-nfc"
+                    data-nfc-option
+                    data-nfc-label="Without NFC tag"
+                >
+                <span class="product-option-circle" aria-hidden="true"></span>
+                <span>
+                    <strong>Without NFC tag</strong>
+                    <small>€24.00 · Same price</small>
+                </span>
+            </label>
+        </fieldset>
+
         <button
             type="button"
             class="shop-button extra-deck-add"
             data-cart-add
-            data-cart-id="deck:goat-extra"
-            data-cart-name="GOAT Extra Deck"
+            id="goat-fusion-deck-add"
+            data-cart-id="deck:goat-extra:nfc"
+            data-cart-name="GOAT Fusion Deck"
             data-cart-price="24.00"
             data-cart-image="images/cards/Thousand-Eyes Restrict.jpg"
             data-cart-url="goat-extra-deck.html"
-            data-cart-details="Fixed 15-card set"
+            data-cart-details="Fixed 15-card set · With NFC tag"
         >
             ADD TO CART — €24.00
         </button>
@@ -149,6 +195,7 @@
 <script src="js/card-url.js"></script>
 <script src="js/goat-extra-deck.js"></script>
 <script src="js/cart.js"></script>
+<script src="js/nfc-options.js"></script>
 
 </body>
 </html>

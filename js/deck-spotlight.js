@@ -34,10 +34,16 @@ const deckCatalog = [
         name: "Chaos Turbo",
         url: "chaos-turbo-deck.html",
         description:
-            "The deck page is ready for the upcoming SCHACHICUSTOMS Chaos Turbo list.",
-        status: "In preparation",
-        available: false,
-        previewIds: []
+            "A complete GOAT Format Chaos Turbo list, presented through the SCHACHICUSTOMS card archive.",
+        status: "Decklist available",
+        available: true,
+        previewIds: [
+            "SCO-054", "SCO-054",
+            "SCO-053", "SCO-053", "SCO-053",
+            "SCO-052", "SCO-052", "SCO-052",
+            "SCO-063",
+            "SCO-065"
+        ]
     },
     {
         name: "Burn",

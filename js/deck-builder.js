@@ -40,7 +40,12 @@ async function loadDeckBuilder() {
         const data = await response.json();
 
         builderState.cards = Object.values(data)
-            .filter(card => card.shop && card.shop.available)
+            .filter(
+                card =>
+                    card.shop &&
+                    card.shop.available &&
+                    !isFusionMonster(card)
+            )
             .sort((first, second) => first.name.localeCompare(second.name));
 
         builderState.cardsById = new Map(
@@ -290,6 +295,17 @@ function clearDeck() {
 function addCustomDeckToCart() {
     const entries = getDeckEntries();
     const cardCount = getDeckCardCount();
+    const selectedNfcOption =
+        document.querySelector(
+            "[data-custom-deck-nfc-option]:checked"
+        );
+    const withNfc =
+        !selectedNfcOption ||
+        selectedNfcOption.value === "nfc";
+    const nfcLabel =
+        withNfc
+            ? "With NFC tag"
+            : "Without NFC tag";
 
     if (!entries.length || !window.SchachiCart) {
         setBuilderStatus("Add at least one card before adding this deck to the cart.");
@@ -301,11 +317,20 @@ function addCustomDeckToCart() {
         .join("|");
 
     const result = window.SchachiCart.add({
-        id: "custom-deck:" + deckSignature,
+        id: "custom-deck:" +
+            deckSignature +
+            ":" +
+            (
+                withNfc
+                    ? "nfc"
+                    : "without-nfc"
+            ),
         name: "Custom Deck",
         price: CUSTOM_DECK_PRICE,
         url: "custom-deck.html",
-        details: String(cardCount) + " cards · custom selection",
+        details: String(cardCount) +
+            " cards · custom selection · " +
+            nfcLabel,
         orderDetails: entries
             .map(
                 entry =>
@@ -316,7 +341,9 @@ function addCustomDeckToCart() {
                     entry.card.id +
                     ")"
             )
-            .join(", "),
+            .join(", ") +
+            " · " +
+            nfcLabel,
         maxQuantity: 1
     });
 
@@ -417,6 +444,8 @@ function restoreDeck() {
         });
 
         trimDeckToMaximum();
+
+        persistDeck();
     } catch (error) {
         builderState.deck.clear();
     }
@@ -451,6 +480,13 @@ function getDeckCardCount() {
 
 function getCardPrice(card) {
     return Number.parseFloat(card.shop?.price) || 0;
+}
+
+function isFusionMonster(card) {
+    return (
+        String(card.category || "").toLowerCase() === "monster" &&
+        String(card.type || "").toLowerCase().includes("fusion")
+    );
 }
 
 function getCardSubtitle(card) {

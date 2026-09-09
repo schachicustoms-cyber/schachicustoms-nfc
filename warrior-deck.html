@@ -150,6 +150,51 @@
                 Includes the displayed 40-card Main Deck and 15-card Side Deck.
             </p>
 
+            <p class="product-quality-note">
+                Premium quality · Common rarity · Matte finish · Custom anime card back
+            </p>
+
+            <fieldset
+                class="product-options deck-nfc-options"
+                data-nfc-option-group
+                data-nfc-button="warrior-deck-add"
+                data-nfc-base-id="deck:warrior"
+                data-nfc-base-details="40-card Main Deck + 15-card Side Deck"
+            >
+                <legend>Choose your version</legend>
+
+                <label class="product-option">
+                    <input
+                        type="radio"
+                        name="warrior-deck-nfc-option"
+                        value="nfc"
+                        data-nfc-option
+                        data-nfc-label="With NFC tag"
+                        checked
+                    >
+                    <span class="product-option-circle" aria-hidden="true"></span>
+                    <span>
+                        <strong>With NFC tag</strong>
+                        <small>€79.00 · Same price</small>
+                    </span>
+                </label>
+
+                <label class="product-option">
+                    <input
+                        type="radio"
+                        name="warrior-deck-nfc-option"
+                        value="without-nfc"
+                        data-nfc-option
+                        data-nfc-label="Without NFC tag"
+                    >
+                    <span class="product-option-circle" aria-hidden="true"></span>
+                    <span>
+                        <strong>Without NFC tag</strong>
+                        <small>€79.00 · Same price</small>
+                    </span>
+                </label>
+            </fieldset>
+
         </div>
 
         <div class="deck-shop-product-actions">
@@ -160,12 +205,13 @@
                 type="button"
                 class="shop-button"
                 data-cart-add
-                data-cart-id="deck:warrior"
+                id="warrior-deck-add"
+                data-cart-id="deck:warrior:nfc"
                 data-cart-name="Warrior Deck"
                 data-cart-price="79.00"
                 data-cart-image="images/warrior-deck-title.png"
                 data-cart-url="warrior-deck.html"
-                data-cart-details="40-card Main Deck + 15-card Side Deck"
+                data-cart-details="40-card Main Deck + 15-card Side Deck · With NFC tag"
             >
                 ADD TO CART — €79.00
             </button>
@@ -205,6 +251,7 @@
 <script src="js/card-url.js"></script>
 <script src="js/warrior-deck.js"></script>
 <script src="js/cart.js"></script>
+<script src="js/nfc-options.js"></script>
 
 </body>
 </html>

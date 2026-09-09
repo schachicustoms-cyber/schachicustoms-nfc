@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaos Turbo | SCHACHICUSTOMS</title>
+
+    <title>Chaos Turbo Deck | SCHACHICUSTOMS</title>
+
+    <meta
+        name="description"
+        content="Explore the SCHACHICUSTOMS Chaos Turbo Deck with its 40-card Main Deck and 15-card Side Deck."
+    >
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,23 +34,187 @@
 
     </div>
 
+    <div class="header-search">
+
+        <form id="chaos-turbo-deck-search-form">
+
+            <input
+                type="search"
+                id="chaos-turbo-deck-search-input"
+                placeholder="Search by card name or SCO-ID..."
+                autocomplete="off"
+            >
+
+            <button type="submit">Search</button>
+
+        </form>
+
+    </div>
+
 </header>
 
-<main class="deck-placeholder-page">
+<main class="deck-page">
 
-    <section class="deck-placeholder-card">
+    <section class="deck-hero">
 
-        <span class="database-eyebrow">DECK ARCHIVE</span>
+        <img
+            class="deck-hero-image"
+            src="images/cards/Chaos Sorcerer.jpg"
+            alt="Chaos Sorcerer from the Chaos Turbo Deck."
+        >
 
-        <h1>Chaos Turbo</h1>
+        <div class="deck-hero-content">
 
-        <p>
-            This decklist is currently being prepared.
-        </p>
+            <span class="database-eyebrow">DECK SPOTLIGHT</span>
 
-        <a href="decks.html" class="home-secondary-button">
-            VIEW ALL DECKS
+            <h1>Chaos Turbo Deck</h1>
+
+            <p>
+                A flexible GOAT Format list built around Light and Dark
+                monsters, card advantage and Chaos Sorcerer.
+            </p>
+
+            <div class="deck-hero-meta" aria-label="Deck overview">
+                <span><strong>40</strong> Main Deck</span>
+                <span><strong>15</strong> Side Deck</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="deck-main-section">
+
+        <div class="deck-main-header">
+
+            <div>
+                <span class="section-eyebrow">MAIN DECK</span>
+                <h2>40 cards</h2>
+            </div>
+
+            <p>Select a card to open its entry.</p>
+
+        </div>
+
+        <div
+            class="deck-card-grid"
+            id="chaos-turbo-main-deck"
+        ></div>
+
+    </section>
+
+    <section class="deck-side-section">
+
+        <div class="deck-main-header">
+
+            <div>
+                <span class="section-eyebrow">SIDE DECK</span>
+                <h2>15 cards</h2>
+            </div>
+
+            <p>Select a card to open its entry.</p>
+
+        </div>
+
+        <div
+            class="deck-card-grid"
+            id="chaos-turbo-side-deck"
+        ></div>
+
+    </section>
+
+    <section class="deck-database-link">
+
+        <div>
+            <span>Explore individual card details</span>
+            <p>Find rulings, sources and NFC verification in the complete archive.</p>
+        </div>
+
+        <a href="database.html" class="home-secondary-button">
+            OPEN CARD DATABASE
         </a>
+
+    </section>
+
+    <section class="deck-shop-product">
+
+        <div>
+
+            <span class="section-eyebrow">PREBUILT DECK</span>
+
+            <h2>Chaos Turbo Deck</h2>
+
+            <p>
+                Includes the displayed 40-card Main Deck and 15-card Side Deck.
+            </p>
+
+            <p class="product-quality-note">
+                Premium quality · Common rarity · Matte finish · Custom anime card back
+            </p>
+
+            <fieldset
+                class="product-options deck-nfc-options"
+                data-nfc-option-group
+                data-nfc-button="chaos-turbo-deck-add"
+                data-nfc-base-id="deck:chaos-turbo"
+                data-nfc-base-details="40-card Main Deck + 15-card Side Deck"
+            >
+                <legend>Choose your version</legend>
+
+                <label class="product-option">
+                    <input
+                        type="radio"
+                        name="chaos-turbo-deck-nfc-option"
+                        value="nfc"
+                        data-nfc-option
+                        data-nfc-label="With NFC tag"
+                        checked
+                    >
+                    <span class="product-option-circle" aria-hidden="true"></span>
+                    <span>
+                        <strong>With NFC tag</strong>
+                        <small>€79.00 · Same price</small>
+                    </span>
+                </label>
+
+                <label class="product-option">
+                    <input
+                        type="radio"
+                        name="chaos-turbo-deck-nfc-option"
+                        value="without-nfc"
+                        data-nfc-option
+                        data-nfc-label="Without NFC tag"
+                    >
+                    <span class="product-option-circle" aria-hidden="true"></span>
+                    <span>
+                        <strong>Without NFC tag</strong>
+                        <small>€79.00 · Same price</small>
+                    </span>
+                </label>
+            </fieldset>
+
+        </div>
+
+        <div class="deck-shop-product-actions">
+
+            <strong>€79.00</strong>
+
+            <button
+                type="button"
+                class="shop-button"
+                data-cart-add
+                id="chaos-turbo-deck-add"
+                data-cart-id="deck:chaos-turbo:nfc"
+                data-cart-name="Chaos Turbo Deck"
+                data-cart-price="79.00"
+                data-cart-image="images/cards/Chaos Sorcerer.jpg"
+                data-cart-url="chaos-turbo-deck.html"
+                data-cart-details="40-card Main Deck + 15-card Side Deck · With NFC tag"
+            >
+                ADD TO CART — €79.00
+            </button>
+
+        </div>
 
     </section>
 
@@ -62,13 +233,23 @@
             <a href="index.html">Home</a>
             <a href="database.html">Card Database</a>
             <a href="rulings.html">Basic Rulings</a>
+            <a
+                href="https://www.thegoatgermany.de"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GOATGermany ↗
+            </a>
         </nav>
 
     </div>
 
 </footer>
 
+<script src="js/card-url.js"></script>
+<script src="js/chaos-turbo-deck.js"></script>
 <script src="js/cart.js"></script>
+<script src="js/nfc-options.js"></script>
 
 </body>
 </html>

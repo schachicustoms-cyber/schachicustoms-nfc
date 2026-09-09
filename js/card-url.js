@@ -46,9 +46,25 @@
 
     }
 
+    function createProductUrl(cardOrName) {
+
+        const slug =
+            createCardSlug(
+                cardOrName
+            );
+
+
+        return slug
+            ? "product.html?card=" +
+                encodeURIComponent(slug)
+            : "product.html";
+
+    }
+
 
     window.SchachiCardUrl = {
         create: createCardUrl,
+        product: createProductUrl,
         slug: createCardSlug
     };
 

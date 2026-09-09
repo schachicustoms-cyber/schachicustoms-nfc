@@ -2927,5 +2927,878 @@
             ],
             "other": []
         }
+    },
+    "SCO-052": {
+        "id": "SCO-052",
+        "aliases": [],
+        "name": "Gravekeeper’s Spy",
+        "image": "images/cards/Gravekeeper's Spy.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "3",
+        "type": "Spellcaster / Effect",
+        "atk": "1200",
+        "def": "2000",
+        "effect": "FLIP: Special Summon 1 \"Gravekeeper’s\" monster with 1500 or less ATK from your Deck.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Necrovalley and ATK",
+                    "text": "You can Special Summon a Gravekeeper’s monster whose ATK becomes higher than 1500 after it is Summoned. For example, with “Necrovalley” in play, you can Special Summon another “Gravekeeper’s Spy” even though its ATK becomes 1700 on the field."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-053": {
+        "id": "SCO-053",
+        "aliases": [],
+        "name": "Thunder Dragon",
+        "image": "images/cards/Thunder Dragon.jpg",
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": "5",
+        "type": "Thunder / Effect",
+        "atk": "1600",
+        "def": "1500",
+        "effect": "You can discard this card; add up to 2 \"Thunder Dragon\" from your Deck to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Banisher of the Light",
+                    "text": "You can discard “Thunder Dragon” to activate its effect even if it would not be sent to your Graveyard, such as while “Banisher of the Light” is face-up on the field."
+                },
+                {
+                    "title": "An opponent’s Thunder Dragon",
+                    "text": "If you have your opponent’s “Thunder Dragon” in your hand because of “Exchange”, you can discard it to activate its effect and add up to 2 “Thunder Dragon” from your Deck to your hand."
+                },
+                {
+                    "title": "Thunder Dragons already in the Graveyard",
+                    "text": "You can discard “Thunder Dragon” to activate its effect even if you already have 2 “Thunder Dragon” in your Graveyard."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Activated effect",
+                    "text": "“Thunder Dragon’s” effect is an activated effect."
+                },
+                {
+                    "title": "Searching zero copies",
+                    "text": "“Thunder Dragon” may be discarded to add 0 “Thunder Dragon” from the player’s Deck to their hand."
+                },
+                {
+                    "title": "Discarded by another effect",
+                    "text": "The effect of “Thunder Dragon” may not be activated if it is discarded through another effect."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-054": {
+        "id": "SCO-054",
+        "aliases": [],
+        "name": "Chaos Sorcerer",
+        "image": "images/cards/Chaos Sorcerer.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "6",
+        "type": "Spellcaster / Effect",
+        "atk": "2300",
+        "def": "2000",
+        "effect": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn: You can target 1 face-up monster on the field; banish that target. This card cannot attack the turn you activate this effect.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Activation timing",
+                    "text": "You can only activate “Chaos Sorcerer’s” effect during Main Phase 1 or Main Phase 2 of your turn."
+                },
+                {
+                    "title": "Once per turn",
+                    "text": "You can only activate “Chaos Sorcerer’s” effect once per turn."
+                },
+                {
+                    "title": "Attacking first",
+                    "text": "If “Chaos Sorcerer” attacks, you cannot use its effect during Main Phase 2. If it did not attack, you can activate its effect in Main Phase 2."
+                },
+                {
+                    "title": "Book of Moon",
+                    "text": "If you target a face-up monster with “Chaos Sorcerer’s” effect and “Book of Moon” is chained to flip that monster face-down, the effect disappears. The effect was still activated, so “Chaos Sorcerer” cannot attack or activate its effect again that turn."
+                },
+                {
+                    "title": "Magic Cylinder",
+                    "text": "If “Chaos Sorcerer” attacks and the attack is negated with “Magic Cylinder”, it cannot activate its effect in Main Phase 2."
+                },
+                {
+                    "title": "Replay",
+                    "text": "If “Chaos Sorcerer” attacks, a replay occurs, and you choose not to attack again, it cannot activate its effect in Main Phase 2."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-055": {
+        "id": "SCO-055",
+        "aliases": [],
+        "name": "Dekoichi the Battlechanted Locomotive",
+        "image": "images/cards/Dekoichi the Battlechanted Locomotive.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "4",
+        "type": "Machine / Effect",
+        "atk": "1400",
+        "def": "1000",
+        "effect": "FLIP: Draw 1 card, then draw 1 additional card for each face-up “Bokoichi the Freightening Car” you control.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Controlled Bokoichi",
+                    "text": "The effect of “Dekoichi the Battlechanted Locomotive” includes any of your opponent’s “Bokoichi the Freightening Car” that you control on your side of the field."
+                },
+                {
+                    "title": "Counting on resolution",
+                    "text": "The number of “Bokoichi the Freightening Car” on your side of the field is counted when this card’s effect resolves. If it is flipped and “Ring of Destruction” is chained to destroy the only “Bokoichi the Freightening Car” you control, you draw only 1 card."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-056": {
+        "id": "SCO-056",
+        "aliases": [],
+        "name": "Magician of Faith",
+        "image": "images/cards/Magician of Faith.jpg",
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": "1",
+        "type": "Spellcaster / Effect",
+        "atk": "300",
+        "def": "400",
+        "effect": "FLIP: Target 1 Spell in your GY; add that target to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-057": {
+        "id": "SCO-057",
+        "aliases": [],
+        "name": "Sangan",
+        "image": "images/cards/Sangan.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "3",
+        "type": "Fiend / Effect",
+        "atk": "1000",
+        "def": "600",
+        "effect": "If this card is sent from the field to the Graveyard: Add 1 monster with 1500 or less ATK from your Deck to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Revealing the selected monster",
+                    "text": "You must show your opponent the monster you select from your Deck for this card’s effect. If you have no eligible monsters, your opponent gets to see your Deck to verify."
+                },
+                {
+                    "title": "Sent from the field",
+                    "text": "The effect of “Sangan” only activates when it is sent from the field to the Graveyard, not from your hand or Deck, and not if it is banished."
+                },
+                {
+                    "title": "Negated Summon",
+                    "text": "If this card’s Summon is negated with “Horn of Heaven” or “Solemn Judgment”, you do not get its effect."
+                },
+                {
+                    "title": "Your opponent’s Sangan",
+                    "text": "If you control your opponent’s “Sangan” and it is destroyed, your opponent gets the effect because it activates in their Graveyard."
+                },
+                {
+                    "title": "Chaining",
+                    "text": "You can chain to “Sangan’s” effect."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-058": {
+        "id": "SCO-058",
+        "aliases": [],
+        "name": "Sinister Serpent",
+        "image": "images/cards/Sinister Serpent.jpg",
+        "category": "Monster",
+        "attribute": "WATER",
+        "level": "1",
+        "type": "Reptile / Effect",
+        "atk": "300",
+        "def": "250",
+        "effect": "During your Standby Phase, if this card is in your Graveyard: You can return it to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Optional effect",
+                    "text": "The effect of this card is optional; you do not have to return it to your hand."
+                },
+                {
+                    "title": "How it is sent to the Graveyard",
+                    "text": "The effect of this card activates no matter how it is sent to the Graveyard. It can be destroyed, Tributed, discarded from the hand, or sent directly from the Deck to the Graveyard."
+                },
+                {
+                    "title": "Destroyed during the Standby Phase",
+                    "text": "If your “Sinister Serpent” is on the field and is destroyed during your Standby Phase, you may return it to your hand during that same Standby Phase."
+                },
+                {
+                    "title": "Dark Ruler Ha Des and Dark Balter the Terrible",
+                    "text": "If “Sinister Serpent” is destroyed in battle by “Dark Ruler Ha Des” or “Dark Balter the Terrible”, you cannot activate its effect to return it to your hand during your next Standby Phase or any later Standby Phase."
+                },
+                {
+                    "title": "The End of Anubis",
+                    "text": "You cannot activate the effect of “Sinister Serpent” if “The End of Anubis” is on the field."
+                },
+                {
+                    "title": "Necrovalley",
+                    "text": "“Necrovalley” does not negate the effect of “Sinister Serpent”."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-059": {
+        "id": "SCO-059",
+        "aliases": [],
+        "name": "Night Assailant",
+        "image": "images/cards/Night Assailant.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "3",
+        "type": "Fiend / Effect",
+        "atk": "200",
+        "def": "500",
+        "effect": "FLIP: Select 1 monster on your opponent’s side of the field and destroy it. When this card is sent directly from your hand to the Graveyard, return 1 Flip Effect Monster from your Graveyard to your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Discarding as a cost",
+                    "text": "“Night Assailant” does not have to be sent to the Graveyard by an effect or an effect controlled by your opponent; it only has to be sent to the Graveyard. Its effect activates when sent as a cost for “Magic Jammer” or “Tribe-Infecting Virus”, after the current Chain resolves."
+                },
+                {
+                    "title": "Morphing Jar and Card Destruction",
+                    "text": "“Night Assailant”’s effect activates when it is sent to the Graveyard by “Morphing Jar” or “Card Destruction”."
+                },
+                {
+                    "title": "Ritual Summons",
+                    "text": "“Night Assailant”’s effect activates when it is sent to the Graveyard for a Ritual Summon."
+                },
+                {
+                    "title": "Last Turn",
+                    "text": "When “Night Assailant” is sent to the Graveyard by “Last Turn”, first resolve “Last Turn” by sending all cards on the field and in the hands to the Graveyard, then activate and resolve “Night Assailant”’s effect, then Special Summon a monster by “Last Turn”."
+                },
+                {
+                    "title": "No infinite loop",
+                    "text": "You cannot select the “Night Assailant” that was itself sent to the Graveyard, so there is no infinite loop."
+                },
+                {
+                    "title": "Multiple Night Assailants",
+                    "text": "When multiple “Night Assailants” are sent to the Graveyard at the same time by “Graceful Charity” or a similar effect, both can return to your hand because each cannot select itself but can select a different “Night Assailant”, including one sent to the Graveyard at the same time."
+                },
+                {
+                    "title": "Targeting",
+                    "text": "Both of “Night Assailant”’s effects target."
+                },
+                {
+                    "title": "Necrovalley",
+                    "text": "You cannot use “Night Assailant”’s second effect while “Necrovalley” is active."
+                },
+                {
+                    "title": "An opponent’s hand",
+                    "text": "If your opponent has your “Night Assailant” in their hand because of “Exchange” and it is sent to the Graveyard, you, the owner, get the effect."
+                },
+                {
+                    "title": "Forced Requisition loop",
+                    "text": "If “Forced Requisition” is active and you discard “Night Assailant” at the End Phase because you have 7 cards in hand while another “Night Assailant” is in your Graveyard, your opponent discards for “Forced Requisition”. You can then retrieve the other “Night Assailant” and repeat this process until your opponent has no cards in hand."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-060": {
+        "id": "SCO-060",
+        "aliases": [],
+        "name": "Card Destruction",
+        "image": "images/cards/Card Destruction.jpg",
+        "category": "Spell",
+        "attribute": "",
+        "level": "",
+        "type": "Normal Spell",
+        "atk": "",
+        "def": "",
+        "effect": "Both players discard as many cards as possible from their hands, then each player draws the same number of cards they discarded.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Discarding is not a cost",
+                    "text": "Discarding your hand is not a cost for either player."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Cards outside their owner’s hand",
+                    "text": "If any cards are not in their owner’s hand through “Exchange” or a similar effect when “Card Destruction” is played, the owners of those cards may decide the order in which the cards go to the Graveyard."
+                },
+                {
+                    "title": "Activation cost",
+                    "text": "Cards discarded for “Card Destruction” are not a cost of activating “Card Destruction”."
+                },
+                {
+                    "title": "Banisher of the Light",
+                    "text": "If “Card Destruction” resolves while “Banisher of the Light” is active on the field, each player still draws the same number of cards that were discarded."
+                },
+                {
+                    "title": "When it can be activated",
+                    "text": "“Card Destruction” can be activated if either player has at least 1 card in their hand, not including “Card Destruction”. If your opponent has 1 or more cards and you only have “Card Destruction”, you can activate it. If your opponent has no cards and you have “Card Destruction” plus 1 other card, you can activate it. If your opponent has no cards and “Card Destruction” is your only card, you cannot activate it."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-061": {
+        "id": "SCO-061",
+        "aliases": [],
+        "name": "Raigeki Break",
+        "image": "images/cards/Raigeki Break.jpg",
+        "category": "Trap",
+        "attribute": "",
+        "level": "",
+        "type": "Normal Trap",
+        "atk": "",
+        "def": "",
+        "effect": "Discard 1 card, then target 1 card on the field; destroy it.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-062": {
+        "id": "SCO-062",
+        "aliases": [],
+        "name": "Kinetic Soldier",
+        "image": "images/cards/Kinetic Soldier.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "3",
+        "type": "Machine / Effect",
+        "atk": "1350",
+        "def": "1800",
+        "effect": "If this card battles a Warrior-Type monster, during damage calculation: This card gains 2000 ATK and DEF during that damage calculation only.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Battle with a Warrior-Type monster",
+                    "text": "“Kinetic Soldier’s” effect activates when it is in battle with a Warrior-Type monster."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-063": {
+        "id": "SCO-063",
+        "aliases": [],
+        "name": "Tribe-Infecting Virus",
+        "image": "images/cards/Tribe-Infecting Virus.jpg",
+        "category": "Monster",
+        "attribute": "WATER",
+        "level": "4",
+        "type": "Aqua / Effect",
+        "atk": "1600",
+        "def": "1000",
+        "effect": "Discard 1 card from your hand and declare 1 Type of monster. Destroy all face-up monsters of the declared Type on the field.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Declaring a Type",
+                    "text": "You declare the Type and discard for the cost when you activate the effect, not when it resolves. Your opponent can chain after you announce which Type will be destroyed."
+                },
+                {
+                    "title": "Available Types",
+                    "text": "You can declare a Type that exists only on your opponent’s side of the field. You cannot declare a Type that is not face-up on the field at all."
+                },
+                {
+                    "title": "Repeated activations",
+                    "text": "You can use this effect repeatedly as long as you can keep paying the cost."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [
+                {
+                    "title": "DNA Surgery",
+                    "text": "If “Tribe-Infecting Virus” declares a Type and “DNA Surgery” is chained to declare a different Type, the declared Type no longer exists on the field. The effect of “Tribe-Infecting Virus” disappears and the monster is not destroyed. — Curtis Schultz, 01/12/2004"
+                }
+            ],
+            "other": []
+        }
+    },
+    "SCO-064": {
+        "id": "SCO-064",
+        "aliases": [],
+        "name": "Upstart Goblin",
+        "image": "images/cards/Upstart Goblin.jpg",
+        "category": "Spell",
+        "attribute": "",
+        "level": "",
+        "type": "Normal Spell",
+        "atk": "",
+        "def": "",
+        "effect": "Draw 1 card, then your opponent gains 1000 LP.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-065": {
+        "id": "SCO-065",
+        "aliases": [],
+        "name": "Tsukuyomi",
+        "image": "images/cards/Tsukuyomi.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "4",
+        "type": "Spellcaster / Spirit / Effect",
+        "atk": "1100",
+        "def": "1400",
+        "effect": "Cannot be Special Summoned. If this card is Normal Summoned or flipped face-up: Target 1 face-up monster on the field; change that target to face-down Defense Position. Once per turn, during the End Phase, if this card was Normal Summoned or flipped face-up this turn: Return it to the hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Targeting itself",
+                    "text": "You can select “Tsukuyomi” itself as the target of its effect, but not when “Tsukuyomi” was flipped face-up by an attack and destroyed by damage calculation."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Mandatory effect",
+                    "text": "“Tsukuyomi’s” effect is mandatory."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-066": {
+        "id": "SCO-066",
+        "aliases": [],
+        "name": "Jar of Greed",
+        "image": "images/cards/Jar of Greed.jpg",
+        "category": "Trap",
+        "attribute": "",
+        "level": "",
+        "type": "Normal Trap",
+        "atk": "",
+        "def": "",
+        "effect": "Draw 1 card.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-067": {
+        "id": "SCO-067",
+        "aliases": [],
+        "name": "Swords of Revealing Light",
+        "image": "images/cards/Swords of Revealing Light.jpg",
+        "category": "Spell",
+        "attribute": "",
+        "level": "",
+        "type": "Normal Spell",
+        "atk": "",
+        "def": "",
+        "effect": "Flip all face-down monsters on your opponent’s side of the field face-up. This card remains face-up on the field for 3 of your opponent’s turns. As long as this card remains face-up on the field, your opponent cannot declare an attack.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Duration",
+                    "text": "This card remains active on the field until the end of your opponent’s third turn. It must remain on the field for its effect to apply."
+                },
+                {
+                    "title": "Removed from the field",
+                    "text": "If this card is destroyed or removed from the field by another card effect, such as “Heavy Storm” or “Giant Trunade”, your opponent may attack again."
+                },
+                {
+                    "title": "Multiple Flip Effects",
+                    "text": "When multiple Flip Effect monsters are flipped face-up by this effect, their effects activate simultaneously and follow the simultaneous-effects rules."
+                },
+                {
+                    "title": "Imperial Order",
+                    "text": "You can activate this card while “Imperial Order” is active. It keeps its turn count, but does not flip monsters face-up or prevent attacks while its effect is negated. If “Imperial Order” is destroyed after two of your opponent’s turns, it prevents attacks for the remaining turn before being destroyed."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Destroyed during activation",
+                    "text": "If this card is destroyed, but its activation is not negated in the same chain, it still flips all monsters on your opponent’s field face-up."
+                },
+                {
+                    "title": "Expiration",
+                    "text": "When this card’s effect expires, it is sent to the Graveyard even if its effect is being negated."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
     }
 }

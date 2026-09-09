@@ -40,7 +40,7 @@ function normalizeCartItem(item) {
     const id =
         String(item?.id || "").trim();
 
-    const name =
+    let name =
         String(item?.name || "").trim();
 
     let price =
@@ -66,10 +66,11 @@ function normalizeCartItem(item) {
 
 
     if (
-        id === "deck:goat-extra"
+        id.startsWith("deck:goat-extra")
     ) {
 
         price = 24;
+        name = "GOAT Fusion Deck";
 
     }
 
@@ -532,6 +533,7 @@ function renderCartPage() {
         '<button type="button" class="secondary-button cart-clear-button" data-cart-clear>' +
             "CLEAR CART" +
         "</button>" +
+        '<p class="product-quality-note cart-product-quality-note">Premium quality · Common rarity · Matte finish · Custom anime card back</p>' +
         '<p class="cart-summary-note">Payment and delivery details will be added before checkout goes live.</p>';
 
 }
@@ -556,7 +558,7 @@ function renderCartItem(item) {
             : "";
 
     const itemImage =
-        item.id === "deck:goat-extra"
+        item.id.startsWith("deck:goat-extra")
             ? renderGoatExtraDeckCartPreview()
             : item.image
             ? '<img src="' +
@@ -565,7 +567,7 @@ function renderCartItem(item) {
             : '<span class="cart-item-image-placeholder" aria-hidden="true"></span>';
 
     const itemClass =
-        item.id === "deck:goat-extra"
+        item.id.startsWith("deck:goat-extra")
             ? "cart-item cart-item--goat-extra"
             : "cart-item";
 

@@ -31,6 +31,7 @@
             <p>
                 Browse the SCHACHICUSTOMS card archive and add up to 55 cards to your custom deck.
                 Every finished custom deck costs €99.00, with a maximum of 3 copies per card.
+                Fusion Monsters are excluded from custom decks.
             </p>
         </section>
 
@@ -95,6 +96,39 @@
                     <strong id="deck-builder-total">€0.00</strong>
                 </div>
 
+                <fieldset class="product-options deck-nfc-options deck-builder-nfc-options">
+                    <legend>Choose your version</legend>
+
+                    <label class="product-option">
+                        <input
+                            type="radio"
+                            name="custom-deck-nfc-option"
+                            value="nfc"
+                            data-custom-deck-nfc-option
+                            checked
+                        >
+                        <span class="product-option-circle" aria-hidden="true"></span>
+                        <span>
+                            <strong>With NFC tag</strong>
+                            <small>€99.00 · Same price</small>
+                        </span>
+                    </label>
+
+                    <label class="product-option">
+                        <input
+                            type="radio"
+                            name="custom-deck-nfc-option"
+                            value="without-nfc"
+                            data-custom-deck-nfc-option
+                        >
+                        <span class="product-option-circle" aria-hidden="true"></span>
+                        <span>
+                            <strong>Without NFC tag</strong>
+                            <small>€99.00 · Same price</small>
+                        </span>
+                    </label>
+                </fieldset>
+
                 <div class="deck-builder-actions">
                     <button type="button" class="home-primary-button" id="deck-builder-add-to-cart" disabled>ADD DECK TO CART</button>
                     <button type="button" class="home-secondary-button" id="deck-builder-copy" disabled>COPY DECK LIST</button>
@@ -103,6 +137,9 @@
 
                 <p class="deck-builder-purchase-note">
                     Your selection is saved on this device and can be added to the cart when it is ready.
+                    <span class="product-quality-note">
+                        Premium quality · Common rarity · Matte finish · Custom anime card back
+                    </span>
                 </p>
                 <p class="deck-builder-status" id="deck-builder-status" aria-live="polite"></p>
             </aside>

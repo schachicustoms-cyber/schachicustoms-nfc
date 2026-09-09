@@ -215,11 +215,13 @@ function renderShopCard(card) {
     const cardName =
         escapeShopHtml(card.name);
 
-    const cardImage =
-        escapeShopHtml(card.image);
+    const productImage =
+        escapeShopHtml(
+            card.shop.productImage || ""
+        );
 
-    const cardUrl =
-        window.SchachiCardUrl.create(
+    const productUrl =
+        window.SchachiCardUrl.product(
             card
         );
 
@@ -231,13 +233,17 @@ function renderShopCard(card) {
 
     return '<article class="shop-catalog-card">' +
         '<a href="' +
-            cardUrl +
-            '" class="shop-catalog-image">' +
-            '<img src="' +
-                cardImage +
-                '" alt="' +
-                cardName +
-                '" loading="lazy">' +
+            productUrl +
+            '" class="shop-catalog-image shop-product-image">' +
+            (
+                productImage
+                    ? '<img src="' +
+                        productImage +
+                        '" alt="Product photo of ' +
+                        cardName +
+                        '" loading="lazy">'
+                    : '<span class="product-image-placeholder">Product image<br>coming soon</span>'
+            ) +
         "</a>" +
         '<div class="shop-catalog-info">' +
             '<span>' +
@@ -245,7 +251,7 @@ function renderShopCard(card) {
             "</span>" +
             "<h3>" +
                 '<a href="' +
-                    cardUrl +
+                    productUrl +
                     '">' +
                     cardName +
                 "</a>" +
@@ -254,19 +260,9 @@ function renderShopCard(card) {
                 "<strong>" +
                     formatShopPrice(cardPrice) +
                 "</strong>" +
-                '<button type="button" class="shop-catalog-add" data-cart-add data-cart-id="card:' +
-                    cardId +
-                    '" data-cart-name="' +
-                    cardName +
-                    '" data-cart-price="' +
-                    cardPrice +
-                    '" data-cart-image="' +
-                    cardImage +
-                    '" data-cart-url="' +
-                    cardUrl +
-                    '" data-cart-details="Single card">' +
-                    "ADD TO CART" +
-                "</button>" +
+                '<a href="' +
+                    productUrl +
+                    '" class="shop-catalog-add">VIEW PRODUCT</a>' +
             "</div>" +
         "</div>" +
     "</article>";

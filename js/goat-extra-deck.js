@@ -1,5 +1,5 @@
 // ========================================
-// SCHACHICUSTOMS – GOAT EXTRA DECK
+// SCHACHICUSTOMS – GOAT FUSION DECK
 // ========================================
 
 const goatExtraDeckIds = [
@@ -44,7 +44,7 @@ async function loadGoatExtraDeck() {
     } catch (error) {
 
         console.error(
-            "SCHACHICUSTOMS GOAT Extra Deck Error:",
+            "SCHACHICUSTOMS GOAT Fusion Deck Error:",
             error
         );
 
