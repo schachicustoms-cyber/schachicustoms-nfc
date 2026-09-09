@@ -95,9 +95,9 @@
                 </a>
 
                 <a
-                    href="#shop-preview"
+                    href="shop.html"
                     class="home-secondary-button"
-                    aria-label="View the upcoming shop"
+                    aria-label="Browse the shop"
                 >
                     SHOP NOW →
                 </a>
@@ -507,17 +507,17 @@
         </span>
 
         <h2>
-            Shop coming soon.
+            Shop the collection.
         </h2>
 
         <p>
-            Premium custom cards, tokens and accessories are currently
-            being prepared.
+            Browse all currently available single cards and the
+            ready-to-order GOAT Extra Deck.
         </p>
 
-        <span class="shop-coming-soon">
-            COMING SOON
-        </span>
+        <a href="shop.html" class="home-primary-button">
+            BROWSE SHOP
+        </a>
 
     </section>
 
@@ -573,6 +573,7 @@
 
 
 
+<script src="js/card-url.js"></script>
 <script>
 
 let homeCards = [];
@@ -782,7 +783,7 @@ function createHeroCard(card) {
 
     return `
         <a
-            href="card.html?id=${encodeURIComponent(card.id)}"
+            href="${window.SchachiCardUrl.create(card)}"
             class="hero-featured-card"
         >
 
@@ -827,7 +828,7 @@ function createFeaturedCard(card) {
 
     return `
         <a
-            href="card.html?id=${encodeURIComponent(card.id)}"
+            href="${window.SchachiCardUrl.create(card)}"
             class="featured-card"
         >
 
@@ -1005,7 +1006,7 @@ function setupHomeSearch() {
         if (card) {
 
             window.location.href =
-                `card.html?id=${encodeURIComponent(card.id)}`;
+                window.SchachiCardUrl.create(card);
 
             return;
 
@@ -1052,6 +1053,7 @@ loadHomeCards();
 </script>
 
 <script src="js/deck-spotlight.js"></script>
+<script src="js/cart.js"></script>
 
 
 </body>

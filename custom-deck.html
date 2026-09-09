@@ -30,9 +30,20 @@
             <h1>Build your deck.</h1>
             <p>
                 Browse the SCHACHICUSTOMS card archive and add up to 55 cards to your custom deck.
-                Every selected card is shown in your order summary at €4.00 per card.
+                Every finished custom deck costs €99.00, with a maximum of 3 copies per card.
             </p>
         </section>
+
+        <a class="deck-builder-mobile-tray" href="#deck-builder-summary">
+            <span>
+                <small>YOUR DECK</small>
+                <strong id="deck-builder-mobile-count">0 / 55 CARDS</strong>
+            </span>
+            <span>
+                <strong id="deck-builder-mobile-total">€0.00</strong>
+                <small>VIEW SUMMARY ↓</small>
+            </span>
+        </a>
 
         <div class="deck-builder-layout">
             <section class="deck-builder-catalog" aria-labelledby="deck-builder-catalog-title">
@@ -62,7 +73,7 @@
                 </div>
             </section>
 
-            <aside class="deck-builder-summary" aria-labelledby="deck-builder-summary-title">
+            <aside class="deck-builder-summary" id="deck-builder-summary" aria-labelledby="deck-builder-summary-title">
                 <div class="deck-builder-summary-heading">
                     <span class="section-eyebrow">YOUR CUSTOM DECK</span>
                     <h2 id="deck-builder-summary-title">Order summary</h2>
@@ -85,12 +96,13 @@
                 </div>
 
                 <div class="deck-builder-actions">
+                    <button type="button" class="home-primary-button" id="deck-builder-add-to-cart" disabled>ADD DECK TO CART</button>
                     <button type="button" class="home-secondary-button" id="deck-builder-copy" disabled>COPY DECK LIST</button>
                     <button type="button" class="secondary-button" id="deck-builder-clear" disabled>CLEAR DECK</button>
                 </div>
 
                 <p class="deck-builder-purchase-note">
-                    Your selection is saved on this device. Direct checkout for custom decks will be connected here.
+                    Your selection is saved on this device and can be added to the cart when it is ready.
                 </p>
                 <p class="deck-builder-status" id="deck-builder-status" aria-live="polite"></p>
             </aside>
@@ -112,6 +124,8 @@
         </div>
     </footer>
 
+    <script src="js/card-url.js"></script>
     <script src="js/deck-builder.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>

@@ -2146,5 +2146,786 @@
                 }
             ]
         }
+    },
+
+    "SCO-039": {
+        "id": "SCO-039",
+        "aliases": [],
+        "name": "Thousand-Eyes Restrict",
+        "image": "images/cards/Thousand-Eyes Restrict.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "1",
+        "type": "Spellcaster / Fusion / Effect",
+        "atk": "0",
+        "def": "0",
+        "effect": "As long as this card remains face-up on the field, other monsters cannot change their battle positions or attack. Select 1 monster on your opponent’s side of the field and equip it to this card (this effect can only be used once per turn and you can only equip 1 monster at a time to this card). The ATK and DEF of this card become the same amounts as the monster equipped to this card. If this card is destroyed as a result of battle, the equipped monster is destroyed instead.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [
+                {
+                    "title": "Equipping a monster",
+                    "text": "“Thousand-Eyes Restrict” may equip itself with 1 monster at a time per turn."
+                },
+                {
+                    "title": "Targeting",
+                    "text": "“Thousand-Eyes Restrict”’s equipping effect is a targeting effect."
+                },
+                {
+                    "title": "Status of equipped monsters",
+                    "text": "Monsters equipped to “Thousand-Eyes Restrict” do not have effects and are treated as Equip Spell Cards."
+                },
+                {
+                    "title": "Manually changing battle positions",
+                    "text": "Monsters may not have their positions manually changed while “Thousand-Eyes Restrict” is on the field."
+                },
+                {
+                    "title": "Changing battle positions by card effect",
+                    "text": "Monsters may change their position through a card effect while “Thousand-Eyes Restrict” is on the field."
+                },
+                {
+                    "title": "Two Thousand-Eyes Restricts",
+                    "text": "If 2 “Thousand-Eyes Restricts” are on the field, no monster may attack."
+                },
+                {
+                    "title": "Interaction with Imperial Order",
+                    "text": "“Imperial Order” has no effect on “Thousand-Eyes Restrict” as “Thousand-Eyes Restrict” determines its ATK and DEF."
+                },
+                {
+                    "title": "Witch of the Black Forest",
+                    "text": "If a “Witch of the Black Forest” is equipped to “Thousand-Eyes Restrict” and sent to the Graveyard, the effect of “Witch of the Black Forest” will activate."
+                }
+            ],
+            "judge": [
+                {
+                    "title": "Nobleman of Extermination",
+                    "text": "A face-down card equipped to “Relinquished” or “Thousand-Eyes Restrict” is a legal target for “Nobleman of Extermination.” — Curtis Schultz, 03/09/2005"
+                },
+                {
+                    "title": "Byser Shock",
+                    "text": "A face-down card equipped to “Relinquished” or “Thousand-Eyes Restrict” will be returned to its owner’s hand by “Byser Shock”’s effect. — Curtis Schultz, 03/09/2005"
+                }
+            ],
+            "questions": [
+                {
+                    "title": "Ring of Destruction chained to the equipping effect",
+                    "text": "If “Thousand-Eyes Restrict” targets an opponent’s “Gemini Elf” with its effect, the opponent can chain “Ring of Destruction” and destroy the targeted “Gemini Elf”. “Ring of Destruction” can also target and destroy “Thousand-Eyes Restrict”, in which case it cannot resolve its effect properly. — Curtis Schultz, 02/18/2004"
+                }
+            ],
+            "other": [
+                {
+                    "title": "Thousand-Eyes Restrict is flipped face-down or removed",
+                    "text": "If “Book of Moon”, “Ring of Destruction”, “Compulsory Evacuation Device”, or a similar card is chained to the equipping effect, “Thousand-Eyes Restrict” must remain face-up on the field to equip the targeted monster. If it is flipped face-down or removed first, the effect does not resolve and the targeted monster remains on the field."
+                }
+            ]
+        }
+    },
+
+    "SCO-040": {
+        "id": "SCO-040",
+        "aliases": [],
+        "name": "Dark Balter the Terrible",
+        "image": "images/cards/Dark Balter the Terrible.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "5",
+        "type": "Fiend / Fusion / Effect",
+        "atk": "2000",
+        "def": "1200",
+        "effect": "A Fusion Summon of this monster can only be conducted with the above Fusion Material Monsters. When a Normal Spell Card is activated, negate the effect by paying 1000 Life Points. The effect of an Effect Monster that this monster destroys as a result of battle is negated.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Fusion Material Monster substitutes",
+                    "text": "The first sentence means that monsters such as “Beastking of the Swamps” cannot be used as substitutes for the required Fusion Material Monsters. “Magical Scientist” or “Summoner of Illusions” can still Special Summon this card like any other Fusion Monster."
+                },
+                {
+                    "title": "Normal Spell Cards only",
+                    "text": "The effect can only negate Normal Spell Cards, not Quick-Play, Equip, Continuous, Field, or Ritual Spell Cards. It is a Multi-Trigger Effect with Spell Speed 2 and can be activated during the opponent’s turn."
+                },
+                {
+                    "title": "Negating an effect instead of an activation",
+                    "text": "This effect negates a Spell Card’s effect when it is activated, not its activation. If “Swords of Revealing Light” is negated this way, it remains meaninglessly on the field for 3 turns and its effect remains negated even if “Dark Balter the Terrible” is later destroyed."
+                },
+                {
+                    "title": "Effect Monster negation after battle",
+                    "text": "The effect that negates an Effect Monster destroyed by battle is separate from the Spell Card effect, so no Life Points are paid for it. It works like the effect of “Dark Ruler Ha Des”."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Destroying a monster",
+                    "text": "“Dark Balter the Terrible” must destroy a monster to negate that monster’s effect."
+                },
+                {
+                    "title": "A destroyed monster leaves the Graveyard",
+                    "text": "Monsters destroyed by “Dark Balter the Terrible” that leave the Graveyard no longer have their effects negated."
+                },
+                {
+                    "title": "Special Summoning restrictions and Flip Effects",
+                    "text": "“Dark Balter the Terrible” does not negate Special Summoning restrictions from the Graveyard, including those of “Tyrant Dragon,” “Dark Ruler Ha Des,” and “Helpoemer.” If it destroys a Flip Effect monster, that monster’s Flip Effect is negated."
+                },
+                {
+                    "title": "Marie the Fallen One",
+                    "text": "If “Dark Balter the Terrible” destroys “Marie the Fallen One” in battle, “Marie the Fallen One”’s Graveyard effect that increases Life Points by 200 each Standby Phase is negated."
+                },
+                {
+                    "title": "Reflect Bounder",
+                    "text": "If “Dark Balter the Terrible” attacks a face-up Attack Position “Reflect Bounder”, “Reflect Bounder”’s effect that inflicts damage equal to the attacking monster’s ATK is not negated. If “Dark Balter the Terrible” destroys it, “Reflect Bounder” is considered destroyed by battle, not by its own effect."
+                },
+                {
+                    "title": "Sinister Serpent",
+                    "text": "If “Dark Balter the Terrible” destroys “Sinister Serpent” in battle, its effect that returns it from the Graveyard to the hand during the Standby Phase is negated."
+                },
+                {
+                    "title": "Spirit Reaper",
+                    "text": "Since “Dark Balter the Terrible” cannot destroy “Spirit Reaper” in battle because of “Spirit Reaper”’s effect, “Spirit Reaper” is neither destroyed nor negated."
+                },
+                {
+                    "title": "Witch of the Black Forest",
+                    "text": "If “Dark Balter the Terrible” destroys “Witch of the Black Forest”, its effect is negated and it will not receive its searching effect."
+                }
+            ],
+            "judge": [],
+            "questions": [
+                {
+                    "title": "Attacking a Monster Token",
+                    "text": "If “Dark Balter the Terrible” attacks a Monster Token, it does not stop an effect because the effect comes from the monster that created the Token, not from the Token itself. — Curtis Schultz, 01/25/2004"
+                }
+            ],
+            "other": []
+        }
+    },
+    "SCO-041": {
+        "id": "SCO-041",
+        "aliases": [],
+        "name": "Master of Oz",
+        "image": "images/cards/Master of Oz.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "9",
+        "type": "Beast / Fusion",
+        "atk": "4200",
+        "def": "3700",
+        "effect": "Big Koala + Des Kangaroo",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-042": {
+        "id": "SCO-042",
+        "aliases": [],
+        "name": "Darkfire Dragon",
+        "image": "images/cards/Darkfire Dragon.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "4",
+        "type": "Dragon / Fusion",
+        "atk": "1500",
+        "def": "1250",
+        "effect": "Firegrass + Petit Dragon",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-043": {
+        "id": "SCO-043",
+        "aliases": [],
+        "name": "King Dragun",
+        "image": "images/cards/King Dragun.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "7",
+        "type": "Dragon / Fusion / Effect",
+        "atk": "2400",
+        "def": "1100",
+        "effect": "Lord of D. + Divine Dragon Ragnarok\n\nYour opponent cannot target Dragon monsters with card effects. Once per turn: You can Special Summon 1 Dragon monster from your hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Effect types",
+                    "text": "The first effect of “King Dragun” is a Continuous Effect. The second effect is an Ignition Effect."
+                },
+                {
+                    "title": "De-Fusion",
+                    "text": "Your opponent cannot target a Dragon-Type Fusion Monster with “De-Fusion” while “King Dragun” or “Lord of D.” is on the field because “De-Fusion” targets."
+                },
+                {
+                    "title": "Divine Wrath",
+                    "text": "“Divine Wrath” does not target, so it may be used against Dragon-Type monsters while “King Dragun” or “Lord of D.” is on the field."
+                },
+                {
+                    "title": "Chaining Divine Wrath",
+                    "text": "You can chain “Divine Wrath” to the effect of “King Dragun” that Special Summons a Dragon-Type monster."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-044": {
+        "id": "SCO-044",
+        "aliases": [],
+        "name": "Gatling Dragon",
+        "image": "images/cards/Gatling Dragon.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "8",
+        "type": "Machine / Fusion / Effect",
+        "atk": "2600",
+        "def": "1200",
+        "effect": "Barrel Dragon + Blowback Dragon\n\nOnce per turn: You can toss a coin 3 times and destroy as many monsters on the field as possible, but not more than the number of heads.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Destroy as many monsters as possible",
+                    "text": "You must destroy as many monsters as possible based on the number of Heads you flip. If you flip 2 Heads and only your opponent’s monster and your “Gatling Dragon” are on the field, both must be destroyed. If there are only 2 monsters on the field and you flip 3 Heads, destroy both monsters."
+                },
+                {
+                    "title": "My Body as a Shield",
+                    "text": "You cannot activate “My Body as a Shield” in a chain to “Gatling Dragon” because it has not yet been decided whether any monster will be destroyed."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-045": {
+        "id": "SCO-045",
+        "aliases": [],
+        "name": "Fiend Skull Dragon",
+        "image": "images/cards/Fiend Skull Dragon.jpg",
+        "category": "Monster",
+        "attribute": "WIND",
+        "level": "5",
+        "type": "Dragon / Fusion / Effect",
+        "atk": "2000",
+        "def": "1200",
+        "effect": "Lesser Fiend + Skull Knight\n\n(This card is always treated as an “Archfiend” card.) A Fusion Summon of this card can only be done with the above Fusion Material Monsters. Negate the effects of Flip Effect Monsters. Negate any Trap effects that target this card on the field, and if you do, destroy that Trap Card.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Fusion Material Monster substitutes",
+                    "text": "You cannot use substitute Fusion Material Monsters such as “Beastking of the Swamps” to Fusion Summon this card. You can use the effects of “Metamorphosis”, “Magical Scientist”, and “Summoner of Illusions” to Special Summon this card."
+                },
+                {
+                    "title": "Fiend Skull Dragon leaves the field",
+                    "text": "If your opponent Flip Summons a monster with a Flip Effect and chains a card such as “Offerings to the Doomed” to destroy “Fiend Skull Dragon”, the Flip Effect is not negated because “Fiend Skull Dragon” is no longer face-up on the field when it resolves."
+                },
+                {
+                    "title": "Targeting Trap Cards",
+                    "text": "Your opponent may activate a Trap Card that targets “Fiend Skull Dragon”, but its effect is negated and that Trap Card is destroyed."
+                },
+                {
+                    "title": "Trap Cards that do not target",
+                    "text": "“Torrential Tribute”, “Bottomless Trap Hole”, “Mirror Force”, and “Last Turn” all apply their effects to “Fiend Skull Dragon” because they do not target."
+                },
+                {
+                    "title": "Call of the Haunted",
+                    "text": "You can activate “Call of the Haunted” to Special Summon “Fiend Skull Dragon”. After it resolves, “Call of the Haunted” is destroyed and “Fiend Skull Dragon” remains on the field. It must have been properly Fusion Summoned previously to be Special Summoned from the Graveyard."
+                },
+                {
+                    "title": "Chaining Call of the Haunted",
+                    "text": "You can chain “Call of the Haunted” to the activation of a Flip Effect to Special Summon “Fiend Skull Dragon”, and that Flip Effect is negated."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Leaving the field in a chain",
+                    "text": "If “Fiend Skull Dragon” is removed from the field in a chain with a Flip Effect, that Flip Effect is not negated by “Fiend Skull Dragon”."
+                },
+                {
+                    "title": "Summoner of Illusions",
+                    "text": "If “Fiend Skull Dragon” is Special Summoned by the effect of “Summoner of Illusions”, the destruction aspect of “Summoner of Illusions” is negated by “Fiend Skull Dragon”."
+                }
+            ],
+            "judge": [],
+            "questions": [
+                {
+                    "title": "Archfiend’s Roar",
+                    "text": "If “Fiend Skull Dragon” is Special Summoned by “Archfiend’s Roar”, it does not negate the effect of “Archfiend’s Roar”. It is destroyed by that effect during the End Phase. — Curtis Schultz, 01/25/2004"
+                }
+            ],
+            "other": []
+        }
+    },
+    "SCO-046": {
+        "id": "SCO-046",
+        "aliases": [],
+        "name": "Ryu Senshi",
+        "image": "images/cards/Ryu Senshi.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "6",
+        "type": "Warrior / Fusion / Effect",
+        "atk": "2000",
+        "def": "1200",
+        "effect": "Warrior Dai Grepher + The Dragon Dwelling in the Cave\n\nA Fusion Summon of this monster can only be conducted with the above Fusion Material Monsters. As long as this card remains face-up on the field, negate the effect of a Normal Trap Card by paying 1000 Life Points. Negate the effects of a Spell Card that targets this card and destroy it.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Targeting Spell Cards",
+                    "text": "This card’s effect that negates Spell Cards that target it is not optional."
+                },
+                {
+                    "title": "Monster Reborn",
+                    "text": "You can Special Summon this card from the Graveyard with “Monster Reborn” because its Spell Card-negation effect is not active while it is in the Graveyard, but only if it was properly Fusion Summoned originally."
+                },
+                {
+                    "title": "Spell Cards that target Ryu Senshi",
+                    "text": "A Spell Card that targets this card may be activated, but it is negated and destroyed."
+                },
+                {
+                    "title": "Cards that do not target",
+                    "text": "The effect does not negate “Creature Swap”, “Fissure”, “Smashing Ground”, “Dark Hole”, “Raigeki”, or similar cards that do not target."
+                },
+                {
+                    "title": "Fusion Sword Murasame Blade",
+                    "text": "If you try to equip “Fusion Sword Murasame Blade” to this monster, it is negated and destroyed."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Normal Trap Cards only",
+                    "text": "“Ryu Senshi” may only negate the effect of a Normal Trap Card."
+                },
+                {
+                    "title": "Continuous and Counter Trap Cards",
+                    "text": "“Ryu Senshi” cannot negate the effect of a Continuous Trap Card or a Counter Trap Card."
+                }
+            ],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-047": {
+        "id": "SCO-047",
+        "aliases": [],
+        "name": "Reaper on the Nightmare",
+        "image": "images/cards/Reaper on the Nightmare.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "5",
+        "type": "Zombie / Fusion / Effect",
+        "atk": "800",
+        "def": "600",
+        "effect": "Spirit Reaper + Nightmare Horse\n\nThis card is not destroyed as a result of battle. Destroy this card when it is targeted by the effect of a Spell, Trap, or Effect Monster. This card can attack your opponent's Life Points directly even if there is a monster on your opponent's side of the field. If this card successfully attacks your opponent's Life Points directly, your opponent discards 1 card randomly from his/her hand.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-048": {
+        "id": "SCO-048",
+        "aliases": [],
+        "name": "Dragoness the Wicked Knight",
+        "image": "images/cards/Dragoness the Wicked Knight.jpg",
+        "category": "Monster",
+        "attribute": "WIND",
+        "level": "3",
+        "type": "Warrior / Fusion",
+        "atk": "1200",
+        "def": "900",
+        "effect": "Armaill + One-Eyed Shield Dragon",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-049": {
+        "id": "SCO-049",
+        "aliases": [],
+        "name": "Dark Blade the Dragon Knight",
+        "image": "images/cards/Dark Blade the Dragon Knight.jpg",
+        "category": "Monster",
+        "attribute": "DARK",
+        "level": "5",
+        "type": "Dragon / Fusion / Effect",
+        "atk": "2200",
+        "def": "1500",
+        "effect": "Dark Blade + Pitch-Dark Dragon\n\nEach time this card inflicts Battle Damage to your opponent, you can select up to 3 Monster Cards from your opponent’s Graveyard and remove them from play.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Targeting Monster Cards",
+                    "text": "The effect of “Dark Blade the Dragon Knight” targets up to 3 Monster Cards in the Graveyard, so you select the monsters when the effect is activated."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-050": {
+        "id": "SCO-050",
+        "aliases": [],
+        "name": "Ojama King",
+        "image": "images/cards/Ojama King.jpg",
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": "6",
+        "type": "Beast / Fusion / Effect",
+        "atk": "0",
+        "def": "3000",
+        "effect": "Ojama Green + Ojama Yellow + Ojama Black\n\nSelect up to 3 of your opponent’s Monster Card Zones. The selected zones cannot be used.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Occupied Monster Card Zones",
+                    "text": "You cannot select occupied Monster Card Zones with “Ojama King”’s effect. If your opponent has 5 monsters on the field, the effect is not applied."
+                },
+                {
+                    "title": "Selecting Monster Card Zones",
+                    "text": "“Ojama King”’s effect activates and you select up to 3 Monster Card Zones when “Ojama King” becomes face-up on the field."
+                },
+                {
+                    "title": "Flipping Ojama King face-down",
+                    "text": "If you select up to 3 Monster Card Zones and your “Ojama King” is flipped face-down, the selected zones become usable again. When it is flipped face-up again, you can select up to 3 Monster Card Zones again."
+                },
+                {
+                    "title": "Taking control of Ojama King",
+                    "text": "If you take control of your opponent’s face-up “Ojama King”, you cannot select new Monster Card Zones because the zones are selected when “Ojama King” becomes face-up on the field."
+                }
+            ],
+            "netrep": [],
+            "judge": [],
+            "questions": [],
+            "other": []
+        }
+    },
+    "SCO-051": {
+        "id": "SCO-051",
+        "aliases": [],
+        "name": "The Last Warrior from Another Planet",
+        "image": "images/cards/The Last Warrior from Another Planet.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "7",
+        "type": "Warrior / Fusion / Effect",
+        "atk": "2350",
+        "def": "2300",
+        "effect": "Zombyra the Dark + Maryokutai\n\nIf this card is Special Summoned: Destroy all other monsters you control. Neither player can Summon monsters.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Setting monsters",
+                    "text": "Monsters may still be Set while this card is on the field."
+                },
+                {
+                    "title": "Tribute Summons",
+                    "text": "This card may be Tributed to Tribute Summon a Level 5 or higher monster."
+                },
+                {
+                    "title": "Cards that cannot be activated",
+                    "text": "Neither player can activate “Scapegoat”, “Magical Hats”, “Monster Reborn”, and similar cards."
+                },
+                {
+                    "title": "Parasite Paracide",
+                    "text": "If your “Parasite Paracide” in your opponent’s Deck is drawn, it is not Special Summoned. It is destroyed and sent to your Graveyard instead, and no damage is dealt."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Special Summons",
+                    "text": "As long as “The Last Warrior from Another Planet” is active, neither player may Special Summon a monster."
+                },
+                {
+                    "title": "Flipping monsters",
+                    "text": "The effect only prevents Summons. It does not prevent monsters from being flipped by other means."
+                }
+            ],
+            "judge": [],
+            "questions": [
+                {
+                    "title": "The Shallow Grave",
+                    "text": "“The Shallow Grave” is a Special Summon. Neither player can Special Summon any monsters while “The Last Warrior from Another Planet” is face-up on the field. — Curtis Schultz, 02/12/2004"
+                },
+                {
+                    "title": "Fusion and Ritual Summons",
+                    "text": "Fusion Summons and Ritual Summons are Special Summons, so neither may be performed while “The Last Warrior from Another Planet” is face-up on the field. — Curtis Schultz, 02/12/2004"
+                }
+            ],
+            "other": []
+        }
     }
 }

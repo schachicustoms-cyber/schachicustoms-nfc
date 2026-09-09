@@ -1,4 +1,6 @@
 const MAX_DECK_CARDS = 55;
+const MAX_COPIES_PER_CARD = 3;
+const CUSTOM_DECK_PRICE = 99;
 const DECK_STORAGE_KEY = "schachicustoms-custom-deck-v1";
 
 const builderState = {
@@ -19,6 +21,9 @@ const builderElements = {
     meterFill: document.getElementById("deck-builder-meter-fill"),
     items: document.getElementById("deck-builder-items"),
     total: document.getElementById("deck-builder-total"),
+    mobileCount: document.getElementById("deck-builder-mobile-count"),
+    mobileTotal: document.getElementById("deck-builder-mobile-total"),
+    addToCart: document.getElementById("deck-builder-add-to-cart"),
     copy: document.getElementById("deck-builder-copy"),
     clear: document.getElementById("deck-builder-clear"),
     status: document.getElementById("deck-builder-status")
@@ -111,6 +116,7 @@ function setupDeckBuilder() {
 
     builderElements.copy.addEventListener("click", copyDeckList);
     builderElements.clear.addEventListener("click", clearDeck);
+    builderElements.addToCart.addEventListener("click", addCustomDeckToCart);
 }
 
 function renderDeckBuilder() {
@@ -156,26 +162,28 @@ function renderCatalog() {
         .map(card => {
             const selectedQuantity = builderState.deck.get(card.id) || 0;
             const subtitle = getCardSubtitle(card);
+            const cardLimitReached =
+                selectedQuantity >= MAX_COPIES_PER_CARD;
 
             return `
                 <article class="deck-builder-card">
-                    <a class="deck-builder-card-image" href="card.html?id=${encodeURIComponent(card.id)}">
+                    <a class="deck-builder-card-image" href="${window.SchachiCardUrl.create(card)}">
                         <img src="${escapeHtml(card.image)}" alt="${escapeHtml(card.name)}" loading="lazy">
                     </a>
                     <div class="deck-builder-card-info">
                         <span>${escapeHtml(card.id)}</span>
-                        <h3><a href="card.html?id=${encodeURIComponent(card.id)}">${escapeHtml(card.name)}</a></h3>
+                        <h3><a href="${window.SchachiCardUrl.create(card)}">${escapeHtml(card.name)}</a></h3>
                         <p>${escapeHtml(subtitle)}</p>
                         <div class="deck-builder-card-footer">
-                            <strong>${formatPrice(getCardPrice(card))}</strong>
+                            <strong>INCLUDED</strong>
                             <button
                                 type="button"
                                 class="deck-builder-add"
                                 data-add-card="${escapeHtml(card.id)}"
-                                ${deckIsFull ? "disabled" : ""}
+                                ${deckIsFull || cardLimitReached ? "disabled" : ""}
                                 aria-label="Add ${escapeHtml(card.name)} to deck"
                             >
-                                ${selectedQuantity ? `ADD · ${selectedQuantity}` : "ADD"}
+                                ${cardLimitReached ? "MAX 3" : selectedQuantity ? `ADD · ${selectedQuantity}` : "ADD"}
                             </button>
                         </div>
                     </div>
@@ -191,11 +199,14 @@ function renderDeckSummary() {
     const total = getDeckTotal(entries);
 
     builderElements.count.textContent = `${cardCount} / ${MAX_DECK_CARDS} CARDS`;
+    builderElements.mobileCount.textContent = `${cardCount} / ${MAX_DECK_CARDS} CARDS`;
     builderElements.meter.setAttribute("aria-valuenow", String(cardCount));
     builderElements.meterFill.style.width = `${(cardCount / MAX_DECK_CARDS) * 100}%`;
     builderElements.total.textContent = formatPrice(total);
+    builderElements.mobileTotal.textContent = formatPrice(total);
     builderElements.clear.disabled = cardCount === 0;
     builderElements.copy.disabled = cardCount === 0;
+    builderElements.addToCart.disabled = cardCount === 0;
 
     if (entries.length === 0) {
         builderElements.items.innerHTML = `
@@ -211,13 +222,13 @@ function renderDeckSummary() {
             <article class="deck-builder-item">
                 <img src="${escapeHtml(card.image)}" alt="">
                 <div>
-                    <a href="card.html?id=${encodeURIComponent(card.id)}">${escapeHtml(card.name)}</a>
-                    <span>${escapeHtml(card.id)} · ${formatPrice(getCardPrice(card))} each</span>
+                    <a href="${window.SchachiCardUrl.create(card)}">${escapeHtml(card.name)}</a>
+                    <span>${escapeHtml(card.id)} · included in the fixed deck price</span>
                 </div>
                 <div class="deck-builder-stepper" aria-label="${escapeHtml(card.name)} quantity">
                     <button type="button" data-deck-action="decrease" data-card-id="${escapeHtml(card.id)}" aria-label="Remove one ${escapeHtml(card.name)}">−</button>
                     <strong>${quantity}</strong>
-                    <button type="button" data-deck-action="increase" data-card-id="${escapeHtml(card.id)}" aria-label="Add one ${escapeHtml(card.name)}" ${cardCount >= MAX_DECK_CARDS ? "disabled" : ""}>+</button>
+                    <button type="button" data-deck-action="increase" data-card-id="${escapeHtml(card.id)}" aria-label="Add one ${escapeHtml(card.name)}" ${cardCount >= MAX_DECK_CARDS || quantity >= MAX_COPIES_PER_CARD ? "disabled" : ""}>+</button>
                 </div>
             </article>
         `)
@@ -231,12 +242,19 @@ function addCard(cardId) {
         return;
     }
 
+    const currentQuantity = builderState.deck.get(cardId) || 0;
+
+    if (currentQuantity >= MAX_COPIES_PER_CARD) {
+        setBuilderStatus(`${card.name} is limited to ${MAX_COPIES_PER_CARD} copies per custom deck.`);
+        return;
+    }
+
     if (getDeckCardCount() >= MAX_DECK_CARDS) {
         setBuilderStatus(`Your deck already has the maximum of ${MAX_DECK_CARDS} cards.`);
         return;
     }
 
-    builderState.deck.set(cardId, (builderState.deck.get(cardId) || 0) + 1);
+    builderState.deck.set(cardId, currentQuantity + 1);
     persistDeck();
     renderDeckBuilder();
     setBuilderStatus(`${card.name} added to your deck.`);
@@ -267,6 +285,50 @@ function clearDeck() {
     persistDeck();
     renderDeckBuilder();
     setBuilderStatus("Your custom deck has been cleared.");
+}
+
+function addCustomDeckToCart() {
+    const entries = getDeckEntries();
+    const cardCount = getDeckCardCount();
+
+    if (!entries.length || !window.SchachiCart) {
+        setBuilderStatus("Add at least one card before adding this deck to the cart.");
+        return;
+    }
+
+    const deckSignature = entries
+        .map(entry => entry.card.id + ":" + entry.quantity)
+        .join("|");
+
+    const result = window.SchachiCart.add({
+        id: "custom-deck:" + deckSignature,
+        name: "Custom Deck",
+        price: CUSTOM_DECK_PRICE,
+        url: "custom-deck.html",
+        details: String(cardCount) + " cards · custom selection",
+        orderDetails: entries
+            .map(
+                entry =>
+                    entry.quantity +
+                    "x " +
+                    entry.card.name +
+                    " (" +
+                    entry.card.id +
+                    ")"
+            )
+            .join(", "),
+        maxQuantity: 1
+    });
+
+    if (result.added) {
+        builderState.deck.clear();
+        persistDeck();
+        renderDeckBuilder();
+        setBuilderStatus("Your custom deck has been added to the cart. Start your next deck whenever you are ready.");
+        return;
+    }
+
+    setBuilderStatus("This exact custom deck is already in your cart.");
 }
 
 async function copyDeckList() {
@@ -306,8 +368,14 @@ function createDeckListText() {
     return [
         "SCHACHICUSTOMS CUSTOM DECK",
         "",
-        ...entries.map(entry =>
-            `${entry.quantity}x ${entry.card.name} (${entry.card.id}) — ${formatPrice(getCardPrice(entry.card) * entry.quantity)}`
+        ...entries.map(
+            entry =>
+                entry.quantity +
+                "x " +
+                entry.card.name +
+                " (" +
+                entry.card.id +
+                ")"
         ),
         "",
         `Cards: ${getDeckCardCount()} / ${MAX_DECK_CARDS}`,
@@ -326,10 +394,9 @@ function getDeckEntries() {
 }
 
 function getDeckTotal(entries) {
-    return entries.reduce(
-        (sum, entry) => sum + getCardPrice(entry.card) * entry.quantity,
-        0
-    );
+    return entries.length
+        ? CUSTOM_DECK_PRICE
+        : 0;
 }
 
 function restoreDeck() {
@@ -339,7 +406,10 @@ function restoreDeck() {
         );
 
         Object.entries(savedDeck).forEach(([id, quantity]) => {
-            const validQuantity = Math.max(0, Math.floor(Number(quantity) || 0));
+            const validQuantity = Math.min(
+                MAX_COPIES_PER_CARD,
+                Math.max(0, Math.floor(Number(quantity) || 0))
+            );
 
             if (builderState.cardsById.has(id) && validQuantity > 0) {
                 builderState.deck.set(id, validQuantity);

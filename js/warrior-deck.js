@@ -155,7 +155,7 @@ function renderDeckList(deck, containerId) {
             .map(
                 card => `
                     <a
-                        href="card.html?id=${encodeURIComponent(card.id)}"
+                        href="${window.SchachiCardUrl.create(card)}"
                         class="deck-card"
                         aria-label="Open ${escapeHtml(card.name)}"
                     >
@@ -227,8 +227,9 @@ function setupDeckSearch(cards) {
 
             if (result) {
                 window.location.href =
-                    "card.html?id=" +
-                    encodeURIComponent(result[0]);
+                    window.SchachiCardUrl.create(
+                        result[1]
+                    );
             }
 
         }

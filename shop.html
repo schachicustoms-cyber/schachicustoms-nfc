@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | SCHACHICUSTOMS</title>
+
+    <meta
+        name="description"
+        content="Browse all currently available SCHACHICUSTOMS single cards and GOAT Format decks."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <div class="brand-name">SCHACHICUSTOMS</div>
+            <div class="brand-tagline">ORICAS · TOKENS & MORE</div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="database.html">Card Database</a>
+            <a href="rulings.html">Basic Rulings</a>
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="shop-page">
+
+    <section class="shop-hero">
+
+        <span class="database-eyebrow">SCHACHICUSTOMS SHOP</span>
+
+        <h1>Browse the collection.</h1>
+
+        <p>
+            Find every currently available SCHACHICUSTOMS product in one place.
+            Choose a fixed deck, build your own, or add individual cards to your cart.
+        </p>
+
+        <div class="shop-jump-links">
+            <a href="#shop-decks">BROWSE DECKS ↓</a>
+            <a href="#shop-single-cards">BROWSE SINGLE CARDS ↓</a>
+        </div>
+
+    </section>
+
+    <section class="shop-decks-section" id="shop-decks">
+
+        <div class="shop-section-heading">
+
+            <div>
+                <span class="section-eyebrow">DECKS</span>
+                <h2>Decks & custom builds</h2>
+            </div>
+
+            <a href="decks.html" class="shop-section-link">
+                VIEW DECK ARCHIVE →
+            </a>
+
+        </div>
+
+        <div class="shop-deck-grid">
+
+            <article class="shop-deck-card shop-warrior-deck-card">
+
+                <div class="shop-deck-card-content">
+
+                    <span>PREBUILT DECK</span>
+
+                    <h3>Warrior Deck</h3>
+
+                    <p>
+                        The complete 40-card Main Deck and 15-card Side Deck
+                        from the SCHACHICUSTOMS deck archive.
+                    </p>
+
+                    <div class="shop-deck-card-footer">
+                        <strong>€79.00</strong>
+
+                        <div>
+                            <a href="warrior-deck.html" class="shop-card-link">
+                                VIEW DECK
+                            </a>
+
+                            <button
+                                type="button"
+                                class="shop-catalog-add"
+                                data-cart-add
+                                data-cart-id="deck:warrior"
+                                data-cart-name="Warrior Deck"
+                                data-cart-price="79.00"
+                                data-cart-image="images/warrior-deck-title.png"
+                                data-cart-url="warrior-deck.html"
+                                data-cart-details="40-card Main Deck + 15-card Side Deck"
+                            >
+                                ADD TO CART
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="shop-deck-card shop-extra-deck-card">
+
+                <div class="shop-deck-card-content">
+
+                    <span>FIXED 15-CARD SET</span>
+
+                    <h3>GOAT Extra Deck</h3>
+
+                    <p>
+                        A complete, ready-to-order 15-card Extra Deck
+                        for GOAT Format.
+                    </p>
+
+                    <div class="shop-deck-card-footer">
+                        <strong>€24.00</strong>
+
+                        <div>
+                            <a href="goat-extra-deck.html" class="shop-card-link">
+                                VIEW DETAILS
+                            </a>
+
+                            <button
+                                type="button"
+                                class="shop-catalog-add"
+                                data-cart-add
+                                data-cart-id="deck:goat-extra"
+                                data-cart-name="GOAT Extra Deck"
+                                data-cart-price="24.00"
+                                data-cart-image="images/cards/Thousand-Eyes Restrict.jpg"
+                                data-cart-url="goat-extra-deck.html"
+                                data-cart-details="Fixed 15-card set"
+                            >
+                                ADD TO CART
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="shop-deck-card shop-custom-deck-card">
+
+                <div class="shop-deck-card-content">
+
+                    <span>CUSTOM DECK</span>
+
+                    <h3>Build your own deck</h3>
+
+                    <p>
+                        Choose up to 55 available cards, with a maximum of
+                        3 copies per card, then add your exact selection to the cart.
+                    </p>
+
+                    <div class="shop-deck-card-footer">
+                        <strong>€99.00 <small>fixed price</small></strong>
+
+                        <a href="custom-deck.html" class="home-secondary-button">
+                            BUILD DECK
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="shop-single-cards-section" id="shop-single-cards">
+
+        <div class="shop-section-heading">
+
+            <div>
+                <span class="section-eyebrow">SINGLE CARDS</span>
+                <h2>Available cards</h2>
+            </div>
+
+            <p id="shop-single-card-count" aria-live="polite">
+                Loading cards…
+            </p>
+
+        </div>
+
+        <div class="shop-catalog-controls">
+
+            <div class="shop-catalog-search">
+
+                <label
+                    for="shop-single-card-search"
+                    class="shop-catalog-control-label"
+                >
+                    SEARCH SINGLE CARDS
+                </label>
+
+                <input
+                    type="search"
+                    id="shop-single-card-search"
+                    placeholder="Search by card name or SCO-ID..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <div
+                class="shop-catalog-filter-wrapper"
+                role="group"
+                aria-label="Filter single cards"
+            >
+
+                <span class="shop-catalog-control-label">
+                    FILTER BY TYPE
+                </span>
+
+                <div class="shop-catalog-filter-buttons">
+
+                    <button
+                        type="button"
+                        class="shop-catalog-filter active"
+                        data-shop-card-filter="all"
+                        aria-pressed="true"
+                    >
+                        ALL
+                    </button>
+
+                    <button
+                        type="button"
+                        class="shop-catalog-filter"
+                        data-shop-card-filter="Monster"
+                        aria-pressed="false"
+                    >
+                        MONSTERS
+                    </button>
+
+                    <button
+                        type="button"
+                        class="shop-catalog-filter"
+                        data-shop-card-filter="fusion"
+                        aria-pressed="false"
+                    >
+                        FUSION MONSTERS
+                    </button>
+
+                    <button
+                        type="button"
+                        class="shop-catalog-filter"
+                        data-shop-card-filter="Spell"
+                        aria-pressed="false"
+                    >
+                        SPELLS
+                    </button>
+
+                    <button
+                        type="button"
+                        class="shop-catalog-filter"
+                        data-shop-card-filter="Trap"
+                        aria-pressed="false"
+                    >
+                        TRAPS
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div
+            class="shop-catalog-grid"
+            id="shop-single-card-grid"
+            aria-label="Available single cards"
+        >
+            <p class="shop-catalog-loading">Loading available cards…</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <strong>SCHACHICUSTOMS</strong>
+            <span>ORICAS · TOKENS & MORE</span>
+        </div>
+
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="database.html">Card Database</a>
+            <a href="decks.html">Deck Archive</a>
+            <a href="rulings.html">Basic Rulings</a>
+        </nav>
+
+    </div>
+
+</footer>
+
+<script src="js/card-url.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>

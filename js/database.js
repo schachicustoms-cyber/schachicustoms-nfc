@@ -233,10 +233,36 @@ function updateDatabase() {
 
 
     // ========================================
-    // CATEGORY FILTER
+    // CARD TYPE FILTER
     // ========================================
 
     if (
+        currentFilter === "fusion"
+    ) {
+
+        cards =
+            cards.filter(
+                card => {
+
+                    return (
+                        String(
+                            card.category || ""
+                        )
+                            .toLowerCase() ===
+                        "monster" &&
+                        String(
+                            card.type || ""
+                        )
+                            .toLowerCase()
+                            .includes(
+                                "fusion"
+                            )
+                    );
+
+                }
+            );
+
+    } else if (
         currentFilter !== "all"
     ) {
 
@@ -373,9 +399,8 @@ function createCardElement(card) {
 
 
     link.href =
-        "card.html?id=" +
-        encodeURIComponent(
-            card.id
+        window.SchachiCardUrl.create(
+            card
         );
 
 
@@ -1034,9 +1059,8 @@ headerSearchForm.addEventListener(
         if (result) {
 
             window.location.href =
-                "card.html?id=" +
-                encodeURIComponent(
-                    result.id
+                window.SchachiCardUrl.create(
+                    result
                 );
 
             return;

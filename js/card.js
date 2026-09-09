@@ -15,6 +15,13 @@ const params =
 const requestedCardId =
     params.get("id");
 
+const requestedCardName =
+    params.get("card");
+
+const requestedCardReference =
+    requestedCardName ||
+    requestedCardId;
+
 
 // ========================================
 // CARD DATABASE LADEN
@@ -46,7 +53,7 @@ async function loadCard() {
         const result =
             findCardByIdOrAlias(
                 cards,
-                requestedCardId
+                requestedCardReference
             );
 
 
@@ -64,31 +71,17 @@ async function loadCard() {
         const card =
             result.card;
 
-        const realId =
-            result.id;
-
-
         // ========================================
-        // ALTE IDs AUF NEUE ID UMLEITEN
+        // CANONICAL NAME URL
         // ========================================
 
-        if (
-            requestedCardId &&
-            requestedCardId.toLowerCase() !==
-            realId.toLowerCase()
-        ) {
-
-            const newUrl =
-                "card.html?id=" +
-                encodeURIComponent(realId);
-
-            window.history.replaceState(
-                {},
-                "",
-                newUrl
-            );
-
-        }
+        window.history.replaceState(
+            {},
+            "",
+            window.SchachiCardUrl.create(
+                card
+            )
+        );
 
 
         // ========================================
@@ -151,15 +144,15 @@ async function loadCard() {
 
 
 // ========================================
-// KARTE NACH ID ODER ALIAS FINDEN
+// KARTE NACH ID, ALIAS ODER NAME FINDEN
 // ========================================
 
 function findCardByIdOrAlias(
     cards,
-    requestedId
+    requestedValue
 ) {
 
-    if (!requestedId) {
+    if (!requestedValue) {
 
         return null;
 
@@ -167,7 +160,7 @@ function findCardByIdOrAlias(
 
 
     const query =
-        requestedId
+        requestedValue
             .trim()
             .toLowerCase();
 
@@ -225,6 +218,37 @@ function findCardByIdOrAlias(
                 };
 
             }
+
+        }
+
+    }
+
+
+    // ========================================
+    // CARD NAME / NAME URL
+    // ========================================
+
+    const requestedSlug =
+        window.SchachiCardUrl.slug(
+            requestedValue
+        );
+
+
+    for (
+        const [id, card]
+        of Object.entries(cards)
+    ) {
+
+        if (
+            window.SchachiCardUrl.slug(
+                card.name
+            ) === requestedSlug
+        ) {
+
+            return {
+                id: id,
+                card: card
+            };
 
         }
 
@@ -349,10 +373,36 @@ function renderRulings(rulings) {
             ? rulings.netrep
             : [];
 
+    const judge =
+        Array.isArray(
+            rulings.judge
+        )
+            ? rulings.judge
+            : [];
+
+
+    const questions =
+        Array.isArray(
+            rulings.questions
+        )
+            ? rulings.questions
+            : [];
+
+
+    const other =
+        Array.isArray(
+            rulings.other
+        )
+            ? rulings.other
+            : [];
+
 
     if (
         individual.length === 0 &&
-        netrep.length === 0
+        netrep.length === 0 &&
+        judge.length === 0 &&
+        questions.length === 0 &&
+        other.length === 0
     ) {
 
         renderNoRulings(
@@ -395,6 +445,48 @@ function renderRulings(rulings) {
             "Netrep Rulings",
             netrep,
             "netrep"
+        );
+
+    }
+
+
+    if (
+        judge.length > 0
+    ) {
+
+        renderRulingGroup(
+            container,
+            "Judge List Rulings",
+            judge,
+            "judge"
+        );
+
+    }
+
+
+    if (
+        questions.length > 0
+    ) {
+
+        renderRulingGroup(
+            container,
+            "Netrep Q&As",
+            questions,
+            "questions"
+        );
+
+    }
+
+
+    if (
+        other.length > 0
+    ) {
+
+        renderRulingGroup(
+            container,
+            "Other Rulings",
+            other,
+            "other"
         );
 
     }
@@ -824,30 +916,38 @@ function renderShop(card) {
     }
 
 
-    if (
-        card.shop.url &&
-        card.shop.url.trim() !==
-        ""
-    ) {
+    shopLink.hidden =
+        false;
 
-        shopLink.href =
-            card.shop.url;
+    shopLink.textContent =
+        "ADD TO CART — " +
+        shopPrice.textContent;
 
-        shopLink.hidden =
-            false;
+    shopLink.dataset.cartAdd =
+        "";
 
-        comingSoon.hidden =
-            true;
+    shopLink.dataset.cartId =
+        "card:" + card.id;
 
-    } else {
+    shopLink.dataset.cartName =
+        card.name;
 
-        shopLink.hidden =
-            true;
+    shopLink.dataset.cartPrice =
+        card.shop.price;
 
-        comingSoon.hidden =
-            false;
+    shopLink.dataset.cartImage =
+        card.image || "";
 
-    }
+    shopLink.dataset.cartUrl =
+        window.SchachiCardUrl.create(
+            card
+        );
+
+    shopLink.dataset.cartDetails =
+        "Single card";
+
+    comingSoon.hidden =
+        true;
 
 }
 
@@ -1052,7 +1152,7 @@ function setupSearch(cards) {
                 ) {
 
                     openCard(
-                        id
+                        card
                     );
 
                     return;
@@ -1089,7 +1189,7 @@ function setupSearch(cards) {
                     if (match) {
 
                         openCard(
-                            id
+                            card
                         );
 
                         return;
@@ -1118,7 +1218,7 @@ function setupSearch(cards) {
             if (exactName) {
 
                 openCard(
-                    exactName[0]
+                    exactName[1]
                 );
 
                 return;
@@ -1143,7 +1243,7 @@ function setupSearch(cards) {
             if (partialName) {
 
                 openCard(
-                    partialName[0]
+                    partialName[1]
                 );
 
                 return;
@@ -1166,11 +1266,12 @@ function setupSearch(cards) {
 // KARTE ÖFFNEN
 // ========================================
 
-function openCard(id) {
+function openCard(card) {
 
     window.location.href =
-        "card.html?id=" +
-        encodeURIComponent(id);
+        window.SchachiCardUrl.create(
+            card
+        );
 
 }
 
@@ -1189,7 +1290,7 @@ function showNotFound() {
 
     setText(
         "card-id",
-        requestedCardId ||
+        requestedCardReference ||
         "No ID"
     );
 
