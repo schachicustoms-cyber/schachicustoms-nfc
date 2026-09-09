@@ -17,7 +17,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -84,7 +84,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -167,7 +167,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -239,7 +239,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -319,7 +319,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -407,7 +407,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -458,7 +458,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -514,7 +514,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -561,7 +561,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -608,7 +608,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -668,7 +668,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -702,7 +702,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -826,7 +826,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -870,7 +870,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -917,7 +917,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -956,7 +956,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1007,7 +1007,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1054,7 +1054,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1088,7 +1088,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1148,7 +1148,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1191,7 +1191,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1263,7 +1263,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1358,7 +1358,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1406,7 +1406,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1449,7 +1449,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1504,7 +1504,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1547,7 +1547,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1590,7 +1590,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1641,7 +1641,7 @@
         },
         "shop": {
             "available": true,
-            "price": "3.99",
+            "price": "4.00",
             "url": ""
         },
         "sources": [
@@ -1663,6 +1663,488 @@
                 }
             ],
             "netrep": []
+        }
+    },
+
+    "SCO-030": {
+        "id": "SCO-030",
+        "aliases": [],
+        "name": "Ninja Grandmaster Sasuke",
+        "image": "images/cards/Ninja Grandmaster Sasuke.jpg",
+        "category": "Monster",
+        "attribute": "LIGHT",
+        "level": "4",
+        "type": "Warrior / Effect",
+        "atk": "1800",
+        "def": "1000",
+        "effect": "At the start of the Damage Step, if this card attacks a face-up Defense Position monster: Destroy that monster.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Interaction with a face-down Defense Position monster",
+                    "text": "“Ninja Grandmaster Sasuke”’s effect activates at the beginning of the Damage Step, before the monster is flipped face-up. So if “Ninja Grandmaster Sasuke” attacks a face-down Defense Position monster, “Ninja Grandmaster Sasuke” will not destroy it with his effect because it is not flipped face-up until after “Ninja Grandmaster Sasuke”’s effect would activate."
+                },
+                {
+                    "title": "Interaction with Spirit Reaper",
+                    "text": "A face-up Defense Position “Spirit Reaper” will be destroyed by the effect of “Ninja Grandmaster Sasuke”. “Ninja Grandmaster Sasuke”’s effect does not target. So if “Ninja Grandmaster Sasuke” attacks “Spirit Reaper”, “Spirit Reaper” is destroyed by “Ninja Grandmaster Sasuke”’s effect, not by “Spirit Reaper”’s effect."
+                },
+                {
+                    "title": "Interaction with D.D. Warrior Lady",
+                    "text": "If “Ninja Grandmaster Sasuke” attacks a face-up Defense Position “D.D. Warrior Lady”, “D.D. Warrior Lady” is destroyed by the effect of “Ninja Grandmaster Sasuke” and “D.D. Warrior Lady”’s effect is not activated."
+                },
+                {
+                    "title": "Interaction with Book of Moon",
+                    "text": "If “Ninja Grandmaster Sasuke” attacks a face-up Defense Position monster, and you flip it face-down during the Battle Step with “Book of Moon”, the monster is face-down at the start of the Damage Step so “Ninja Grandmaster Sasuke” will not destroy it with his effect."
+                },
+                {
+                    "title": "Interaction with Ceasefire",
+                    "text": "If “Ninja Grandmaster Sasuke” attacks a face-down Defense Position monster, and “Ceasefire” is activated during the Battle Step, the monster is face-up at the start of the Damage Step so it will be destroyed by “Ninja Grandmaster Sasuke”’s effect."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-031": {
+        "id": "SCO-031",
+        "aliases": [],
+        "name": "King Tiger Wanghu",
+        "image": "images/cards/King Tiger Wanghu.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": "4",
+        "type": "Beast / Effect",
+        "atk": "1700",
+        "def": "1000",
+        "effect": "When a monster(s) with 1400 or less ATK is Normal Summoned or Special Summoned: Destroy those monsters with 1400 or less ATK. This card must be face-up on the field to activate and to resolve this effect.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Monsters already on the field",
+                    "text": "Monsters with ATK 1400 or less that are already on the field when “King Tiger Wanghu” is Summoned are not destroyed. “King Tiger Wanghu”’s effect only applies to monsters Summoned while it is face-up on the field."
+                },
+                {
+                    "title": "Flip Summons and monsters flipped face-up",
+                    "text": "When a monster is Flip Summoned or flipped face-up by a card effect, it is not destroyed by the effect of “King Tiger Wanghu”."
+                },
+                {
+                    "title": "Both sides of the field",
+                    "text": "“King Tiger Wanghu”’s effect applies to both sides of the field."
+                },
+                {
+                    "title": "Interaction with Cyber Jar",
+                    "text": "When “King Tiger Wanghu” is Special Summoned by the effect of “Cyber Jar”, other monsters with ATK 1400 or less that are Special Summoned by the same “Cyber Jar” are destroyed if they are Special Summoned in face-up Attack Position."
+                },
+                {
+                    "title": "ATK modifiers when a monster is Summoned",
+                    "text": "If a monster’s ATK when it is Summoned is less than 1400 due to the effect of other cards, such as a Field Spell Card that reduces its ATK, it is destroyed by “King Tiger Wanghu”’s effect (so apply all existing modifiers before determining if the monster is destroyed). If “Command Knight” is Summoned, it increases its own ATK to 1600 before “King Tiger Wanghu” can destroy it."
+                },
+                {
+                    "title": "King Tiger Wanghu destroys itself",
+                    "text": "If “King Tiger Wanghu” is Normal Summoned or Special Summoned, and its own ATK is reduced below 1400 by a pre-existing effect, then it destroys itself when Summoned. Example: “King Tiger Wanghu” and “Bladefly” are Special Summoned simultaneously by “Cyber Jar”. “King Tiger Wanghu”’s ATK is 1300, and it is destroyed by its own effect (and “Bladefly” is also destroyed by “King Tiger Wanghu”’s effect)."
+                },
+                {
+                    "title": "Monsters Summoned face-down",
+                    "text": "Monsters that are Summoned face-down (like with “The Shallow Grave”) are not destroyed by King Tiger Wanghu."
+                },
+                {
+                    "title": "Monster Tokens",
+                    "text": "“King Tiger Wanghu”’s effect includes Monster Tokens with ATK 1400 or less."
+                },
+                {
+                    "title": "Interaction with Marauding Captain",
+                    "text": "If “King Tiger Wanghu” is on the field and “Marauding Captain” is Summoned, “Marauding Captain” can still activate its effect and Special Summon a monster even though “Marauding Captain” is destroyed."
+                },
+                {
+                    "title": "Simultaneous Trigger Effects",
+                    "text": "If “King Tiger Wanghu” is on the field along with Trigger Effect monsters such as “Mysterious Puppeteer”, “Ryu-Kishin Clown”, “Sonic Bird”, and “Dragon Seeker”, then they form a chain."
+                },
+                {
+                    "title": "Interaction with Exiled Force",
+                    "text": "If “King Tiger Wanghu” is on the field, and “Exiled Force” is Summoned, “King Tiger Wanghu”’s effect immediately activates. Since “Exiled Force” cannot be chained, “King Tiger Wanghu” will destroy “Exiled Force” before the turn player can Tribute “Exiled Force” using its effect."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Interaction with Gyaku-Gire Panda",
+                    "text": "If “Gyaku-Gire Panda” is Summoned while “King Tiger Wanghu” is on the field, “Gyaku-Gire Panda” will not be destroyed if the opponent has enough monsters (2 or more in this case) to raise the ATK of “Gyaku-Gire Panda” above the 1400 ATK threshold."
+                },
+                {
+                    "title": "Interaction with Tsukuyomi",
+                    "text": "If “Tsukuyomi” is Summoned while “King Tiger Wanghu” is on the field, “Tsukuyomi” and “King Tiger Wanghu” will trigger at the same time. Since the turn player is Summoning “Tsukuyomi”, it will be CL1 and “King Tiger Wanghu” will be CL2. This will result in “King Tiger Wanghu” destroying “Tsukuyomi” and then the effect of “Tsukuyomi” will resolve flipping the target face-down. If the player who is Summoning “Tsukuyomi” is the same player who controls “King Tiger Wanghu”, that player can choose the order the effects are activated in since they are both mandatory effects that happen at the same time. The player can choose to have “King Tiger Wanghu” be CL1 and “Tsukuyomi” be CL2. This will result in “Tsukuyomi” resolving first and flipping “King Tiger Wanghu” face-down. In this example, “Tsukuyomi” would live because “King Tiger Wanghu” must be face-up on the field for its effect to resolve."
+                }
+            ]
+        }
+    },
+
+    "SCO-032": {
+        "id": "SCO-032",
+        "aliases": [],
+        "name": "Mind Control",
+        "image": "images/cards/Mind Control.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Target 1 monster your opponent controls; until the End Phase, take control of that target, but it cannot declare an attack or be Tributed.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Control and a monster flipped face-down",
+                    "text": "The effect of “Mind Control” that prevents the targeted monster from attacking or being Tributed lasts until the End Phase of the turn “Mind Control” was activated, even if the monster is flipped face-down before the End Phase. If the monster targeted with this card is flipped face-down, it will still return to the original owner’s side of the field during the End Phase."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Judge List: Tributing the controlled monster",
+                    "text": "The monster you take control of with “Mind Control” cannot be Tributed. You cannot Tribute it to Summon a high-level monster. You cannot Tribute it with “Metamorphosis.” You cannot Tribute it for “Enemy Controller.” You cannot Tribute it with “Share the Pain.” You cannot Tribute it with “Cannon Soldier.”\n\nCurtis Schultz, 02/20/2005"
+                }
+            ]
+        }
+    },
+
+    "SCO-033": {
+        "id": "SCO-033",
+        "aliases": [],
+        "name": "Mobius the Frost Monarch",
+        "image": "images/cards/Mobius the Frost Monarch.jpg",
+        "category": "Monster",
+        "attribute": "WATER",
+        "level": "6",
+        "type": "Aqua / Effect",
+        "atk": "2400",
+        "def": "1000",
+        "effect": "When this card is Tribute Summoned: You can target up to 2 Spell/Trap Cards on the field; destroy those targets.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Selecting Spell / Trap Cards",
+                    "text": "You select the Spell / Trap Cards when you activate the effect of “Mobius the Frost Monarch”."
+                },
+                {
+                    "title": "Targeting",
+                    "text": "This effect targets."
+                },
+                {
+                    "title": "Interaction with Level Limit - Area B",
+                    "text": "If “Level Limit - Area B” is active and “Mobius the Frost Monarch” is successfully Tribute Summoned, “Level Limit - Area B” is a Continuous Spell Card so its effect is applied and the battle position of “Mobius the Frost Monarch” is changed to Defense Position. Then you can activate the effect of “Mobius the Frost Monarch”."
+                },
+                {
+                    "title": "Interaction with Ultimate Offering",
+                    "text": "If “Mobius the Frost Monarch” is Tribute Summoned by the effect of “Ultimate Offering” in the middle of a chain (and is not the last step of the chain to resolve), then you have missed the timing on his effect and you cannot activate his effect to destroy 2 Spell or Trap Cards."
+                },
+                {
+                    "title": "A target destroyed before resolution",
+                    "text": "If 1 of the 2 Spell or Trap Cards targeted by the effect of “Mobius the Frost Monarch” is destroyed by some card effect before his effect resolves, the remaining 1 card is still destroyed by his effect."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-034": {
+        "id": "SCO-034",
+        "aliases": [],
+        "name": "Xing Zhen Hu",
+        "image": "images/cards/Xing Zhen Hu.jpg",
+        "category": "Trap",
+        "type": "Continuous Trap",
+        "effect": "Activate by selecting 2 Set Spell or Trap Cards on the field. The selected Spell or Trap Cards cannot be activated.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Chaining a selected Spell / Trap Card",
+                    "text": "You can chain one of the 2 Spell or Trap Cards on the field to the activation of “Xing Zhen Hu”. However, the remaining one will not be able to be activated after “Xing Zhen Hu” resolves."
+                },
+                {
+                    "title": "Neither target remains on the field",
+                    "text": "If neither of the targeted Spell or Trap Cards is on the field when “Xing Zhen Hu” resolves, then “Xing Zhen Hu” remains on the field meaninglessly."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-035": {
+        "id": "SCO-035",
+        "aliases": [],
+        "name": "Smashing Ground",
+        "image": "images/cards/Smashing Ground.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Destroy the 1 face-up monster your opponent controls with the highest DEF (your choice, if tied).",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [],
+            "netrep": []
+        }
+    },
+
+    "SCO-036": {
+        "id": "SCO-036",
+        "aliases": [],
+        "name": "Mystik Wok",
+        "image": "images/cards/Mystik Wok.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Tribute 1 monster. Select either its ATK or DEF and gain that many Life Points.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Tributing as a cost",
+                    "text": "Tributing a monster for “Mystik Wok” is a cost, so you can Tribute “The Legendary Fisherman” or “The Agent of Force - Mars”."
+                },
+                {
+                    "title": "Current ATK or DEF",
+                    "text": "The ATK or DEF is the current number, not the original number."
+                },
+                {
+                    "title": "Selecting ATK or DEF",
+                    "text": "You select ATK or DEF when “Mystik Wok” is activated."
+                },
+                {
+                    "title": "Eligible monsters",
+                    "text": "You can Tribute face-down monsters, or your opponent’s monster using “Soul Exchange”."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-037": {
+        "id": "SCO-037",
+        "aliases": [],
+        "name": "Morphing Jar",
+        "image": "images/cards/Morphing Jar.jpg",
+        "category": "Monster",
+        "attribute": "EARTH",
+        "level": 2,
+        "race": "Rock",
+        "type": "Flip / Effect",
+        "atk": 700,
+        "def": 600,
+        "effect": "FLIP: Both players discard as many cards as possible from their hands, then each player draws 5 cards.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Drawing with fewer than 5 cards",
+                    "text": "If there are fewer than 5 cards in the Deck of either player when this card’s Flip Effect is activated, that player will lose the Duel, since the text of this card says “draw”."
+                }
+            ],
+            "netrep": []
+        }
+    },
+
+    "SCO-038": {
+        "id": "SCO-038",
+        "aliases": [],
+        "name": "Brain Control",
+        "image": "images/cards/Brain Control.jpg",
+        "category": "Spell",
+        "type": "Normal Spell",
+        "effect": "Pay 800 LP, then target 1 face-up monster your opponent controls; take control of that target until the End Phase.",
+        "custom": {
+            "series": "SCHACHICUSTOMS ORICA",
+            "status": "verified"
+        },
+        "shop": {
+            "available": true,
+            "price": "4.00",
+            "url": ""
+        },
+        "sources": [
+            {
+                "name": "GOATGermany Rulings",
+                "url": "https://rulings.thegoatgermany.de"
+            }
+        ],
+        "community": {
+            "name": "GOATGermany",
+            "url": "https://www.thegoatgermany.de",
+            "whatsapp": ""
+        },
+        "rulings": {
+            "individual": [
+                {
+                    "title": "Face-down target later in the turn",
+                    "text": "If the monster targeted by “Brain Control” is flipped face-down later in the turn, it is still returned back to the original controller in the End Phase."
+                },
+                {
+                    "title": "No free Monster Zone",
+                    "text": "You cannot activate “Brain Control” if you already have 5 monsters on your side of the field."
+                }
+            ],
+            "netrep": [
+                {
+                    "title": "Judge List: Book of Moon chained",
+                    "text": "If “Book of Moon” is chained to “Brain Control,” turning the target of “Brain Control” face-down, the effect of “Brain Control” would disappear and the targeted monster will remain where it is."
+                },
+                {
+                    "title": "Other Ruling: Temporarily removed from play",
+                    "text": "If the monster affected by “Change of Heart” is temporarily removed from play, that monster will return to the original controller when the monster returns to play."
+                },
+                {
+                    "title": "Other Ruling: Blindly Loyal Goblin",
+                    "text": "A face-up “Blindly Loyal Goblin” may not be targeted by “Change of Heart.” If a face-down “Blindly Loyal Goblin” changes control through the effect of “Change of Heart” or similar cards and “Blindly Loyal Goblin” is turned face-up, control of “Blindly Loyal Goblin” will not return to the original controller."
+                }
+            ]
         }
     }
 }

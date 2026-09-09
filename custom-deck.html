@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Custom Deck | SCHACHICUSTOMS</title>
+    <meta name="description" content="Build a custom SCHACHICUSTOMS deck from the card database with up to 55 cards.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-name">SCHACHICUSTOMS</div>
+                <div class="brand-tagline">ORICAS · TOKENS & MORE</div>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="database.html">Card Database</a>
+                <a href="rulings.html">Basic Rulings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="deck-builder-page">
+        <a class="deck-builder-back" href="decks.html">← DECK ARCHIVE</a>
+
+        <section class="deck-builder-hero">
+            <span class="database-eyebrow">CUSTOM DECK</span>
+            <h1>Build your deck.</h1>
+            <p>
+                Browse the SCHACHICUSTOMS card archive and add up to 55 cards to your custom deck.
+                Every selected card is shown in your order summary at €4.00 per card.
+            </p>
+        </section>
+
+        <div class="deck-builder-layout">
+            <section class="deck-builder-catalog" aria-labelledby="deck-builder-catalog-title">
+                <div class="deck-builder-toolbar">
+                    <div>
+                        <span class="section-eyebrow">AVAILABLE ARCHIVE</span>
+                        <h2 id="deck-builder-catalog-title">Choose cards</h2>
+                    </div>
+
+                    <label class="deck-builder-search" for="deck-builder-search">
+                        <span>SEARCH CARDS</span>
+                        <input id="deck-builder-search" type="search" placeholder="Card name or SCO-ID" autocomplete="off">
+                    </label>
+                </div>
+
+                <div class="deck-builder-filters" aria-label="Card category filter">
+                    <button type="button" class="deck-builder-filter active" data-category="all">ALL</button>
+                    <button type="button" class="deck-builder-filter" data-category="Monster">MONSTERS</button>
+                    <button type="button" class="deck-builder-filter" data-category="Spell">SPELLS</button>
+                    <button type="button" class="deck-builder-filter" data-category="Trap">TRAPS</button>
+                </div>
+
+                <p class="deck-builder-results" id="deck-builder-results" aria-live="polite"></p>
+
+                <div class="deck-builder-card-grid" id="deck-builder-card-grid">
+                    <p class="deck-builder-loading">Loading available cards…</p>
+                </div>
+            </section>
+
+            <aside class="deck-builder-summary" aria-labelledby="deck-builder-summary-title">
+                <div class="deck-builder-summary-heading">
+                    <span class="section-eyebrow">YOUR CUSTOM DECK</span>
+                    <h2 id="deck-builder-summary-title">Order summary</h2>
+                </div>
+
+                <div class="deck-builder-count">
+                    <span id="deck-builder-count">0 / 55 CARDS</span>
+                    <div class="deck-builder-meter" role="progressbar" aria-label="Cards selected" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0">
+                        <span id="deck-builder-meter-fill"></span>
+                    </div>
+                </div>
+
+                <div class="deck-builder-items" id="deck-builder-items">
+                    <p class="deck-builder-empty">Your deck is empty. Add cards from the archive to begin.</p>
+                </div>
+
+                <div class="deck-builder-total">
+                    <span>DECK TOTAL</span>
+                    <strong id="deck-builder-total">€0.00</strong>
+                </div>
+
+                <div class="deck-builder-actions">
+                    <button type="button" class="home-secondary-button" id="deck-builder-copy" disabled>COPY DECK LIST</button>
+                    <button type="button" class="secondary-button" id="deck-builder-clear" disabled>CLEAR DECK</button>
+                </div>
+
+                <p class="deck-builder-purchase-note">
+                    Your selection is saved on this device. Direct checkout for custom decks will be connected here.
+                </p>
+                <p class="deck-builder-status" id="deck-builder-status" aria-live="polite"></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>SCHACHICUSTOMS</strong>
+                <span>ORICAS · TOKENS & MORE</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="database.html">Card Database</a>
+                <a href="decks.html">Deck Archive</a>
+                <a href="rulings.html">Basic Rulings</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/deck-builder.js"></script>
+</body>
+</html>

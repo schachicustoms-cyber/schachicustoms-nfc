@@ -578,8 +578,14 @@ function createRulingDropdown(
     content.className =
         "ruling-content";
 
-    content.hidden =
-        true;
+    content.classList.add(
+        "is-collapsed"
+    );
+
+    content.setAttribute(
+        "aria-hidden",
+        "true"
+    );
 
 
     const text =
@@ -618,8 +624,15 @@ function createRulingDropdown(
             );
 
 
-            content.hidden =
-                isOpen;
+            content.classList.toggle(
+                "is-collapsed",
+                isOpen
+            );
+
+            content.setAttribute(
+                "aria-hidden",
+                String(isOpen)
+            );
 
 
             icon.textContent =

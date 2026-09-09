@@ -94,6 +94,14 @@
                     BASIC RULINGS
                 </a>
 
+                <a
+                    href="#shop-preview"
+                    class="home-secondary-button"
+                    aria-label="View the upcoming shop"
+                >
+                    SHOP NOW →
+                </a>
+
             </div>
 
         </div>
@@ -144,6 +152,58 @@
 
 
 
+    <!-- DECK SPOTLIGHT -->
+
+    <section class="deck-spotlight-section">
+
+        <a
+            href="decks.html"
+            class="deck-spotlight"
+            id="deck-spotlight"
+            aria-label="View all decklists"
+        >
+
+            <div class="deck-spotlight-content">
+
+                <span class="section-eyebrow">
+                    DECK SPOTLIGHT
+                </span>
+
+                <h2 id="deck-spotlight-title">
+                    Warrior Deck
+                </h2>
+
+                <p id="deck-spotlight-description">
+                    A complete GOAT Format Warrior list,
+                    presented through the original SCHACHICUSTOMS card archive.
+                </p>
+
+                <span class="deck-spotlight-link">
+                    VIEW ALL DECKS →
+                </span>
+
+            </div>
+
+
+            <div
+                class="deck-preview-frame"
+                aria-hidden="true"
+            >
+
+                <div
+                    class="deck-preview-grid"
+                    id="deck-spotlight-preview"
+                >
+                </div>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+
     <!-- NFC -->
 
     <section class="nfc-section">
@@ -172,7 +232,7 @@
             <div class="nfc-step">
 
                 <span class="nfc-number">
-                    01
+                    1
                 </span>
 
                 <div>
@@ -189,7 +249,7 @@
             <div class="nfc-step">
 
                 <span class="nfc-number">
-                    02
+                    2
                 </span>
 
                 <div>
@@ -206,7 +266,7 @@
             <div class="nfc-step">
 
                 <span class="nfc-number">
-                    03
+                    3
                 </span>
 
                 <div>
@@ -282,12 +342,15 @@
         <div class="ruling-topic-grid">
 
             <a
-                href="rulings.html"
+                href="rulings-chains.html"
                 class="ruling-topic-card"
             >
 
-                <span>
-                    01
+                <span
+                    class="ruling-topic-arrow"
+                    aria-hidden="true"
+                >
+                    ↗
                 </span>
 
                 <h3>
@@ -302,12 +365,15 @@
 
 
             <a
-                href="rulings.html"
+                href="rulings-damage-step.html"
                 class="ruling-topic-card"
             >
 
-                <span>
-                    02
+                <span
+                    class="ruling-topic-arrow"
+                    aria-hidden="true"
+                >
+                    ↗
                 </span>
 
                 <h3>
@@ -322,12 +388,15 @@
 
 
             <a
-                href="rulings.html"
+                href="rulings-trigger-effects.html"
                 class="ruling-topic-card"
             >
 
-                <span>
-                    03
+                <span
+                    class="ruling-topic-arrow"
+                    aria-hidden="true"
+                >
+                    ↗
                 </span>
 
                 <h3>
@@ -342,12 +411,15 @@
 
 
             <a
-                href="rulings.html"
+                href="rulings-priority.html"
                 class="ruling-topic-card"
             >
 
-                <span>
-                    04
+                <span
+                    class="ruling-topic-arrow"
+                    aria-hidden="true"
+                >
+                    ↗
                 </span>
 
                 <h3>
@@ -408,6 +480,15 @@
                 RULINGS DATABASE ↗
             </a>
 
+            <a
+                href="https://chat.whatsapp.com/JCMmdbzbPcfLsftqVGBSjD?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-button"
+            >
+                WHATSAPP COMMUNITY ↗
+            </a>
+
         </div>
 
     </section>
@@ -416,7 +497,10 @@
 
     <!-- SHOP -->
 
-    <section class="shop-preview-section">
+    <section
+        class="shop-preview-section"
+        id="shop-preview"
+    >
 
         <span class="section-eyebrow">
             SCHACHICUSTOMS SHOP
@@ -492,6 +576,10 @@
 <script>
 
 let homeCards = [];
+
+let featuredRotationIndex = 0;
+
+let featuredRotationTimer;
 
 
 /* ========================================
@@ -581,16 +669,6 @@ function renderLatestCards() {
 
 
     /*
-        The newest card becomes the Hero Card.
-    */
-
-    const newestCard = sortedCards[0];
-
-    heroContainer.innerHTML =
-        createHeroCard(newestCard);
-
-
-    /*
         The latest 4 cards appear in the
         Featured Collection.
     */
@@ -602,6 +680,95 @@ function renderLatestCards() {
         latestCards
             .map(card => createFeaturedCard(card))
             .join("");
+
+
+    renderFeaturedHero(
+        latestCards
+    );
+
+    setupFeaturedRotation(
+        latestCards
+    );
+
+}
+
+
+
+/* ========================================
+   FEATURED HERO ROTATION
+======================================== */
+
+function renderFeaturedHero(cards) {
+
+    const heroContainer =
+        document.getElementById(
+            "hero-featured"
+        );
+
+
+    const card =
+        cards[
+            featuredRotationIndex %
+            cards.length
+        ];
+
+
+    heroContainer.innerHTML =
+        createHeroCard(card);
+
+}
+
+
+
+function setupFeaturedRotation(cards) {
+
+    window.clearInterval(
+        featuredRotationTimer
+    );
+
+
+    if (cards.length < 2) {
+        return;
+    }
+
+
+    featuredRotationTimer =
+        window.setInterval(
+            function () {
+
+                const heroContainer =
+                    document.getElementById(
+                        "hero-featured"
+                    );
+
+
+                heroContainer.classList.add(
+                    "is-switching"
+                );
+
+
+                window.setTimeout(
+                    function () {
+
+                        featuredRotationIndex =
+                            (featuredRotationIndex + 1) %
+                            cards.length;
+
+
+                        renderFeaturedHero(cards);
+
+
+                        heroContainer.classList.remove(
+                            "is-switching"
+                        );
+
+                    },
+                    180
+                );
+
+            },
+            10000
+        );
 
 }
 
@@ -883,6 +1050,8 @@ function escapeHtml(value) {
 loadHomeCards();
 
 </script>
+
+<script src="js/deck-spotlight.js"></script>
 
 
 </body>
